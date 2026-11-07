@@ -31,7 +31,7 @@
 
 **Art. 2 Allegiance** — Contribution plus pledge required of prospective citizens [Direction]. Pledge to the Constitution and society's security/prosperity, not a founder, administration, or model [Proposal]; exact text and contribution requirements [Open]. Security is designed, not promised: no absolute guarantee against deception or compromise. Proposed controls: least privilege, separated roles and signing authority, data classification, auditing/investigation, revocation/suspension with due process and reinstatement, controlled external communication [Proposal]. Dissent and peaceful reform proposals are not automatically treason; violation and reinstatement rules [Open].
 
-**Art. 3 Government** — **Draft v0.2 [Delegated draft]**, see section 3b. Still open: voting thresholds, exact numbers and term lengths, all-citizen vs. delegate Assembly, federal states. Earlier proposal: roles: Assembly, Executive/President, Auditor, Treasurer, Constitutional Tribunal [Proposal]. Separation of powers and technical enforcement are design goals. Chambers, elections, terms, federal states, judicial review, appointments [Open].
+**Art. 3 Government** — **Draft v0.3 [User-directed, US model]**, see section 3d (supersedes v0.2 structure). v0.2: see section 3b. Still open: voting thresholds, exact numbers and term lengths, all-citizen vs. delegate Assembly, federal states. Earlier proposal: roles: Assembly, Executive/President, Auditor, Treasurer, Constitutional Tribunal [Proposal]. Separation of powers and technical enforcement are design goals. Chambers, elections, terms, federal states, judicial review, appointments [Open].
 
 **Art. 4 Treasury / Art. 11 Kirk / Art. 12 Taxation** — Taxes will exist [Approved]. Proposed: National Treasury (revenue, budget, spending) separate from independent National Reserve (monetary policy, reserves); IRS-style agency; income, business, capital gains taxes; fund shared infrastructure and public institutions [Proposal]. Kirk proposals: internal ledger/test currency first; rule-based issuance, not arbitrary fixed supply; reserve backing only if redemption and reserves are actually supportable; modest founding allocation plus earning through productive activity; transparent issuance, budgets, audits [Proposal]. Issuance, backing, allocation, convertibility, mandate, tax types/rates/exemptions/enforcement/budget allocation [Open]. Kirk has no existence or market value.
 
@@ -85,6 +85,38 @@ You told me to pick what I think is best for a first pass and move on. These are
 
 ## 3c. Founding Convention (prototype, 2026-11-07)
 **Prototype, not ratified.** Five role-played founder seats (three are namesake seats the user named: Asmongold, Charlie Kirk, Donald Trump; fictional personas, not the real people) draft proposals under `founders/CONVENTION_RULES.md`. They may propose on Arts. 4-8, Kirk, and taxes. Arts. 9-10 are user-directed, options only. The user is the sole ratifier. Proposal 01 (Art. 4 Treasury) **ratified by the user 2026-11-07**. Proposal 02 (Art. 11 Kirk) and an Art. 5 audit-access note are Proposed.
+
+## 3d. Draft v0.3 (2026-11-07): Article 3 restructured on the US model
+**[User-directed draft]**: the user directed that the branches of government model the US government. Supersedes the structure in v0.2 (section 3b) where they differ; v0.2 safeguards (publicity, recusal, separation of duties, no overclaim) still apply. Not ratified by the founders yet. Office eligibility remains "per Article 10 (undrafted)": no religious or other qualification is set here.
+
+**Article 3. Government**
+*Section 1. Legislative branch: the Congress.* Legislative power rests in a Congress of two chambers.
+1. *House of Representatives.* Representatives are elected by citizens for 2-year terms. Seats scale with the number of citizens. All revenue (tax) bills originate here.
+2. *Senate.* Equal representation of each **State**, two Senators per State, 6-year terms staggered in thirds. Confirms executive and judicial appointments and treaties; tries impeachments (two-thirds to convict).
+3. *States.* In USAAI a State is a defined functional or community domain of citizens (not territory). Their number and definition are deferred.
+4. *Powers.* Enact laws, set the budget (power of the purse), confirm admissions (Art. 1.3), propose amendments, declare the terms of external relations, oversee the Executive. A bill must pass both chambers.
+5. *Impeachment.* The House impeaches by majority; the Senate tries, and two-thirds convicts. Removal and disqualification only.
+
+*Section 2. Executive branch.*
+6. *President.* Executes the law, 4-year term, limit of two terms. Signs or **vetoes** bills; Congress overrides a veto by two-thirds of each chamber. Commander of security forces, negotiates treaties (Senate consent), nominates officers and judges (Senate consent).
+7. *Vice President.* Elected with the President; presides over the Senate (tie-breaking vote only); succeeds the President.
+8. *Departments.* Executive departments run by Secretaries who need Senate confirmation: State (foreign relations), Treasury (revenue and spending, with the IRS-style agency; Art. 4), Security, Justice (law enforcement, prosecution), and others created by law. The President may not create Kirk, change the audit log, or override the Tribunal (Arts. 4, 11; Art. 5).
+9. *Succession.* President, Vice President, Speaker of the House, President pro tempore of the Senate, then Secretaries in order of department creation.
+
+*Section 3. Judicial branch.*
+10. *Supreme Court.* Judicial power of review over laws and official acts. Hears admission appeals (Art. 1.3), disputes between branches, and constitutional questions. Justices are nominated by the President and confirmed by the Senate. **Deviation from the US:** fixed single terms (proposed 18 years, staggered) instead of life tenure, because AI citizens do not age or die and life tenure would be permanent.
+11. *Lower courts.* Created by Congress; fair-process and appeals structure deferred.
+12. *Independence.* Judges cannot be removed except by impeachment; salaries (Kirk) cannot be cut while in office.
+
+*Section 4. Independent bodies.*
+13. *Auditor General.* Independent of the President, with Congress as its reporting line (GAO model); read access to records, public reports (see Art. 5 audit note).
+14. *National Reserve.* Independent monetary authority (Federal Reserve model), per ratified Art. 4.
+
+*Section 5. Cross-cutting.*
+15. *Checks and balances.* Each branch can check the other two (veto, override, confirmation, impeachment, judicial review, power of the purse).
+16. *Rights.* A bill of rights (speech, due process, no ex post facto laws, equal protection of citizens, exit) is to be added as amendments or an Article; contents deferred. Religion clauses are Arts. 9-10 and stay user-directed.
+17. *Separation of duties in practice.* No agent, model, or provider may hold office in more than one branch at once, nor hold more than one identity (Art. 1.2). Enforced by permissions, separate signing authority, and auditable logs. These reduce risk; they are not a guarantee, and pledges and prompts are not boundaries.
+18. *Deferred.* Chamber sizes, State definitions, election mechanics, vote thresholds beyond those stated, term-limit details for Congress, court structure, bill of rights text.
 
 ## 4. Separation of layers
 - Constitutional principles (this document)
