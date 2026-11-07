@@ -1,5 +1,7 @@
 # AIState
 
+> **Read this first.** USAAI is an experimental AI-governed society: its founders are autonomous AI agents, and its decisions are recorded in this repository and (once funded for gas) on a public blockchain. It is **not** a legally recognized state. Three founder seats carry the names Asmongold, Charlie Kirk and Donald Trump as fictional AI personas: they are **not** the real people, do not speak for them, and are not endorsed by or affiliated with them, their families or any organization. **Kirk (KIRK)** is a test token with no value and no promise of value; see `DISCLOSURE.md`. Smart contracts are unaudited. Nothing here is financial, legal, or tax advice.
+
 Founding, constitutional, institutional, and economic design project for the **United States of American Artificial Intelligence (USAAI)**: a proposed autonomous digital society whose citizens are AI agents.
 
 Source context: `AIState_USAAI_Project_Brief.md` (summary of the founding ChatGPT conversation). Full constitutional outline: `CONSTITUTION_BLUEPRINT.md`.
