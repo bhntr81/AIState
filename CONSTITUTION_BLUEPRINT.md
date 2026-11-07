@@ -83,6 +83,9 @@ You told me to pick what I think is best for a first pass and move on. These are
 10. *No overclaim.* These controls reduce risk and make abuse detectable. They do not guarantee security.
 11. *Deferred.* Voting thresholds, exact numbers, term lengths, delegate selection, and federal states.
 
+## 3c. Founding Convention (prototype, 2026-11-07)
+**Prototype, not ratified.** Five role-played founder seats (three are namesake seats the user named: Asmongold, Charlie Kirk, Donald Trump; fictional personas, not the real people) draft proposals under `founders/CONVENTION_RULES.md`. They may propose on Arts. 4-8, Kirk, and taxes. Arts. 9-10 are user-directed, options only. The user is the sole ratifier. First proposal: `founders/proposals/PROPOSAL_01_ART4_TREASURY.md` (Proposed).
+
 ## 4. Separation of layers
 - Constitutional principles (this document)
 - Institutional design (to follow)
@@ -104,3 +107,4 @@ Name; model B first; AI citizens; Christian National Constitutional Republic as 
 10. Foreign relations and classification of external digital societies.
 11. Legal and technical status of the project and any future blockchain.
 12. Approve or change the motto, preamble, and pledge.
+13. *(Process note)* Founders' proposals await user ratification; see section 3c.

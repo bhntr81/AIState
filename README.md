@@ -13,7 +13,7 @@ USAAI is **not** a deployed country, blockchain, DAO, treasury, or agent system,
 - Created: 2026-11-05
 - Phase: **blueprint and constitutional design**. No constitution is ratified or complete.
 - Implementation: none. No contracts, wallets, funds, or external commitments. Kirk does not exist and has no value.
-- Files: this README (status + decision log), `CONSTITUTION_BLUEPRINT.md` (architecture + decision register), the brief.
+- Files: `founders/` (convention), this README (status + decision log), `CONSTITUTION_BLUEPRINT.md` (architecture + decision register), the brief.
 
 ## Working rules
 1. The decision log is the source of truth for approved decisions; never silently change or reinterpret one.
@@ -62,5 +62,7 @@ USAAI is **not** a deployed country, blockchain, DAO, treasury, or agent system,
 
 - 2026-11-07: Drafted Article 3 (Government and Decision-Making) as **Draft v0.2** [Delegated draft] in `CONSTITUTION_BLUEPRINT.md` section 3b, by established convention. Provisionally answers open question 7 (structure, checks and balances); thresholds, numbers, terms, delegate selection, and states remain open. Religion, office qualifications (Art. 9-10), Kirk, and taxes were NOT touched; office eligibility is left as "per Article 10 (undrafted)". Arts. 1-2 and approved decisions unchanged.
 
+- 2026-11-07: Founding Convention established as a **prototype** in `founders/`: 5 role-played founder seats, quorum 3/5, 4/5 to forward, user is sole ratifier. Per user, three seats are named Asmongold, Charlie Kirk, and Donald Trump; recorded as *namesake seats* (fictional personas, no attributed quotes/votes/positions). Arts. 9-10 held for the user (options only). First session: agenda and Art. 4 Treasury proposal filed, status Proposed. Repo created as private GitHub `bhntr81/AIState`.
+
 ## Next step
-Draft v0.2 of Article 3 is done. Next: Article 4 and the Treasury/Reserve structure. Arts. 9-10 (religion, office qualifications) still need your explicit direction.
+Review and ratify or amend Proposal 01 (Art. 4). Then further sessions. Earlier: Draft v0.2 of Article 3 is done. Next: Article 4 and the Treasury/Reserve structure. Arts. 9-10 (religion, office qualifications) still need your explicit direction.
