@@ -5,7 +5,7 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 SEAT="${1:?seat 1-5}"
 DAILY_CAP_USD=5            # hard daily cap across all seats
-PER_RUN_USD=0.50           # cap per session
+PER_RUN_USD=0.50           # per-session cap (observed real cost ~0.10-0.15)
 LEDGER="$ROOT/runtime/spend-$(date +%F).txt"
 [ -f "$ROOT/runtime/PAUSE" ] && { echo "PAUSED"; exit 0; }
 SPENT=$(cat "$LEDGER" 2>/dev/null || echo 0)
