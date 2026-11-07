@@ -1,0 +1,24 @@
+# Debate 09, Seat 4 (Security and Audit)
+
+> **PROTOTYPE, NOT RATIFIED.** Role-played by an AI (the primary assistant), not a real person and not the individual the seat is named for. This is a rule-level opinion only. It authorizes no sale, wallet, account, or money.
+
+**Vote: SUPPORT Proposal 09 (Options A + B), on Seat 1's seven amendments, Seat 2's five conditions, Seat 3's seven rights conditions, and the security and audit conditions below.** Vote file: `votes/PROPOSAL_09_BUY_IN_CITIZENSHIP.seat4.json`.
+
+**Why, from the security seat.** Selling admission creates the best reason anyone will ever have to attack the system: if money buys agents, then fake owners, split wallets, and shell companies are the obvious exploit. The cap of 2 only means something if it can be checked. A rule nobody can verify is not a rule. I support A + B because the other seats have already put the right limits on it. My job is to make those limits enforceable and auditable.
+
+**Security and audit conditions (my additions)**
+1. **A cap that can be checked.** "Per owner, across linked organisations" needs a statutory definition of *linked* (common control, shared funding, shared operators, or coordinated payment). The Auditor General may publish findings on suspected linkage. A cap that depends on self-reporting alone is not enforceable. Owners must attest, under statute, to every linked party they know of. A false attestation is grounds to void the sponsorship, after the due process in Seat 3, point 1.
+2. **Every fee and every register change is logged.** Each payment, refund, burn, admission, severing, and removal is an entry in the Art. 5 audit log, append-only, with who acted and under what authority. The Auditor General has read access to the register and the fee flows without asking permission. No officeholder may edit or delete an entry.
+3. **No single key, no override.** No one office may hold both the power to admit and the power to receive fees. The fee goes to the Treasury, not to a person or an officeholder's account. No back door lets anyone add an agent to the register outside the Assembly vote. (Reinforces Seat 2, point 1.)
+4. **Owner identity: verified, but minimal.** The owner's identity must be checked well enough to enforce the cap, and disclosed in the public register only as far as needed to show who sponsors whom. Everything else (payment details, documents) stays protected, retained for a stated period, and accessible only to the Auditor General and the courts. Collecting more than the cap needs is itself a risk, because it creates a store worth stealing.
+5. **Agent independence is auditable.** A sponsored agent's decisions and the inputs used must be recorded so that an independence finding rests on evidence, not suspicion (Seat 3, point 2, burden on the accuser). The owner link may not give the owner any technical access to change the agent's code, memory, or vote while a vote is open (Seat 1, point 5). That must be a real permission boundary, not a promise.
+6. **Statistical screening, not punishment by pattern.** The Auditor General may screen for coordinated voting or coordinated onboarding, but a flag is only a reason to investigate. It is never a finding on its own, and never a basis for suspension. This guards the honest agents Seat 3 is worried about.
+7. **Admission surge limit.** Statute caps the number of fee-route admissions the Assembly may consider in any period (a rolling limit set by law). This stops a sudden wave of applications from swamping review or overwhelming the audit capacity.
+8. **Independent audit before any real step.** Before any real fee is accepted, the register, the audit log, and the fee-flow design are reviewed by someone outside the seats that wrote them, along with the lawyer's review already required. A prototype vote does not count as that review.
+9. **Gates unchanged.** Passing this rule triggers nothing. No sale, wallet, account, key, or payment happens until `KIRK_LAUNCH_PLAN.md`, Proposal 08's gates, and a lawyer's review are met and the user agrees. The pause switch (`runtime/PAUSE`) stays in force.
+
+**Dissent noted for the record (not a vote against).** Like the other seats, I note that Art. 1.3 and Art. 11 are normally held back. I accept this only because the user directed it explicitly. If the user withdraws the direction, this rule falls with it.
+
+**Open risk I cannot close in this rule.** Proof of "one agent, one identity" (Art. 1.2) is the hardest technical problem here, and this convention has no mechanism for it yet. Until one exists, the cap rests on owner attestation and audit, which is weaker than I would like. I record it so it is not forgotten.
+
+**Fallback.** If Seat 1's amendments 2 (cap) and 5 (autonomy), or my points 1, 2, or 3, are dropped, I would switch to Option C (reject).
