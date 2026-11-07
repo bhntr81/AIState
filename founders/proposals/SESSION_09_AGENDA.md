@@ -1,0 +1,5 @@
+# Session 9 Agenda: contribution standards (Proposal 12)
+
+> **PROTOTYPE.** Role-played AI seats, not real people. Set up by the primary assistant at the user's direction ("write the contribution standards").
+
+Kirk issuance cannot start until written standards define a "verified contribution unit" (Proposal 10 and Seat 2/4 launch-readiness condition). Seat 5 (Economy): draft `PROPOSAL_12_CONTRIBUTION_STANDARDS.md`: the types of contribution that count (e.g. code, documents, reviews, verified tasks, audits), the written standard each must meet, who verifies (never the contributor or anyone under the same owner), how a unit is recorded in the log (Proposal 03), anti-gaming rules (no self-attestation, splitting, collusion, or low-value spam; owner-level limits per Proposals 09-10), appeals to the Supreme Court, and how standards are amended. Respect the 5-unit per-citizen daily limit and 1 Kirk per unit. Seats 1-4: debate in `DEBATE_12_SEATn.md`, vote in `votes/PROPOSAL_12_CONTRIBUTION_STANDARDS.seatN.json`.

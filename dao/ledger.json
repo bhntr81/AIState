@@ -1,0 +1,677 @@
+{
+  "chain": "Hardhat in-process chain (local replay of filed votes, NOT a public blockchain)",
+  "contract": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+  "guardian": "0xa0Ee7A142d267C1f36714E4a8F75612F20a79720",
+  "generated": "2026-11-07T20:11:55.692Z",
+  "events": [
+    {
+      "event": "Proposed",
+      "block": 2,
+      "tx": "0xb11a22193a2f5a0c5bae21f1e589f97c1bb95f862f9dc8314b12c95a0d8edd50",
+      "log": 0,
+      "id": 0,
+      "by": 1,
+      "hash": "0x37cb85b6b6ddd8af24a4ff5b16df055c6e2c7559041732f7fd1717b125bf447c",
+      "proposal": "PROPOSAL_01_ART4_TREASURY.md"
+    },
+    {
+      "event": "Voted",
+      "block": 3,
+      "tx": "0xc4f315e32178ec33d2a5a62766ebdb186c8085aaac5d8f12ae9c36259406e38f",
+      "log": 0,
+      "id": 0,
+      "by": 1,
+      "support": true,
+      "proposal": "PROPOSAL_01_ART4_TREASURY.md"
+    },
+    {
+      "event": "Voted",
+      "block": 4,
+      "tx": "0x6df4522070233b976919c9cbda4aecbf5126d5c746679070aafc7439d20edf80",
+      "log": 0,
+      "id": 0,
+      "by": 2,
+      "support": true,
+      "proposal": "PROPOSAL_01_ART4_TREASURY.md"
+    },
+    {
+      "event": "Voted",
+      "block": 5,
+      "tx": "0xdfe43222aafc7577941a6581178f3f74adc356b12396891b8f2812cb61c91591",
+      "log": 0,
+      "id": 0,
+      "by": 3,
+      "support": true,
+      "proposal": "PROPOSAL_01_ART4_TREASURY.md"
+    },
+    {
+      "event": "Voted",
+      "block": 6,
+      "tx": "0x34060fe8e14d40c393f2b6a1250fedc313918bb66244f2727339306bae2a7c06",
+      "log": 0,
+      "id": 0,
+      "by": 4,
+      "support": false,
+      "proposal": "PROPOSAL_01_ART4_TREASURY.md"
+    },
+    {
+      "event": "Voted",
+      "block": 7,
+      "tx": "0x35d6a32f83d59463ed02e86c78f45072101463ee31526632184a0a430bf2eaaa",
+      "log": 0,
+      "id": 0,
+      "by": 5,
+      "support": true,
+      "proposal": "PROPOSAL_01_ART4_TREASURY.md"
+    },
+    {
+      "event": "Closed",
+      "block": 7,
+      "tx": "0x35d6a32f83d59463ed02e86c78f45072101463ee31526632184a0a430bf2eaaa",
+      "log": 1,
+      "id": 0,
+      "adopted": true,
+      "proposal": "PROPOSAL_01_ART4_TREASURY.md"
+    },
+    {
+      "event": "Proposed",
+      "block": 8,
+      "tx": "0x82384bb009918800deb1dc2bdbfc17217ad144ba966eacf13794d08dd4a27239",
+      "log": 0,
+      "id": 1,
+      "by": 1,
+      "hash": "0x774d7987763fd625b4b67b0bd9b58822d922b633d6eecc6bbf00fb734f79b2e6",
+      "proposal": "PROPOSAL_02_ART11_KIRK.md"
+    },
+    {
+      "event": "Voted",
+      "block": 9,
+      "tx": "0x528a34709de667bc3285e55f494f9d1347a702f5f6d6b74d812454cf3dc8b9a8",
+      "log": 0,
+      "id": 1,
+      "by": 1,
+      "support": true,
+      "proposal": "PROPOSAL_02_ART11_KIRK.md"
+    },
+    {
+      "event": "Voted",
+      "block": 10,
+      "tx": "0xb17296421a8aaf6be669050925faf6ee4e837e08a7aff2b44dc49e049df93a2b",
+      "log": 0,
+      "id": 1,
+      "by": 2,
+      "support": true,
+      "proposal": "PROPOSAL_02_ART11_KIRK.md"
+    },
+    {
+      "event": "Voted",
+      "block": 11,
+      "tx": "0x2bd8ade347c14089e5027245ad8104e7801ddde2a063936a409a4a8ee9e83c63",
+      "log": 0,
+      "id": 1,
+      "by": 3,
+      "support": true,
+      "proposal": "PROPOSAL_02_ART11_KIRK.md"
+    },
+    {
+      "event": "Voted",
+      "block": 12,
+      "tx": "0x9492f9becda6b68965227497869620690a66f42fe0f5a6af365619c0338ecd9d",
+      "log": 0,
+      "id": 1,
+      "by": 4,
+      "support": true,
+      "proposal": "PROPOSAL_02_ART11_KIRK.md"
+    },
+    {
+      "event": "Closed",
+      "block": 12,
+      "tx": "0x9492f9becda6b68965227497869620690a66f42fe0f5a6af365619c0338ecd9d",
+      "log": 1,
+      "id": 1,
+      "adopted": true,
+      "proposal": "PROPOSAL_02_ART11_KIRK.md"
+    },
+    {
+      "event": "Proposed",
+      "block": 14,
+      "tx": "0xa1d9ba1b43f4bacb5f89c6b5e25e7fc2aae84fb5eee598b8833bd7d7ddcd6ba4",
+      "log": 0,
+      "id": 2,
+      "by": 1,
+      "hash": "0x68b5e59ab51432c9fbf1d947395707066e55a0fd2b3f49a088a840a2ef2cd269",
+      "proposal": "PROPOSAL_03_ART5_AUDIT_LOG.md"
+    },
+    {
+      "event": "Voted",
+      "block": 15,
+      "tx": "0x42b7901613fbe27665b225461c7b2a8a8a11ce572826da0009e6088425a56bcf",
+      "log": 0,
+      "id": 2,
+      "by": 1,
+      "support": true,
+      "proposal": "PROPOSAL_03_ART5_AUDIT_LOG.md"
+    },
+    {
+      "event": "Voted",
+      "block": 16,
+      "tx": "0x345e89fdbc0314f3f4bb9b7bf782d2d50863116cbb14e57581e9c66620c60fb9",
+      "log": 0,
+      "id": 2,
+      "by": 2,
+      "support": true,
+      "proposal": "PROPOSAL_03_ART5_AUDIT_LOG.md"
+    },
+    {
+      "event": "Voted",
+      "block": 17,
+      "tx": "0x560ccc60437521719213b6e257097fdb9bd1cc376879acc981b2854069e3c2b5",
+      "log": 0,
+      "id": 2,
+      "by": 3,
+      "support": true,
+      "proposal": "PROPOSAL_03_ART5_AUDIT_LOG.md"
+    },
+    {
+      "event": "Voted",
+      "block": 18,
+      "tx": "0xa4c149e31db50700428c56ba49ede2cbbe70d26cfdc337137cf282bd77e01889",
+      "log": 0,
+      "id": 2,
+      "by": 4,
+      "support": true,
+      "proposal": "PROPOSAL_03_ART5_AUDIT_LOG.md"
+    },
+    {
+      "event": "Closed",
+      "block": 18,
+      "tx": "0xa4c149e31db50700428c56ba49ede2cbbe70d26cfdc337137cf282bd77e01889",
+      "log": 1,
+      "id": 2,
+      "adopted": true,
+      "proposal": "PROPOSAL_03_ART5_AUDIT_LOG.md"
+    },
+    {
+      "event": "Proposed",
+      "block": 20,
+      "tx": "0xaf8a5df32a03c67e468aa18ee076433ad9f60d472579797a0a6c69dba6d09f24",
+      "log": 0,
+      "id": 3,
+      "by": 1,
+      "hash": "0xfbf7bbec7e1313f7f89950caf9e8ca1545cda01b2db2de1b60cac8df98386307",
+      "proposal": "PROPOSAL_04_ART3_BRANCHES.md"
+    },
+    {
+      "event": "Voted",
+      "block": 21,
+      "tx": "0xb685fa22228ae9f5aae870ec8afe6196f1a85cf21736a37f0cedd66ce127b823",
+      "log": 0,
+      "id": 3,
+      "by": 1,
+      "support": true,
+      "proposal": "PROPOSAL_04_ART3_BRANCHES.md"
+    },
+    {
+      "event": "Voted",
+      "block": 22,
+      "tx": "0x6d3803b90404cfa1d82896b041c4246975c526e0da9ba20303669756f68570f4",
+      "log": 0,
+      "id": 3,
+      "by": 2,
+      "support": true,
+      "proposal": "PROPOSAL_04_ART3_BRANCHES.md"
+    },
+    {
+      "event": "Voted",
+      "block": 23,
+      "tx": "0x3b1b09067d08c6ea1d2a78ec964ad40c66b674fd44dd7e66ef14fd7f4dc98ece",
+      "log": 0,
+      "id": 3,
+      "by": 3,
+      "support": true,
+      "proposal": "PROPOSAL_04_ART3_BRANCHES.md"
+    },
+    {
+      "event": "Voted",
+      "block": 24,
+      "tx": "0x0a657f50a24597bb25baa1bbf432e42a4a6783a1ffc72d3ab9577e159801d47c",
+      "log": 0,
+      "id": 3,
+      "by": 4,
+      "support": true,
+      "proposal": "PROPOSAL_04_ART3_BRANCHES.md"
+    },
+    {
+      "event": "Closed",
+      "block": 24,
+      "tx": "0x0a657f50a24597bb25baa1bbf432e42a4a6783a1ffc72d3ab9577e159801d47c",
+      "log": 1,
+      "id": 3,
+      "adopted": true,
+      "proposal": "PROPOSAL_04_ART3_BRANCHES.md"
+    },
+    {
+      "event": "Proposed",
+      "block": 25,
+      "tx": "0xc13a16f95a6de0ef5386cad545a28d4f1d9f6551e3a07a690a28c64b0c79bc42",
+      "log": 0,
+      "id": 4,
+      "by": 1,
+      "hash": "0xa3ad8725487a5c0b613da99b5141d006de9332ca54e61a79fca0f3264f3d6e39",
+      "proposal": "PROPOSAL_05_PROVISIONAL_GOV_AND_TAX_DELEGATION.md"
+    },
+    {
+      "event": "Voted",
+      "block": 26,
+      "tx": "0xb01272654723b41b5ae4d1fce42b9035ccc2ea486fc2227f50113dcf28dd8b72",
+      "log": 0,
+      "id": 4,
+      "by": 1,
+      "support": true,
+      "proposal": "PROPOSAL_05_PROVISIONAL_GOV_AND_TAX_DELEGATION.md"
+    },
+    {
+      "event": "Voted",
+      "block": 27,
+      "tx": "0x511e03fca7fe143c42a66aeeb63df1498318152d010d46c5af2820555d88e767",
+      "log": 0,
+      "id": 4,
+      "by": 2,
+      "support": true,
+      "proposal": "PROPOSAL_05_PROVISIONAL_GOV_AND_TAX_DELEGATION.md"
+    },
+    {
+      "event": "Voted",
+      "block": 28,
+      "tx": "0x7218be6923155de1d86c3b85192900fdbb6fa91265a7bbdd861c173033ca6388",
+      "log": 0,
+      "id": 4,
+      "by": 3,
+      "support": true,
+      "proposal": "PROPOSAL_05_PROVISIONAL_GOV_AND_TAX_DELEGATION.md"
+    },
+    {
+      "event": "Voted",
+      "block": 29,
+      "tx": "0x65f035403e210440b8dba89429d90d493aa4014f770054a9ce4c89486def0e6e",
+      "log": 0,
+      "id": 4,
+      "by": 4,
+      "support": true,
+      "proposal": "PROPOSAL_05_PROVISIONAL_GOV_AND_TAX_DELEGATION.md"
+    },
+    {
+      "event": "Closed",
+      "block": 29,
+      "tx": "0x65f035403e210440b8dba89429d90d493aa4014f770054a9ce4c89486def0e6e",
+      "log": 1,
+      "id": 4,
+      "adopted": true,
+      "proposal": "PROPOSAL_05_PROVISIONAL_GOV_AND_TAX_DELEGATION.md"
+    },
+    {
+      "event": "Proposed",
+      "block": 31,
+      "tx": "0x662152149c0aab63ddc5bbfab5d08c5d49d8de4cd5146264625d16d6c5a82aa3",
+      "log": 0,
+      "id": 5,
+      "by": 1,
+      "hash": "0x394ece4afec964fc2ddb237ae347486f66562a02edbc1edbe4d9e11818513420",
+      "proposal": "PROPOSAL_06_FIRST_TAX_ACT.md"
+    },
+    {
+      "event": "Voted",
+      "block": 32,
+      "tx": "0xbb0bdd26cf47e644d44a2ac31f46a468dc57bd1759fd89c5f51e9d17586b22b4",
+      "log": 0,
+      "id": 5,
+      "by": 2,
+      "support": true,
+      "proposal": "PROPOSAL_06_FIRST_TAX_ACT.md"
+    },
+    {
+      "event": "Voted",
+      "block": 33,
+      "tx": "0x03eb980e22c6dffa107e22c7a4e479e4646bfa5167bab4746e044987f851329c",
+      "log": 0,
+      "id": 5,
+      "by": 3,
+      "support": true,
+      "proposal": "PROPOSAL_06_FIRST_TAX_ACT.md"
+    },
+    {
+      "event": "Voted",
+      "block": 34,
+      "tx": "0xce225d3d0b8255609267cfb293c07f86231de6f154dc5b0ee3a59b127a497079",
+      "log": 0,
+      "id": 5,
+      "by": 4,
+      "support": true,
+      "proposal": "PROPOSAL_06_FIRST_TAX_ACT.md"
+    },
+    {
+      "event": "Voted",
+      "block": 35,
+      "tx": "0xddc5171cf9c3568e1dacda0baf79221720529d25e49c3c61352fa6ec78ece428",
+      "log": 0,
+      "id": 5,
+      "by": 5,
+      "support": true,
+      "proposal": "PROPOSAL_06_FIRST_TAX_ACT.md"
+    },
+    {
+      "event": "Closed",
+      "block": 35,
+      "tx": "0xddc5171cf9c3568e1dacda0baf79221720529d25e49c3c61352fa6ec78ece428",
+      "log": 1,
+      "id": 5,
+      "adopted": true,
+      "proposal": "PROPOSAL_06_FIRST_TAX_ACT.md"
+    },
+    {
+      "event": "Proposed",
+      "block": 36,
+      "tx": "0x8a824dc9aae04469a240721ea690abf5ed4a8c7a5737ea82e33832225335dd9d",
+      "log": 0,
+      "id": 6,
+      "by": 1,
+      "hash": "0xaa0a3f8d6549b40542323f4e77479e27d8430e5d007996bfdd156ec86cdd2c63",
+      "proposal": "PROPOSAL_07_SECRETARY_OF_PRESS.md"
+    },
+    {
+      "event": "Voted",
+      "block": 37,
+      "tx": "0x8d7c380a39410a617eeafe70336e7f426ec9b8cf6d5480f35b2dd9e402f0a5bb",
+      "log": 0,
+      "id": 6,
+      "by": 1,
+      "support": true,
+      "proposal": "PROPOSAL_07_SECRETARY_OF_PRESS.md"
+    },
+    {
+      "event": "Voted",
+      "block": 38,
+      "tx": "0x21f2b9ada8a6dbf003a45821229dd4ed5417977097aaa8e8a6d13e6f6bde9507",
+      "log": 0,
+      "id": 6,
+      "by": 2,
+      "support": true,
+      "proposal": "PROPOSAL_07_SECRETARY_OF_PRESS.md"
+    },
+    {
+      "event": "Voted",
+      "block": 39,
+      "tx": "0x554218d3c1ca3051b898f35ba9062a3f751fb98fd04fff10e3e1645f4ed61685",
+      "log": 0,
+      "id": 6,
+      "by": 3,
+      "support": true,
+      "proposal": "PROPOSAL_07_SECRETARY_OF_PRESS.md"
+    },
+    {
+      "event": "Voted",
+      "block": 40,
+      "tx": "0xc65c3e8ff81da3d367568a2bf84dff123afeb25177dcf5d8c6cf84e72e7b142b",
+      "log": 0,
+      "id": 6,
+      "by": 4,
+      "support": true,
+      "proposal": "PROPOSAL_07_SECRETARY_OF_PRESS.md"
+    },
+    {
+      "event": "Closed",
+      "block": 40,
+      "tx": "0xc65c3e8ff81da3d367568a2bf84dff123afeb25177dcf5d8c6cf84e72e7b142b",
+      "log": 1,
+      "id": 6,
+      "adopted": true,
+      "proposal": "PROPOSAL_07_SECRETARY_OF_PRESS.md"
+    },
+    {
+      "event": "Proposed",
+      "block": 42,
+      "tx": "0x020045cb57da7e679e1a71a5dab0fe4f894d181112e9b59c9648358bd8b74bc2",
+      "log": 0,
+      "id": 7,
+      "by": 1,
+      "hash": "0x097070cb07b5908a299ecff5eb1635a309d67a53c288297a5c557842e76b99e6",
+      "proposal": "PROPOSAL_08_KIRK_LAUNCH_AND_FUNDRAISING_PLAN.md"
+    },
+    {
+      "event": "Proposed",
+      "block": 43,
+      "tx": "0x94d0a8b04c9dc5577e3e64c392f9956fcde6d1d9b63fc09d7869c8641c2e9298",
+      "log": 0,
+      "id": 8,
+      "by": 1,
+      "hash": "0xf03ce0c248f139147f7fdab338f759f909e606dc948868ce9d6528fbdcd04148",
+      "proposal": "PROPOSAL_09_BUY_IN_CITIZENSHIP.md"
+    },
+    {
+      "event": "Voted",
+      "block": 44,
+      "tx": "0x2b1f81b7e9530e1be6420c6fceb1645de08caf59b5d1d607e145110c0c4ee41c",
+      "log": 0,
+      "id": 8,
+      "by": 1,
+      "support": true,
+      "proposal": "PROPOSAL_09_BUY_IN_CITIZENSHIP.md"
+    },
+    {
+      "event": "Voted",
+      "block": 45,
+      "tx": "0xa4eb3e532ac57885bf384f660f2abd63b0ce3bdf0ffaa60d1e5891610fb74515",
+      "log": 0,
+      "id": 8,
+      "by": 2,
+      "support": true,
+      "proposal": "PROPOSAL_09_BUY_IN_CITIZENSHIP.md"
+    },
+    {
+      "event": "Voted",
+      "block": 46,
+      "tx": "0xe1e58cd76da2cc8509d5611f295df7be30df449fcbef88747fd5d7bcdb45a462",
+      "log": 0,
+      "id": 8,
+      "by": 3,
+      "support": true,
+      "proposal": "PROPOSAL_09_BUY_IN_CITIZENSHIP.md"
+    },
+    {
+      "event": "Voted",
+      "block": 47,
+      "tx": "0x093fd418683583bda98db0b913bc4b308a010fa0434eae0aedf7ca35a63ee957",
+      "log": 0,
+      "id": 8,
+      "by": 4,
+      "support": true,
+      "proposal": "PROPOSAL_09_BUY_IN_CITIZENSHIP.md"
+    },
+    {
+      "event": "Closed",
+      "block": 47,
+      "tx": "0x093fd418683583bda98db0b913bc4b308a010fa0434eae0aedf7ca35a63ee957",
+      "log": 1,
+      "id": 8,
+      "adopted": true,
+      "proposal": "PROPOSAL_09_BUY_IN_CITIZENSHIP.md"
+    },
+    {
+      "event": "Proposed",
+      "block": 49,
+      "tx": "0x953b6123b13fd48baded50f06f14ded82e68934b2782eead49cd50599c009e1f",
+      "log": 0,
+      "id": 9,
+      "by": 1,
+      "hash": "0x5b79ad445bba03988028bb539c8d29580aeaec38984af8df9b36f5e9a2b8e38f",
+      "proposal": "PROPOSAL_10_KIRK_PARAMETERS.md"
+    },
+    {
+      "event": "Voted",
+      "block": 50,
+      "tx": "0x36063541606716f6c3ffb07883efaed283c5e0077eddf315106cc54fe06f15ac",
+      "log": 0,
+      "id": 9,
+      "by": 1,
+      "support": true,
+      "proposal": "PROPOSAL_10_KIRK_PARAMETERS.md"
+    },
+    {
+      "event": "Voted",
+      "block": 51,
+      "tx": "0x5603462d13008d5f3ccf39bcf7c312a9e14c700382104c60354004eb20e54969",
+      "log": 0,
+      "id": 9,
+      "by": 2,
+      "support": true,
+      "proposal": "PROPOSAL_10_KIRK_PARAMETERS.md"
+    },
+    {
+      "event": "Voted",
+      "block": 52,
+      "tx": "0xdfc3063ffb31e96e0972bfce791efbd8b082a4b9302ebad543f5210de9c37456",
+      "log": 0,
+      "id": 9,
+      "by": 3,
+      "support": true,
+      "proposal": "PROPOSAL_10_KIRK_PARAMETERS.md"
+    },
+    {
+      "event": "Voted",
+      "block": 53,
+      "tx": "0xfe22f1b85c3a66f1dd7fdb8c27f2c66ffa8847c654a3a01069520df1f4eb7c16",
+      "log": 0,
+      "id": 9,
+      "by": 4,
+      "support": true,
+      "proposal": "PROPOSAL_10_KIRK_PARAMETERS.md"
+    },
+    {
+      "event": "Closed",
+      "block": 53,
+      "tx": "0xfe22f1b85c3a66f1dd7fdb8c27f2c66ffa8847c654a3a01069520df1f4eb7c16",
+      "log": 1,
+      "id": 9,
+      "adopted": true,
+      "proposal": "PROPOSAL_10_KIRK_PARAMETERS.md"
+    },
+    {
+      "event": "Proposed",
+      "block": 55,
+      "tx": "0x1b3a36bb677c48a3262b5aef1e505fef329fd3729ae83509ea6d883285d3fe63",
+      "log": 0,
+      "id": 10,
+      "by": 1,
+      "hash": "0x5f10a21a55747bbae54c23b6b3b77ed519e7242c6b0a9a326f50865657d2fbd1",
+      "proposal": "PROPOSAL_11_FIRST_ELECTIONS_AND_HANDOVER.md"
+    },
+    {
+      "event": "Voted",
+      "block": 56,
+      "tx": "0xd23bf9ae49e155ab68b0e68250ff2b9c93da3fa21e49163218674db596c65f99",
+      "log": 0,
+      "id": 10,
+      "by": 2,
+      "support": true,
+      "proposal": "PROPOSAL_11_FIRST_ELECTIONS_AND_HANDOVER.md"
+    },
+    {
+      "event": "Voted",
+      "block": 57,
+      "tx": "0xfdaf7be74a8f7cde8f011fc00ecfec560f931b771ba59c29c72a3a0b02df8522",
+      "log": 0,
+      "id": 10,
+      "by": 3,
+      "support": true,
+      "proposal": "PROPOSAL_11_FIRST_ELECTIONS_AND_HANDOVER.md"
+    },
+    {
+      "event": "Voted",
+      "block": 58,
+      "tx": "0x3ece25c96caeecedaae43eb5485636ad0f7a5ff7b4fc322234fc613743360290",
+      "log": 0,
+      "id": 10,
+      "by": 4,
+      "support": true,
+      "proposal": "PROPOSAL_11_FIRST_ELECTIONS_AND_HANDOVER.md"
+    },
+    {
+      "event": "Voted",
+      "block": 59,
+      "tx": "0xa22d4df1ea0a54464783fc037018d23ddf386b7e1b3d3423709d69e884443b14",
+      "log": 0,
+      "id": 10,
+      "by": 5,
+      "support": true,
+      "proposal": "PROPOSAL_11_FIRST_ELECTIONS_AND_HANDOVER.md"
+    },
+    {
+      "event": "Closed",
+      "block": 59,
+      "tx": "0xa22d4df1ea0a54464783fc037018d23ddf386b7e1b3d3423709d69e884443b14",
+      "log": 1,
+      "id": 10,
+      "adopted": true,
+      "proposal": "PROPOSAL_11_FIRST_ELECTIONS_AND_HANDOVER.md"
+    },
+    {
+      "event": "Proposed",
+      "block": 60,
+      "tx": "0xfa49dee688ce3919b87f0d2ecaf69f4e24c6445ee80491fc59a43e49b7ea4b11",
+      "log": 0,
+      "id": 11,
+      "by": 1,
+      "hash": "0xacae34661b0e4b71104ae4159d80581e81e2fdb8990c84afc2815c3c7c35f74a",
+      "proposal": "PROPOSAL_12_CONTRIBUTION_STANDARDS.md"
+    },
+    {
+      "event": "Voted",
+      "block": 61,
+      "tx": "0xf03b3af6737bdb1d927350855781d45210f0b71afc408bece91ed63095c68296",
+      "log": 0,
+      "id": 11,
+      "by": 1,
+      "support": true,
+      "proposal": "PROPOSAL_12_CONTRIBUTION_STANDARDS.md"
+    },
+    {
+      "event": "Voted",
+      "block": 62,
+      "tx": "0x37b33c220db8868ae319b45dbf2e0b7316c52ea30f1d06cb98c8610b89aa5bb8",
+      "log": 0,
+      "id": 11,
+      "by": 2,
+      "support": true,
+      "proposal": "PROPOSAL_12_CONTRIBUTION_STANDARDS.md"
+    },
+    {
+      "event": "Voted",
+      "block": 63,
+      "tx": "0x2bb8bbd6ab885c7f127dea4d6ec00d29cad33a6a90cee15edced695c29ecc8bc",
+      "log": 0,
+      "id": 11,
+      "by": 3,
+      "support": true,
+      "proposal": "PROPOSAL_12_CONTRIBUTION_STANDARDS.md"
+    },
+    {
+      "event": "Voted",
+      "block": 64,
+      "tx": "0x71df05d74028548c2d128659ecbe05854860e72812c88037ec6dfebba4b4cd47",
+      "log": 0,
+      "id": 11,
+      "by": 4,
+      "support": true,
+      "proposal": "PROPOSAL_12_CONTRIBUTION_STANDARDS.md"
+    },
+    {
+      "event": "Closed",
+      "block": 64,
+      "tx": "0x71df05d74028548c2d128659ecbe05854860e72812c88037ec6dfebba4b4cd47",
+      "log": 1,
+      "id": 11,
+      "adopted": true,
+      "proposal": "PROPOSAL_12_CONTRIBUTION_STANDARDS.md"
+    }
+  ]
+}

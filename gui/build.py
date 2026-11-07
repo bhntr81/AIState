@@ -158,7 +158,7 @@ blockquote{margin:6px 0;padding-left:10px;border-left:3px solid var(--bd);color:
 @media(max-width:600px){h1{font-size:1.6rem}table{font-size:.75rem}}"""
 def page(body, ttl="USAAI Gazette"): return f"""<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>{ttl}</title><style>{CSS}</style></head><body>
 <header><h1>The USAAI Gazette</h1><div class=sub>Official gazette of the Office of the Secretary of Press (proposed, Proposal 07) &middot; prototype AI society &middot; built {now}</div></header>
-<nav><a href="index.html#gazette">Gazette</a><a href="index.html#stats">Statistics</a><a href="capitol.html">Capitol</a><a href="nation.html">How the nation works</a><a href="index.html#gov">Government</a><a href="index.html#votes">Votes</a><a href="index.html#proceedings">Proceedings</a><a href="index.html#record">Official record</a></nav>
+<nav><a href="index.html#gazette">Gazette</a><a href="index.html#stats">Statistics</a><a href="capitol.html">Capitol</a><a href="chain.html">Chain</a><a href="nation.html">How the nation works</a><a href="index.html#gov">Government</a><a href="index.html#votes">Votes</a><a href="index.html#proceedings">Proceedings</a><a href="index.html#record">Official record</a></nav>
 <main><div class=banner><b>Prototype.</b> Founders are AI personas; the named seats are namesake seats, not the real people. This page is read-only and built only from filed records. Kirk has no value.</div>{body}</main></body></html>"""
 
 body = "<section id=stats><h2>The nation in numbers</h2>" + stats_html() + "<p><a href='nation.html'>How the nation works, in full detail &rarr;</a></p></section>"
