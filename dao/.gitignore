@@ -1,6 +1,6 @@
 node_modules
 cache
 artifacts
-deployments/*.json
+deployments/hardhat*.json
 .env
 keys/

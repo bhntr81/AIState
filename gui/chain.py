@@ -12,12 +12,16 @@ for f in (ROOT/"dao/deployments").glob("*.json") if (ROOT/"dao/deployments").exi
     dep[f.stem] = json.loads(f.read_text())
 SCAN = {"base": "https://basescan.org/address/", "baseSepolia": "https://sepolia.basescan.org/address/"}
 def short(h): return h[:10]+"…"+h[-6:]
+EXP = led.get('explorer')
+def txl(h): return f"<a href='{EXP}/tx/{h}'><code>{short(h)}</code></a>" if EXP else f"<code>{short(h)}</code>"
 ev = led["events"]; votes = [e for e in ev if e["event"] == "Voted"]; closed = [e for e in ev if e["event"] == "Closed"]
 rows = ""
 for e in reversed(ev):
     what = {"Proposed": f"Seat {e.get('by')} filed a proposal", "Voted": f"Seat {e.get('by')} voted <b>{'YES' if e.get('support') else 'NO'}</b>", "Closed": f"Voting closed: <b>{'ADOPTED' if e.get('adopted') else 'REJECTED'}</b>"}[e["event"]]
-    rows += f"<tr><td>{e['block']}</td><td>{what}</td><td>{E(e['proposal'].replace('.md','').replace('_',' '))}</td><td><code>{short(e['tx'])}</code></td></tr>"
-if dep:
+    rows += f"<tr><td>{e['block']}</td><td>{what}</td><td>{E(e['proposal'].replace('.md','').replace('_',' '))}</td><td>{txl(e['tx'])}</td></tr>"
+if EXP and led.get("contract"):
+    status = f"<p><b>Live on a public blockchain:</b> {E(led['chain'])}. Voting contract <a href='{EXP}/address/{led['contract']}'><code>{led['contract']}</code></a>. Founder seat addresses: " + ", ".join(f"<a href='{EXP}/address/{a}'><code>{short(a)}</code></a>" for a in led.get("seats", [])) + ". Anyone can verify every vote below on the explorer. (Test network: test ETH has no value. Kirk money is still test only.)</p>"
+elif dep:
     live = "".join(f"<li><b>{E(n)}</b>: " + "".join(f"{k} <a href='{SCAN.get(n,'#')}{v}'>{short(v)}</a>; " for k, v in d.items() if k in ("reserve","kirk","treasury")) + "</li>" for n, d in dep.items())
     status = f"<p><b>Public deployments recorded:</b></p><ul>{live}</ul>"
 else:
@@ -38,5 +42,5 @@ table{{width:100%;border-collapse:collapse;font:.85rem system-ui}}th,td{{border:
 <div class=card><b>Chain:</b> {E(led['chain'])}<br>{status}</div>
 <div class=stats><div><b>{len(ev)}</b>on-chain events</div><div><b>{len(votes)}</b>votes</div><div><b>{len(closed)}</b>decisions closed</div><div><b>{sum(1 for c in closed if c.get('adopted'))}</b>adopted</div><div><b>0</b>Kirk in circulation</div></div>
 <div class=card><b>Kirk contract settings</b> (immutable once deployed; founder-set in Proposal 10): founding grant {params['foundingGrantKirk']}, {params['rewardPerUnitKirk']} per unit, epoch {params['epochSeconds']}s, cap {params['epochCapKirk']} Kirk/epoch. Finalized by founders: {params['finalizedByFounders']}. Not deployed.</div>
-<h2>Event log (newest first)</h2><div class=wrap><table><tr><th>Block</th><th>Action</th><th>Proposal</th><th>Tx (local)</th></tr>{rows}</table></div></main></body></html>"""
+<h2>Event log (newest first)</h2><div class=wrap><table><tr><th>Block</th><th>Action</th><th>Proposal</th><th>Transaction</th></tr>{rows}</table></div></main></body></html>"""
 OUT.mkdir(exist_ok=True); (OUT/"chain.html").write_text(page); print("built chain.html", len(ev), "events")
