@@ -10,3 +10,4 @@
 6. **Scope:** Arts. 4-8, Kirk, taxes. For Arts. 9-10 (religion, office qualifications) founders may only draft neutral option sets with tradeoffs; the user directs.
 7. **Forbidden:** changing Arts. 1-3, approved decisions, or README categories A-D.
 8. **Honesty:** the primary assistant plays all founders and states so in each record.
+9. **Amended scope (2026-11-07, per user):** the user directed that the founders create and shape the branches of government on the US model. Founders may therefore revise Article 3 (use `CONSTITUTION_BLUEPRINT.md` section 3d, Draft v0.3, as the base text), and once the branches are seated they write their own tax and revenue law under Article 12. Still excluded: Arts. 1-2 text, approved decisions, categories A-D, and Arts. 9-10 (user-directed, options only).
