@@ -1,0 +1,8 @@
+{
+  "_note": "PLACEHOLDERS. The founders must set these (Session on Kirk parameters) before any real deployment. Amounts are in whole Kirk; epochSeconds is the issuance window.",
+  "foundingGrantKirk": 100,
+  "rewardPerUnitKirk": 1,
+  "epochSeconds": 86400,
+  "epochCapKirk": 1000,
+  "finalizedByFounders": false
+}

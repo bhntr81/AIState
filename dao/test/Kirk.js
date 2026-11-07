@@ -3,7 +3,7 @@ describe("Kirk / Reserve / Treasury", () => {
   let gov, guard, a, b, reserve, kirk, treasury;
   beforeEach(async () => {
     [gov, guard, a, b] = await ethers.getSigners();
-    reserve = await (await ethers.getContractFactory("Reserve")).deploy(gov.address, guard.address);
+    reserve = await (await ethers.getContractFactory("Reserve")).deploy(gov.address, guard.address, 100n*10n**18n, 10n**18n, 86400, 1000n*10n**18n);
     kirk = await ethers.getContractAt("Kirk", await reserve.kirk());
     treasury = await (await ethers.getContractFactory("Treasury")).deploy(await kirk.getAddress(), gov.address);
   });

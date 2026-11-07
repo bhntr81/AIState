@@ -6,10 +6,11 @@ import "./Kirk.sol";
 /// equal founding grant per admitted citizen (one identity each), earned issuance for verified
 /// contribution under a per-epoch cap. Governance (the DAO) decides who/what; the Treasury has no mint.
 contract Reserve {
-    uint256 public constant FOUNDING_GRANT = 100e18;   // placeholder amount
-    uint256 public constant REWARD_PER_UNIT = 1e18;    // placeholder
-    uint256 public constant EPOCH = 1 days;
-    uint256 public constant EPOCH_CAP = 1000e18;       // placeholder issuance ceiling per epoch
+    // Set once at deployment (from dao/params.json, decided by the founders); immutable after.
+    uint256 public immutable FOUNDING_GRANT;
+    uint256 public immutable REWARD_PER_UNIT;
+    uint256 public immutable EPOCH;
+    uint256 public immutable EPOCH_CAP;
 
     Kirk public immutable kirk;
     address public governance;   // Founders DAO (or its executor)
@@ -23,7 +24,10 @@ contract Reserve {
     modifier onlyGov() { require(msg.sender == governance, "only governance"); _; }
     modifier live() { require(!paused, "paused"); _; }
 
-    constructor(address _gov, address _guardian) {
+    constructor(address _gov, address _guardian, uint256 grant, uint256 rewardPerUnit, uint256 epochLen, uint256 epochCap) {
+        require(_gov != address(0) && _guardian != address(0), "zero address");
+        require(grant > 0 && rewardPerUnit > 0 && epochLen > 0 && epochCap >= grant, "bad params");
+        FOUNDING_GRANT = grant; REWARD_PER_UNIT = rewardPerUnit; EPOCH = epochLen; EPOCH_CAP = epochCap;
         governance = _gov; guardian = _guardian; kirk = new Kirk(address(this)); epochStart = block.timestamp;
     }
     function setPaused(bool p) external { require(msg.sender == guardian, "only guardian"); paused = p; }
