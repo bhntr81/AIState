@@ -7,8 +7,9 @@ const fs = require("fs"), path = require("path");
 const hre = require("hardhat"); const { ethers, network } = hre;
 const ROOT = path.join(__dirname, "..", ".."), F = path.join(ROOT, "founders");
 (async () => {
-  if (network.name === "base") throw new Error("Mainnet blocked: this script is testnet-only until the user decides how seat keys work with real gas (see LAUNCH_RUNBOOK.md).");
-  const keys = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "keys", "seats.json")));
+  const main = network.name === "base";
+  if (main && process.env.CONFIRM_MAINNET_PUBLISH !== "I_UNDERSTAND_THIS_SPENDS_REAL_ETH") throw new Error("Mainnet blocked: set CONFIRM_MAINNET_PUBLISH=I_UNDERSTAND_THIS_SPENDS_REAL_ETH");
+  const keys = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "keys", main ? "mainnet-seats.json" : "seats.json")));
   const w = Object.fromEntries(Object.entries(keys).map(([n, k]) => [n, new ethers.Wallet(k, ethers.provider)]));
   const seats = [1,2,3,4,5].map(i => w["seat"+i]);
   if (network.name === "hardhat") for (const x of Object.values(w)) await ethers.provider.send("hardhat_setBalance", [x.address, "0x56BC75E2D63100000"]);
@@ -54,8 +55,8 @@ const ROOT = path.join(__dirname, "..", ".."), F = path.join(ROOT, "founders");
     for (const e of await logs(name, fromBlock)) rows.push({ event: name, block: e.blockNumber, tx: e.transactionHash, log: e.index, ...fn(e), proposal: props[fn(e).id] });
   }
   rows.sort((a, b) => a.block - b.block || a.log - b.log);
-  const explorer = { baseSepolia: "https://sepolia.basescan.org" }[network.name];
+  const explorer = { baseSepolia: "https://sepolia.basescan.org", base: "https://basescan.org" }[network.name];
   if (network.name !== "hardhat") fs.writeFileSync(path.join(__dirname, "..", "ledger.json"), JSON.stringify({
-    chain: network.name === "baseSepolia" ? "Base Sepolia (public test network)" : network.name, explorer, contract: addr, seats: seats.map(s => s.address), guardian: w.guardian.address, generated: new Date().toISOString(), events: rows }, null, 2));
+    chain: network.name === "baseSepolia" ? "Base Sepolia (public test network)" : network.name === "base" ? "Base mainnet (public blockchain, real ETH gas)" : network.name, explorer, contract: addr, seats: seats.map(s => s.address), guardian: w.guardian.address, generated: new Date().toISOString(), events: rows }, null, 2));
   console.log("DAO at", addr, "on", network.name, "events:", rows.length);
 })();
