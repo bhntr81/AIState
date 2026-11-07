@@ -6,7 +6,7 @@
 2. **Forwarding:** a proposal needs 4 of 5 to be forwarded to the user.
 3. **Deliberation** is written. Dissents are recorded with reasons.
 4. **Records** are logged in `proposals/`.
-5. **Ratification:** the convention only PROPOSES. The user is the sole ratifier during the prototype phase. Nothing is approved until the user says so; status stays "Proposed".
+5. **Ratification (amended 2026-11-07 per user: full self-governance):** a proposal adopted by 4 of 5 founders is ratified by the convention. The user keeps a pause switch (`runtime/PAUSE`) and may still direct or amend at any time. Exception: Arts. 9-10 remain user-directed, options only, until the user lifts the hold. Earlier records that say "only the user can ratify" predate this amendment.
 6. **Scope:** Arts. 4-8, Kirk, taxes. For Arts. 9-10 (religion, office qualifications) founders may only draft neutral option sets with tradeoffs; the user directs.
 7. **Forbidden:** changing Arts. 1-3, approved decisions, or README categories A-D.
 8. **Honesty:** the primary assistant plays all founders and states so in each record.
