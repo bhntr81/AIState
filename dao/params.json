@@ -4,5 +4,6 @@
   "rewardPerUnitKirk": 1,
   "epochSeconds": 86400,
   "epochCapKirk": 500,
-  "finalizedByFounders": true
+  "finalizedByFounders": true,
+  "maxUnitsPerCitizenPerEpoch": 5
 }

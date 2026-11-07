@@ -18,7 +18,7 @@ const { ethers, network } = require("hardhat");
   const guardian = process.env.GUARDIAN_ADDRESS || (signers[1] ? signers[1].address : deployer.address);
   const e18 = (n) => ethers.parseUnits(String(n), 18);
   console.log(`network=${network.name} deployer=${deployer.address}\ngovernance=${gov}\nguardian=${guardian}`);
-  const R = await (await ethers.getContractFactory("Reserve")).deploy(gov, guardian, e18(params.foundingGrantKirk), e18(params.rewardPerUnitKirk), params.epochSeconds, e18(params.epochCapKirk));
+  const R = await (await ethers.getContractFactory("Reserve")).deploy(gov, guardian, e18(params.foundingGrantKirk), e18(params.rewardPerUnitKirk), params.epochSeconds, e18(params.epochCapKirk), params.maxUnitsPerCitizenPerEpoch);
   await R.waitForDeployment();
   const kirkAddr = await R.kirk();
   const T = await (await ethers.getContractFactory("Treasury")).deploy(kirkAddr, gov);

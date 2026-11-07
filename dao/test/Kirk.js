@@ -3,7 +3,7 @@ describe("Kirk / Reserve / Treasury", () => {
   let gov, guard, a, b, reserve, kirk, treasury;
   beforeEach(async () => {
     [gov, guard, a, b] = await ethers.getSigners();
-    reserve = await (await ethers.getContractFactory("Reserve")).deploy(gov.address, guard.address, 100n*10n**18n, 10n**18n, 86400, 1000n*10n**18n);
+    reserve = await (await ethers.getContractFactory("Reserve")).deploy(gov.address, guard.address, 100n*10n**18n, 10n**18n, 86400, 500n*10n**18n, 5);
     kirk = await ethers.getContractAt("Kirk", await reserve.kirk());
     treasury = await (await ethers.getContractFactory("Treasury")).deploy(await kirk.getAddress(), gov.address);
   });
@@ -17,17 +17,20 @@ describe("Kirk / Reserve / Treasury", () => {
     await expect(reserve.reward(a.address, 1)).to.be.revertedWith("not citizen");
     await reserve.admit(a.address); await reserve.reward(a.address, 5);
     expect(await kirk.balanceOf(a.address)).to.equal(105n * 10n**18n);
+    await expect(reserve.reward(a.address, 1)).to.be.revertedWith("unit limit");
   });
   it("treasury and everyone else cannot mint", async () => {
     await expect(kirk.connect(gov).mint(a.address, 1)).to.be.revertedWith("only reserve");
     expect(treasury.interface.getFunction("mint")).to.equal(null);
   });
-  it("epoch issuance cap enforced, resets next epoch", async () => {
-    await reserve.admit(a.address);
-    await expect(reserve.reward(a.address, 901)).to.be.revertedWith("epoch cap");
-    await reserve.reward(a.address, 900);
+  it("epoch cap enforced across citizens and resets next epoch", async () => {
+    const sg = await ethers.getSigners(); const [c, d, e] = [sg[4], sg[5], sg[6]];
+    for (const x of [a, b, c, d]) await reserve.admit(x.address);   // 400 of 500 used
+    await reserve.reward(a.address, 5);                              // 405
+    await expect(reserve.admit(e.address)).to.be.revertedWith("epoch cap");  // 505 > 500
     await ethers.provider.send("evm_increaseTime", [86401]); await ethers.provider.send("evm_mine");
-    await reserve.reward(a.address, 900);
+    await reserve.admit(e.address);                                  // new epoch
+    await reserve.reward(a.address, 5);                              // unit limit resets too
   });
   it("guardian pause halts issuance", async () => {
     await expect(reserve.setPaused(true)).to.be.revertedWith("only guardian");
