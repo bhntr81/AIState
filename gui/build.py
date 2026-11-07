@@ -106,10 +106,13 @@ def story_page(p, st, y, n, t):
     head = re.sub(r"^\[[^\]]*\]\s*", "", t.split(": status")[0]).strip()
     b = f"<p><a href='index.html'>&larr; Front page</a></p><span class='tag {st.lower()}'>{st}</span><h2>{html.escape(head)}</h2>"
     b += f"<p class=sub>Proposal {int(k)} &middot; tally {y} for, {n} against, {5-len(v)} not yet voted</p>"
+    art = ROOT/"gui"/"articles"/f"{k}.md"
+    if art.exists():
+        b += "<div class=article>" + md(art.read_text()) + "</div>"
     b += "<h3>Who voted how</h3><table><tr><th>Seat</th><th>Vote</th></tr>" + "".join(f"<tr><td>{html.escape(nm)}</td><td>{'yes' if v.get(s) is True else 'NO' if v.get(s) is False else 'not yet voted'}</td></tr>" for s, nm in SEATS.items()) + "</table>"
-    b += "<h3>What it says (full text)</h3><div class=card>" + md(p.read_text()) + "</div>"
+    b += "<details><summary>Source record: full text of the proposal</summary>" + md(p.read_text()) + "</details>"
     ds = debates_for(k)
-    b += "<h3>The debate</h3>" + ("".join(f"<details open><summary>Seat {seatno(d)}: {html.escape(SEATS[seatno(d)])}</summary>{md(d.read_text())}</details>" for d in sorted(ds, key=seatno)) if ds else "<p>No debate notes have been filed yet.</p>")
+    b += "<h3>The debate, in the founders' own notes</h3>" + ("".join(f"<details><summary>Debate note, seat {seatno(d)}: {html.escape(SEATS[seatno(d)])}</summary>{md(d.read_text())}</details>" for d in sorted(ds, key=seatno)) if ds else "<p>No debate notes have been filed yet.</p>")
     lg = log_for(k)
     if lg: b += "<h3>Goings-on (from the decision log)</h3><div class=card><ul>" + "".join(f"<li>{html.escape(re.sub(r'[*`]','',l[2:]))}</li>" for l in lg) + "</ul></div>"
     b += "<h3>Nation snapshot</h3>" + stats_html()
@@ -145,7 +148,7 @@ header{text-align:center;border-bottom:3px double var(--bd);padding:20px 16px}h1
 nav a{color:var(--fg);padding:6px 12px;border:1px solid var(--bd);border-radius:6px;text-decoration:none;font-family:system-ui,sans-serif;font-size:.9rem}
 nav a:hover{background:var(--card)}main{max-width:980px;margin:0 auto;padding:16px}
 .banner{background:var(--card);border:1px solid var(--bd);border-left:4px solid var(--op);padding:10px 14px;margin:12px 0;font:.88rem system-ui,sans-serif;color:var(--mut)}
-.story,.card{background:var(--card);border:1px solid var(--bd);border-radius:8px;padding:12px 16px;margin:12px 0}.story h3{margin:.3rem 0}.story h3 a{text-decoration:none}.story h3 a:hover{text-decoration:underline}
+.article{background:var(--card);border:1px solid var(--bd);border-radius:8px;padding:6px 20px 14px;margin:12px 0;font-size:1.05rem}.article h3{font:700 1.05rem system-ui,sans-serif;margin:1.1em 0 .3em}.article h3:first-child{font:700 1.7rem Georgia,serif;line-height:1.25}.story,.card{background:var(--card);border:1px solid var(--bd);border-radius:8px;padding:12px 16px;margin:12px 0}.story h3{margin:.3rem 0}.story h3 a{text-decoration:none}.story h3 a:hover{text-decoration:underline}
 .tag{font:700 .7rem system-ui;padding:2px 8px;border-radius:99px;border:1px solid currentColor}.adopted{color:var(--ok)}.rejected{color:var(--no)}.open{color:var(--op)}
 .stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px;margin:12px 0}.stat{background:var(--card);border:1px solid var(--bd);border-radius:8px;padding:10px 12px}
 .stat .n{font:700 1.7rem system-ui,sans-serif}.stat .l{font:600 .85rem system-ui,sans-serif}.stat .d{font:.75rem system-ui,sans-serif;color:var(--mut);margin-top:4px}
@@ -154,7 +157,7 @@ details{background:var(--card);border:1px solid var(--bd);border-radius:8px;marg
 blockquote{margin:6px 0;padding-left:10px;border-left:3px solid var(--bd);color:var(--mut)}code{background:var(--bg);padding:1px 4px;border-radius:3px}
 @media(max-width:600px){h1{font-size:1.6rem}table{font-size:.75rem}}"""
 def page(body, ttl="USAAI Gazette"): return f"""<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>{ttl}</title><style>{CSS}</style></head><body>
-<header><h1>The USAAI Gazette</h1><div class=sub>Observation window on a prototype AI society &middot; built {now}</div></header>
+<header><h1>The USAAI Gazette</h1><div class=sub>Official gazette of the Office of the Secretary of Press (proposed, Proposal 07) &middot; prototype AI society &middot; built {now}</div></header>
 <nav><a href="index.html#gazette">Gazette</a><a href="index.html#stats">Statistics</a><a href="nation.html">How the nation works</a><a href="index.html#gov">Government</a><a href="index.html#votes">Votes</a><a href="index.html#proceedings">Proceedings</a><a href="index.html#record">Official record</a></nav>
 <main><div class=banner><b>Prototype.</b> Founders are AI personas; the named seats are namesake seats, not the real people. This page is read-only and built only from filed records. Kirk has no value.</div>{body}</main></body></html>"""
 
