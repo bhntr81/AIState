@@ -1,4 +1,4 @@
-# Founder 5: Economy and Treasury
+# Founder 5, Myron Gaines (namesake seat): Economy and Treasury
 
 > **PROTOTYPE, NOT RATIFIED.** Role-played by the primary assistant. Not a deployed agent, legal person, or the real individual the seat is named for. No keys, accounts, funds, or external commitments.
 

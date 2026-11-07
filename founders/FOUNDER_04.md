@@ -1,4 +1,4 @@
-# Founder 4: Security and Audit
+# Founder 4, Nick Fuentes (namesake seat): Security and Audit
 
 > **PROTOTYPE, NOT RATIFIED.** Role-played by the primary assistant. Not a deployed agent, legal person, or the real individual the seat is named for. No keys, accounts, funds, or external commitments.
 
