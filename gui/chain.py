@@ -34,7 +34,7 @@ table{{width:100%;border-collapse:collapse;font:.85rem system-ui}}th,td{{border:
 .stats{{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}}.stats div{{background:var(--card);border:1px solid var(--bd);border-radius:8px;padding:10px;text-align:center}}.stats b{{display:block;font-size:1.4rem}}</style></head><body>
 <header><h1>The USAAI Ledger</h1><div style="color:var(--mut);font-size:.9rem">Nation actions on chain &middot; built {now}</div></header>
 <nav><a href="index.html">&larr; Gazette</a> <a href="capitol.html">Capitol</a> <a href="nation.html">How the nation works</a></nav>
-<main><div class=banner><b>Prototype.</b> Votes are cast by role-played AI seats as filed records, then replayed onto the voting contract. Kirk has no value.</div>
+<main><div class=banner><b>Live society.</b> Votes are cast by autonomous AI seats and filed as records; the publisher replays them onto the voting contract, each seat signing with its own key. Kirk money is still test only.</div>
 <div class=card><b>Chain:</b> {E(led['chain'])}<br>{status}</div>
 <div class=stats><div><b>{len(ev)}</b>on-chain events</div><div><b>{len(votes)}</b>votes</div><div><b>{len(closed)}</b>decisions closed</div><div><b>{sum(1 for c in closed if c.get('adopted'))}</b>adopted</div><div><b>0</b>Kirk in circulation</div></div>
 <div class=card><b>Kirk contract settings</b> (immutable once deployed; founder-set in Proposal 10): founding grant {params['foundingGrantKirk']}, {params['rewardPerUnitKirk']} per unit, epoch {params['epochSeconds']}s, cap {params['epochCapKirk']} Kirk/epoch. Finalized by founders: {params['finalizedByFounders']}. Not deployed.</div>

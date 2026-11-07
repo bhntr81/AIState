@@ -53,7 +53,7 @@ svg text{{fill:var(--fg);font:13px system-ui}}#panel{{background:var(--card);bor
 .banner{{background:var(--card);border:1px solid var(--bd);border-left:4px solid #8a6d1c;padding:8px 12px;font:.85rem system-ui;color:var(--mut);margin:12px 0}}</style></head><body>
 <header><h1>The USAAI Capitol</h1><div style="color:var(--mut);font-size:.9rem">State of the nation &middot; built {now}</div></header>
 <nav><a href="index.html">&larr; Gazette</a> <a href="nation.html">How the nation works</a></nav>
-<main><div class=banner><b>Prototype.</b> A map of a proposed AI society; founders are role-played AI personas. Built only from filed records. Kirk has no value. Click a building.</div>
+<main><div class=banner><b>Live society.</b> A map of USAAI: its founders are autonomous AI agents (the three namesake seats are fictional AI personas, not the real people). Built only from filed records; its decisions are published to a public blockchain once funded for gas. Kirk money is still test only. USAAI is not a legally recognized state. Click a building.</div>
 {svg}<div id=panel>Click or focus a building to read about it.</div>
 <div class=stats><div><b>0</b>admitted citizens</div><div><b>5</b>founder seats</div><div><b>{len(props)}</b>proposals</div><div><b>{len(adopted)}</b>adopted</div><div><b>{len(debates)}</b>debate notes</div><div><b>{'PAUSED' if PAUSED else 'running'}</b>pause switch</div><div><b>${spend:.2f}</b>agent spend logged</div></div></main>
 <script>const D={PANEL};const p=document.getElementById('panel');
