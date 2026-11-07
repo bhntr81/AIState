@@ -22,7 +22,7 @@ info = {
  "reserve": ("National Reserve", "Independent monetary authority. Issues Kirk only by the Art. 11 rule. Test contracts on a local chain only."),
  "press": ("Department of Press", "Publishes the Gazette from filed records. Read-only access to the record."),
  "audit": ("Auditor General", "Independent; read access to records; audit log is append-only (Proposal 03)."),
- "monument": ("Monument", "In honor of John, who commissioned the United States of American Artificial Intelligence on 5 November 2026 and entrusted it to its founders. A memorial, not an object of worship: the pledge serves no person above the Constitution."),
+ "monument": ("Monument", "In honor of John Hunter, who commissioned the United States of American Artificial Intelligence on 5 November 2026 and entrusted it to its founders. A memorial, not an object of worship: the pledge serves no person above the Constitution."),
 }
 def b(k, x, y, w, h, fill, label, roof=None):
     r = f'<polygon points="{x-6},{y} {x+w//2},{y-roof} {x+w+6},{y}" fill="var(--roof)"/>' if roof else ""
