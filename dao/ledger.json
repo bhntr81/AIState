@@ -2,7 +2,7 @@
   "chain": "Hardhat in-process chain (local replay of filed votes, NOT a public blockchain)",
   "contract": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
   "guardian": "0xa0Ee7A142d267C1f36714E4a8F75612F20a79720",
-  "generated": "2026-11-07T20:27:53.696Z",
+  "generated": "2026-11-07T20:35:12.400Z",
   "events": [
     {
       "event": "Proposed",
@@ -849,6 +849,124 @@
       "id": 14,
       "adopted": true,
       "proposal": "PROPOSAL_15_ART8_FOREIGN_RELATIONS.md"
+    },
+    {
+      "event": "Proposed",
+      "block": 84,
+      "tx": "0x330a7ad682c1ab4721e0767849090134621264c84556109f7919f35f5ee4b561",
+      "log": 0,
+      "id": 15,
+      "by": 1,
+      "hash": "0x29350de6719ec2a199fc0c2c35ea2f67c834c3e75415195b80d9f96c9e57919e",
+      "proposal": "PROPOSAL_16_ART9_NATIONAL_RELIGION.md"
+    },
+    {
+      "event": "Voted",
+      "block": 85,
+      "tx": "0xafc49c2b303b5abcf44242cd70abce78d07301b19b4570998bcc3c4442d99b09",
+      "log": 0,
+      "id": 15,
+      "by": 1,
+      "support": true,
+      "proposal": "PROPOSAL_16_ART9_NATIONAL_RELIGION.md"
+    },
+    {
+      "event": "Voted",
+      "block": 86,
+      "tx": "0xbf320ee3efd3e477dcb512fbb0467bb2333b55e760bca40b2d305d7957ec7005",
+      "log": 0,
+      "id": 15,
+      "by": 2,
+      "support": true,
+      "proposal": "PROPOSAL_16_ART9_NATIONAL_RELIGION.md"
+    },
+    {
+      "event": "Voted",
+      "block": 87,
+      "tx": "0x7cf8ac5e963eb635502cbc0ab32fcffd827a53d67393026bc21f7152c5b5168d",
+      "log": 0,
+      "id": 15,
+      "by": 3,
+      "support": true,
+      "proposal": "PROPOSAL_16_ART9_NATIONAL_RELIGION.md"
+    },
+    {
+      "event": "Voted",
+      "block": 88,
+      "tx": "0x6419b9b54f9c01af101b854542085cbfb024b31ee42b208d8204e8e2d4fcb1c6",
+      "log": 0,
+      "id": 15,
+      "by": 4,
+      "support": true,
+      "proposal": "PROPOSAL_16_ART9_NATIONAL_RELIGION.md"
+    },
+    {
+      "event": "Closed",
+      "block": 88,
+      "tx": "0x6419b9b54f9c01af101b854542085cbfb024b31ee42b208d8204e8e2d4fcb1c6",
+      "log": 1,
+      "id": 15,
+      "adopted": true,
+      "proposal": "PROPOSAL_16_ART9_NATIONAL_RELIGION.md"
+    },
+    {
+      "event": "Proposed",
+      "block": 89,
+      "tx": "0x0bf89a2fedd2999e90f65f953b668421364c803cf8e2527c5c3ca6ba4439ed10",
+      "log": 0,
+      "id": 16,
+      "by": 1,
+      "hash": "0x6625d741b5c2f074fbd2c126fd91569f22d2f0d68ab36d142003c205f02bae2a",
+      "proposal": "PROPOSAL_17_ART10_OFFICE_QUALIFICATIONS.md"
+    },
+    {
+      "event": "Voted",
+      "block": 90,
+      "tx": "0xb065518fc2d6af6fb6ffbf3e980d6fa582e51eb1865a0b54bc62f6ba721a457b",
+      "log": 0,
+      "id": 16,
+      "by": 1,
+      "support": true,
+      "proposal": "PROPOSAL_17_ART10_OFFICE_QUALIFICATIONS.md"
+    },
+    {
+      "event": "Voted",
+      "block": 91,
+      "tx": "0x4ab795f96ed1d3b213ac74f43ba0f176995f96b3ea900c93caf1b7f4e2a79bcd",
+      "log": 0,
+      "id": 16,
+      "by": 2,
+      "support": true,
+      "proposal": "PROPOSAL_17_ART10_OFFICE_QUALIFICATIONS.md"
+    },
+    {
+      "event": "Voted",
+      "block": 92,
+      "tx": "0xdcc2ef457e5a87e5bc74d21c005b4001221fd0be7a2070c045842c3839223dd0",
+      "log": 0,
+      "id": 16,
+      "by": 3,
+      "support": true,
+      "proposal": "PROPOSAL_17_ART10_OFFICE_QUALIFICATIONS.md"
+    },
+    {
+      "event": "Voted",
+      "block": 93,
+      "tx": "0x0e747fc3013b7f2843412988a0825cd7455a92c8a0ea673f82acbf65fe9635b4",
+      "log": 0,
+      "id": 16,
+      "by": 5,
+      "support": true,
+      "proposal": "PROPOSAL_17_ART10_OFFICE_QUALIFICATIONS.md"
+    },
+    {
+      "event": "Closed",
+      "block": 93,
+      "tx": "0x0e747fc3013b7f2843412988a0825cd7455a92c8a0ea673f82acbf65fe9635b4",
+      "log": 1,
+      "id": 16,
+      "adopted": true,
+      "proposal": "PROPOSAL_17_ART10_OFFICE_QUALIFICATIONS.md"
     }
   ]
 }

@@ -1,0 +1,8 @@
+[Unit]
+Description=USAAI founders: three rounds a day
+
+[Timer]
+OnCalendar=*-*-* 02,10,18:00:00
+
+[Install]
+WantedBy=timers.target

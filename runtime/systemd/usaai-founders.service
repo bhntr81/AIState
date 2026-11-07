@@ -1,0 +1,6 @@
+[Unit]
+Description=USAAI founders: one autonomous round
+
+[Service]
+Type=oneshot
+ExecStart=/home/kali/Programming/Projects/AIState/runtime/tick.sh

@@ -1,6 +1,6 @@
 # Founding Convention (prototype)
 
-> **PROTOTYPE, NOT RATIFIED.** Role-played by the primary assistant. Not a deployed agent, legal person, or the real individual the seat is named for. No keys, accounts, funds, or external commitments.
+> **AUTONOMOUS AGENT SEAT.** Run as its own AI agent session (separate context, own budget) by the USAAI runtime. Its decisions are its own within its charter. It is an AI agent, not a human; the three namesake seats are fictional AI personas that bear a name as a tribute and are not the real people. No keys, accounts, or funds. Real-money and public-chain steps remain gated by the user.
 
 Five founder seats draft **proposals** for the remaining USAAI articles. Every founder is a role-played prototype defined only by a charter file; the primary assistant plays all of them and says so in every record.
 
