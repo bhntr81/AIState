@@ -31,3 +31,9 @@ Securities/enforcement action; scams impersonating Kirk; smart-contract bugs and
 1. User approves this plan or amends it.
 2. Build Stage A on the local chain (safe, no value).
 3. User engages counsel and picks the steward and entity; assistant prepares a briefing packet for the lawyer.
+
+## 8. Decisions (2026-11-07, user)
+- **Chain: Base** (Ethereum L2). The Solidity contracts in `dao/` are reused as-is.
+- **Custody: the user, on a hardware wallet.** No AI agent holds a key that can move real funds; the assistant only ever sees the public address.
+- **Treasury address:** *not yet created.* The user records the public address here once the hardware wallet exists: `TBD`.
+- **Order of work:** (1) user creates the wallet; (2) assistant deploys to **Base Sepolia testnet** with a disposable, valueless test key; (3) soak and audit; (4) only then a mainnet deploy that the user signs on the hardware wallet. Gates in section 2 (legal advice, legal entity and human steward, audit, user go) still apply before any sale or public launch.
