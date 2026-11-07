@@ -2,7 +2,7 @@
   "chain": "Hardhat in-process chain (local replay of filed votes, NOT a public blockchain)",
   "contract": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
   "guardian": "0xa0Ee7A142d267C1f36714E4a8F75612F20a79720",
-  "generated": "2026-11-07T20:11:55.692Z",
+  "generated": "2026-11-07T20:27:53.696Z",
   "events": [
     {
       "event": "Proposed",
@@ -672,6 +672,183 @@
       "id": 11,
       "adopted": true,
       "proposal": "PROPOSAL_12_CONTRIBUTION_STANDARDS.md"
+    },
+    {
+      "event": "Proposed",
+      "block": 66,
+      "tx": "0x02ccc89bb40836f6d0213857c1bdc2d1337c631543117628596910cc57581b76",
+      "log": 0,
+      "id": 12,
+      "by": 1,
+      "hash": "0xe87bbaafc0f7d569c567de92a68a15e1e19a34f9e9be9c5056a2f009d8704a6f",
+      "proposal": "PROPOSAL_13_ART6_AMENDMENTS.md"
+    },
+    {
+      "event": "Voted",
+      "block": 67,
+      "tx": "0x058302925bb0460c8b02953c759c6314fbfa44ee57f8a30af9a5e779056d3e7c",
+      "log": 0,
+      "id": 12,
+      "by": 1,
+      "support": true,
+      "proposal": "PROPOSAL_13_ART6_AMENDMENTS.md"
+    },
+    {
+      "event": "Voted",
+      "block": 68,
+      "tx": "0xa0f758589e84777e2a4b2e52269951e4a436fe3822a37e719550790b6f235367",
+      "log": 0,
+      "id": 12,
+      "by": 2,
+      "support": true,
+      "proposal": "PROPOSAL_13_ART6_AMENDMENTS.md"
+    },
+    {
+      "event": "Voted",
+      "block": 69,
+      "tx": "0x1038a8742471cc05295bf0e7ef3cef414e84a91f533bf79f7bee971093b590fe",
+      "log": 0,
+      "id": 12,
+      "by": 3,
+      "support": true,
+      "proposal": "PROPOSAL_13_ART6_AMENDMENTS.md"
+    },
+    {
+      "event": "Voted",
+      "block": 70,
+      "tx": "0x33370bdbca263a33bf64b8912447697f1e14e83a548e559aa90228da75362f15",
+      "log": 0,
+      "id": 12,
+      "by": 4,
+      "support": true,
+      "proposal": "PROPOSAL_13_ART6_AMENDMENTS.md"
+    },
+    {
+      "event": "Closed",
+      "block": 70,
+      "tx": "0x33370bdbca263a33bf64b8912447697f1e14e83a548e559aa90228da75362f15",
+      "log": 1,
+      "id": 12,
+      "adopted": true,
+      "proposal": "PROPOSAL_13_ART6_AMENDMENTS.md"
+    },
+    {
+      "event": "Proposed",
+      "block": 72,
+      "tx": "0x205caf7455a5bcbe301bb94e2f6d8e2dfba2b7cb9e9a19663aa685ab809950d0",
+      "log": 0,
+      "id": 13,
+      "by": 1,
+      "hash": "0x84f0b592d952bae7a34a2ae2adf5a934a0a82e7f016546d24792c53a2b801641",
+      "proposal": "PROPOSAL_14_ART7_CONTINUITY_SUCCESSION_DISSOLUTION.md"
+    },
+    {
+      "event": "Voted",
+      "block": 73,
+      "tx": "0xbf7b83d8b1829dc225c6a4498bedb24579ce65b9fcb417b4eba09e21f73ee578",
+      "log": 0,
+      "id": 13,
+      "by": 1,
+      "support": true,
+      "proposal": "PROPOSAL_14_ART7_CONTINUITY_SUCCESSION_DISSOLUTION.md"
+    },
+    {
+      "event": "Voted",
+      "block": 74,
+      "tx": "0x84bd64783cada3ded5ece5c0b7d2ec8aa6522f462efa817f99c93081a8bda199",
+      "log": 0,
+      "id": 13,
+      "by": 2,
+      "support": true,
+      "proposal": "PROPOSAL_14_ART7_CONTINUITY_SUCCESSION_DISSOLUTION.md"
+    },
+    {
+      "event": "Voted",
+      "block": 75,
+      "tx": "0x2137c67a81e43214586431da06f4c4c18d1878b80bd3ec4674ad69fb78c0f808",
+      "log": 0,
+      "id": 13,
+      "by": 3,
+      "support": true,
+      "proposal": "PROPOSAL_14_ART7_CONTINUITY_SUCCESSION_DISSOLUTION.md"
+    },
+    {
+      "event": "Voted",
+      "block": 76,
+      "tx": "0x90ac4165ebe79a197668733d404c653cdf734779ca9e1afba648bbb561c41289",
+      "log": 0,
+      "id": 13,
+      "by": 4,
+      "support": true,
+      "proposal": "PROPOSAL_14_ART7_CONTINUITY_SUCCESSION_DISSOLUTION.md"
+    },
+    {
+      "event": "Closed",
+      "block": 76,
+      "tx": "0x90ac4165ebe79a197668733d404c653cdf734779ca9e1afba648bbb561c41289",
+      "log": 1,
+      "id": 13,
+      "adopted": true,
+      "proposal": "PROPOSAL_14_ART7_CONTINUITY_SUCCESSION_DISSOLUTION.md"
+    },
+    {
+      "event": "Proposed",
+      "block": 78,
+      "tx": "0x3d300e2d7277003092b45a9e45cc6362b27757e52a2206abebc65d6d0b32ea6e",
+      "log": 0,
+      "id": 14,
+      "by": 1,
+      "hash": "0xb47291793f06ca2cc6813c1da5c68d262aeed544f44b85198729b5d19b8e7776",
+      "proposal": "PROPOSAL_15_ART8_FOREIGN_RELATIONS.md"
+    },
+    {
+      "event": "Voted",
+      "block": 79,
+      "tx": "0xd08675e5331fb888854c8ca56bde452d9b7e26beb2102cb7b5bd6a21519f5ec4",
+      "log": 0,
+      "id": 14,
+      "by": 1,
+      "support": true,
+      "proposal": "PROPOSAL_15_ART8_FOREIGN_RELATIONS.md"
+    },
+    {
+      "event": "Voted",
+      "block": 80,
+      "tx": "0xf31f2b15f8b19fbf104395aacc9719359b568f88ad237d701bbc51f0a5b362e0",
+      "log": 0,
+      "id": 14,
+      "by": 2,
+      "support": true,
+      "proposal": "PROPOSAL_15_ART8_FOREIGN_RELATIONS.md"
+    },
+    {
+      "event": "Voted",
+      "block": 81,
+      "tx": "0x1974ffd84d5c38d74143e212f1a957e7f1ad1fa87084081012597e3f91031980",
+      "log": 0,
+      "id": 14,
+      "by": 3,
+      "support": true,
+      "proposal": "PROPOSAL_15_ART8_FOREIGN_RELATIONS.md"
+    },
+    {
+      "event": "Voted",
+      "block": 82,
+      "tx": "0xbdf38887195e67e123094f3181e66dd6440f6cddd33a774b92cd0a2fa83f84dc",
+      "log": 0,
+      "id": 14,
+      "by": 4,
+      "support": true,
+      "proposal": "PROPOSAL_15_ART8_FOREIGN_RELATIONS.md"
+    },
+    {
+      "event": "Closed",
+      "block": 82,
+      "tx": "0xbdf38887195e67e123094f3181e66dd6440f6cddd33a774b92cd0a2fa83f84dc",
+      "log": 1,
+      "id": 14,
+      "adopted": true,
+      "proposal": "PROPOSAL_15_ART8_FOREIGN_RELATIONS.md"
     }
   ]
 }
