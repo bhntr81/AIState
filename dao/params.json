@@ -1,8 +1,8 @@
 {
-  "_note": "PLACEHOLDERS. The founders must set these (Session on Kirk parameters) before any real deployment. Amounts are in whole Kirk; epochSeconds is the issuance window.",
+  "_note": "Adopted by the founders in Proposal 10 (4-0; seat 3 had not voted when the daily spend cap was reached). Amounts in whole Kirk; epochSeconds is the issuance window. Immutable once deployed.",
   "foundingGrantKirk": 100,
   "rewardPerUnitKirk": 1,
   "epochSeconds": 86400,
-  "epochCapKirk": 1000,
-  "finalizedByFounders": false
+  "epochCapKirk": 500,
+  "finalizedByFounders": true
 }
