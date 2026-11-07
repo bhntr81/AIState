@@ -84,7 +84,7 @@ You told me to pick what I think is best for a first pass and move on. These are
 11. *Deferred.* Voting thresholds, exact numbers, term lengths, delegate selection, and federal states.
 
 ## 3c. Founding Convention (prototype, 2026-11-07)
-**Prototype, not ratified.** Five role-played founder seats (three are namesake seats the user named: Asmongold, Charlie Kirk, Donald Trump; fictional personas, not the real people) draft proposals under `founders/CONVENTION_RULES.md`. They may propose on Arts. 4-8, Kirk, and taxes. Arts. 9-10 are user-directed, options only. The user is the sole ratifier. First proposal: `founders/proposals/PROPOSAL_01_ART4_TREASURY.md` (Proposed).
+**Prototype, not ratified.** Five role-played founder seats (three are namesake seats the user named: Asmongold, Charlie Kirk, Donald Trump; fictional personas, not the real people) draft proposals under `founders/CONVENTION_RULES.md`. They may propose on Arts. 4-8, Kirk, and taxes. Arts. 9-10 are user-directed, options only. The user is the sole ratifier. Proposal 01 (Art. 4 Treasury) **ratified by the user 2026-11-07**. Proposal 02 (Art. 11 Kirk) and an Art. 5 audit-access note are Proposed.
 
 ## 4. Separation of layers
 - Constitutional principles (this document)

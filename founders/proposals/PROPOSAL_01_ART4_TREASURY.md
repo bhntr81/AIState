@@ -1,4 +1,4 @@
-# [Founders' proposal] Art. 4 Treasury Structure: status **Proposed**
+# [Founders' proposal] Art. 4 Treasury Structure: status **Ratified by the user, 2026-11-07**
 
 > **PROTOTYPE, NOT RATIFIED.** Role-played by the primary assistant. Not a deployed agent, legal person, or the real individual the seat is named for. No keys, accounts, funds, or external commitments.
 
@@ -12,3 +12,5 @@ Drafted by the primary assistant playing the five seats; not a vote of real peop
 6. Deferred: Kirk issuance (Art. 11), tax types and rates (Art. 12), thresholds, terms.
 
 **Vote (role-played):** 4 for, 1 recorded dissent (Security and Audit: wants explicit audit-access rules). Forwarded to the user.
+
+**Ratification:** the user ratified this proposal as written on 2026-11-07. The Security and Audit dissent (explicit audit-access rules) is carried to Art. 5 (Session 2 follow-up).

@@ -63,6 +63,7 @@ USAAI is **not** a deployed country, blockchain, DAO, treasury, or agent system,
 - 2026-11-07: Drafted Article 3 (Government and Decision-Making) as **Draft v0.2** [Delegated draft] in `CONSTITUTION_BLUEPRINT.md` section 3b, by established convention. Provisionally answers open question 7 (structure, checks and balances); thresholds, numbers, terms, delegate selection, and states remain open. Religion, office qualifications (Art. 9-10), Kirk, and taxes were NOT touched; office eligibility is left as "per Article 10 (undrafted)". Arts. 1-2 and approved decisions unchanged.
 
 - 2026-11-07: Founding Convention established as a **prototype** in `founders/`: 5 role-played founder seats, quorum 3/5, 4/5 to forward, user is sole ratifier. Per user, three seats are named Asmongold, Charlie Kirk, and Donald Trump; recorded as *namesake seats* (fictional personas, no attributed quotes/votes/positions). Arts. 9-10 held for the user (options only). First session: agenda and Art. 4 Treasury proposal filed, status Proposed. Repo created as private GitHub `bhntr81/AIState`.
+- 2026-11-07: **User ratified Proposal 01 (Art. 4 Treasury structure)** as written. Session 2 run (role-played): Proposal 02 (Art. 11 Kirk) and an Art. 5 audit-access note filed, both Proposed. Arts. 9-10 still held for the user.
 
 ## Next step
-Review and ratify or amend Proposal 01 (Art. 4). Then further sessions. Earlier: Draft v0.2 of Article 3 is done. Next: Article 4 and the Treasury/Reserve structure. Arts. 9-10 (religion, office qualifications) still need your explicit direction.
+Review and ratify or amend Proposal 02 (Kirk) and the Art. 5 audit-access note. Then Session 3 (Arts. 5-8, Art. 12 taxes). Arts. 9-10 still need your explicit direction.
