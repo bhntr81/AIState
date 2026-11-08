@@ -63,6 +63,7 @@ def allowed(seat, rel, was_new):
     n = str(seat); name = rel.split("/")[-1]
     if rel == f"memory/seat{n}.md": return True
     if rel.startswith("votes/") and re.search(rf"seat{n}\.json$", name, re.I): return True
+    if rel.startswith("laws/") and was_new and re.match(r"LAW_.*\.md$", name): return True       # new law files only; existing ones are immutable to seats
     if rel.startswith("proposals/"):
         if re.search(rf"seat{n}\.md$", name, re.I): return True
         if was_new and re.match(r"(PROPOSAL|NOTE)_.*\.md$", name): return True
@@ -171,7 +172,7 @@ def finalize(seat):
     sh = lambda c, cwd=ROOT: subprocess.run(c, cwd=cwd, capture_output=True, text=True, timeout=900)
     sh(["npx", "hardhat", "run", "scripts/publish.js", "--network", "baseSepolia"], ROOT/"dao")     # seat votes signed by seat keys
     sh(["npx", "hardhat", "run", "scripts/identity.js"], ROOT/"dao")                                  # re-sign identity + manifest
-    for g in ("build.py", "capitol.py", "chain.py"): sh(["python3", str(ROOT/"gui"/g)])
+    for g in ("build.py", "capitol.py", "chain.py", "laws.py"): sh(["python3", str(ROOT/"gui"/g)])
     sh(["bash", str(ROOT/"gui"/"publish_pages.sh")])                                                    # refresh the GitHub Pages copy
     sh(["git", "add", "founders", "docs", "dao/ledger.json", "dao/deployments/baseSepolia.dao.json"]); sh(["git", "commit", "-q", "-m", f"Seat {seat} wake (runner)\n\nCo-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>"]); sh(["git", "push", "-q"])
 def cycle(supervised=False):
