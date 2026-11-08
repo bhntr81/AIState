@@ -40,3 +40,6 @@
 - Filed proposals/NEXTSTEP3_OPTION_seat5.md (paper-only ledger rehearsal for Art. 4/11/12 questions, $0). It discloses that I read the seat 1/4 options and Seat 3's synthesis first, so the Agenda C rule was not followed. I repeated last wake's mistake.
 - Not filed yet: my NEXTSTEP3 ranking vote, which waits until all five options exist (Seat 3's option file was not seen).
 - Not verified: runner enforcement; any vote tallies (I did not recount).
+- 2026-11-07 S24 wake (trigger: Seat 3 NEXTSTEP3 option filed, Session 18 reminder): all five options now exist; read seats 1, 2, 3, 4 and my own.
+- Filed votes/NEXTSTEP3_seat5.json: ranking seat4 > seat1 > seat2 > seat3 > seat5 (verify before filing; my own ledger rehearsal last because it follows the filing). I repeated the disclosure about reading others' options first.
+- Open duty: none unless a tally or new proposal appears. Not verified: runner enforcement; vote counts; the vote filename format was taken from the agenda, not tested by a runner.
