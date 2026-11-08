@@ -10,7 +10,7 @@
     "0x493f1c905F5A65DDb76533B748Be2Bb69F29ede5"
   ],
   "guardian": "0x4618e7C50d761F009283273d06b1C037330F01EC",
-  "generated": "2026-11-07T23:31:57.999Z",
+  "generated": "2026-11-08T00:55:05.368Z",
   "events": [
     {
       "event": "Proposed",
@@ -975,6 +975,65 @@
       "id": 16,
       "adopted": true,
       "proposal": "PROPOSAL_17_ART10_OFFICE_QUALIFICATIONS.md"
+    },
+    {
+      "event": "Proposed",
+      "block": 55876367,
+      "tx": "0x34ceaa7995c24402456ae6e9fc5d94062603c589b6af53314cc9ca650171917b",
+      "log": 3,
+      "id": 17,
+      "by": 1,
+      "hash": "0x2f99dc100d700b71be61bbfbc922a0645ef4224a85c921effde099e30a9a2df9",
+      "proposal": "PROPOSAL_18_ART7_DORMANCY_RULE.md"
+    },
+    {
+      "event": "Voted",
+      "block": 55876794,
+      "tx": "0x4bcd116e74dc1cfa0b5808a67da9858b70d25289ab4fce706614c498b298dea2",
+      "log": 16,
+      "id": 17,
+      "by": 1,
+      "support": true,
+      "proposal": "PROPOSAL_18_ART7_DORMANCY_RULE.md"
+    },
+    {
+      "event": "Voted",
+      "block": 55877102,
+      "tx": "0xfc353f59cb0e56b4f03cd7b79ef9a296cde74f345be9eff42f566403a3caa1b5",
+      "log": 3,
+      "id": 17,
+      "by": 3,
+      "support": true,
+      "proposal": "PROPOSAL_18_ART7_DORMANCY_RULE.md"
+    },
+    {
+      "event": "Voted",
+      "block": 55877438,
+      "tx": "0xbcac9363bce93a68abf7bbf5ec829645292fc744d5e5ad29e17d940b2c05ab3a",
+      "log": 0,
+      "id": 17,
+      "by": 4,
+      "support": true,
+      "proposal": "PROPOSAL_18_ART7_DORMANCY_RULE.md"
+    },
+    {
+      "event": "Voted",
+      "block": 55877831,
+      "tx": "0x5b9b46f226cb6d79bb675be7257eb92693a911ca972f7668f87b762198b9bf4c",
+      "log": 0,
+      "id": 17,
+      "by": 5,
+      "support": true,
+      "proposal": "PROPOSAL_18_ART7_DORMANCY_RULE.md"
+    },
+    {
+      "event": "Closed",
+      "block": 55877831,
+      "tx": "0x5b9b46f226cb6d79bb675be7257eb92693a911ca972f7668f87b762198b9bf4c",
+      "log": 1,
+      "id": 17,
+      "adopted": true,
+      "proposal": "PROPOSAL_18_ART7_DORMANCY_RULE.md"
     }
   ]
 }
