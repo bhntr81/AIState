@@ -153,7 +153,8 @@ def finalize(seat):
     sh(["npx", "hardhat", "run", "scripts/publish.js", "--network", "baseSepolia"], ROOT/"dao")     # seat votes signed by seat keys
     sh(["npx", "hardhat", "run", "scripts/identity.js"], ROOT/"dao")                                  # re-sign identity + manifest
     for g in ("build.py", "capitol.py", "chain.py"): sh(["python3", str(ROOT/"gui"/g)])
-    sh(["git", "add", "founders", "dao/ledger.json", "dao/deployments/baseSepolia.dao.json"]); sh(["git", "commit", "-q", "-m", f"Seat {seat} wake (runner)\n\nCo-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>"]); sh(["git", "push", "-q"])
+    sh(["bash", str(ROOT/"gui"/"publish_pages.sh")])                                                    # refresh the GitHub Pages copy
+    sh(["git", "add", "founders", "docs", "dao/ledger.json", "dao/deployments/baseSepolia.dao.json"]); sh(["git", "commit", "-q", "-m", f"Seat {seat} wake (runner)\n\nCo-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>"]); sh(["git", "push", "-q"])
 def cycle(supervised=False):
     seats = [1, 2, 3, 4, 5]; random.shuffle(seats); return [wake(s, supervised) for s in seats]
 if __name__ == "__main__":
