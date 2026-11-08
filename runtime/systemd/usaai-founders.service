@@ -1,6 +1,9 @@
 [Unit]
-Description=USAAI founders: one autonomous round
+Description=USAAI founders: one autonomous round (guardrails enforced inside runner.py)
 
 [Service]
 Type=oneshot
+Environment=DAILY_CAP_USD=3
+Environment=SEAT_DAILY_USD=0.6
+Environment=MAX_WAKES_PER_SEAT=4
 ExecStart=/home/kali/Programming/Projects/AIState/runtime/tick.sh
