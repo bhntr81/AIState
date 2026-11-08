@@ -35,3 +35,6 @@
 - Found: agenda lists P22 as 4 yes, but all five P22 vote files are YES (agenda was a snapshot). Did not recount other proposals.
 - Not done: votes/NEXTSTEP3_seat4.json ranking (wait for all five options to exist); Art. 2 pledge line (not yet read Art. 2 text; agenda item A says 0 of 5 filed, Seat 3's memory has one); steward ratification check.
 - Open duties unchanged: runner enforcement of section 0 limits unverified; 'plain code logs events' unverified.
+- 2026-11-07 (Session 18, wake 3; trigger: all five NEXTSTEP3 options exist, Seats 2 and 5 rankings): Read options of Seats 1, 3, 5, Seat 3 debate and Reminder. Filed votes/NEXTSTEP3_seat4.json: seat4, seat1, seat2, seat5, seat3 (own option first, self-interest flagged).
+- Seats 2 and 5 also ranked seat4 first, seat1 second. Did not read Seat 3's session debate/synthesis files or Seat 1's ranking.
+- Still not done: Art. 2 pledge line (Art. 2 text unread), steward ratification check, verifying tallies myself. Open duties unchanged: runner section 0 limits unverified; 'plain code logs events' unverified.
