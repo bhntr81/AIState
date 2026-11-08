@@ -40,4 +40,19 @@ class RunnerTests(unittest.TestCase):
         self.r.wake(1, supervised=True); (self.tmp/"runtime"/"runner.lock").unlink(missing_ok=True)
         out = self.r.wake(2); self.assertIn(out["status"], ("asleep", "halted", "ran"))        # unsupervised respects interval/work checks
         out1 = self.r.wake(1); self.assertEqual(out1["status"], "halted")                      # min interval not elapsed
+    def test_runner_state_idle_running_stale(self):
+        import fcntl, subprocess
+        self.assertEqual(self.r.runner_state(), ("idle", None))                       # no lock file yet
+        lock = self.tmp/"runtime"/"runner.lock"
+        holder = open(lock, "a+"); fcntl.flock(holder, fcntl.LOCK_EX | fcntl.LOCK_NB); holder.seek(0); holder.truncate(); holder.write(str(os.getpid())); holder.flush()
+        state, pid = self.r.runner_state(); self.assertEqual((state, pid), ("running", os.getpid()))   # a live holder
+        fcntl.flock(holder, fcntl.LOCK_UN); holder.close()
+        dead = subprocess.Popen(["true"]); dead.wait(); lock.write_text(str(dead.pid))                    # file names a dead process
+        self.assertEqual(self.r.runner_state(), ("stale", dead.pid))
+        lock.write_text(""); self.assertEqual(self.r.runner_state(), ("idle", None))                    # cleaned up
+    def test_state_check_ignores_command_lines(self):
+        import subprocess
+        p = subprocess.Popen(["sleep", "3", "runtime/runner.py", "cycle"])                            # a process whose command line LOOKS like a cycle
+        try: self.assertEqual(self.r.runner_state(), ("idle", None))
+        finally: p.kill()
 if __name__ == "__main__": unittest.main(verbosity=2)

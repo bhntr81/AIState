@@ -51,12 +51,40 @@ def verify_identity(seat):
     if entries.get(f"founders/identity/seat{seat}.identity.json") != claimed: return "identity fingerprint does not match the manifest"
     return None
 LOCK = None
+LOCK_FILE = RT/"runner.lock"
+def _pid_alive(pid):
+    try: os.kill(pid, 0); return True
+    except ProcessLookupError: return False
+    except PermissionError: return True
 def take_lock():
+    """One-heavy-process lock. The OS lock (flock) is the truth; the PID written inside is for status reports."""
     global LOCK
-    if LOCK is not None: return True          # this process already holds the one-heavy-process lock
-    LOCK = open(RT/"runner.lock", "w")
-    try: fcntl.flock(LOCK, fcntl.LOCK_EX | fcntl.LOCK_NB); return True
-    except OSError: LOCK = None; return False
+    if LOCK is not None: return True          # this process already holds the lock
+    LOCK = open(LOCK_FILE, "a+")
+    try: fcntl.flock(LOCK, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except OSError: LOCK.close(); LOCK = None; return False
+    LOCK.seek(0); LOCK.truncate(); LOCK.write(str(os.getpid())); LOCK.flush()
+    import atexit; atexit.register(release_lock)
+    return True
+def release_lock():
+    global LOCK
+    if LOCK is not None:
+        try: LOCK.seek(0); LOCK.truncate(); fcntl.flock(LOCK, fcntl.LOCK_UN); LOCK.close()
+        except Exception: pass
+        LOCK = None
+def runner_state():
+    """Returns ("running", pid) if a live process holds the lock, ("stale", pid) if the file names a dead process
+    (a crash left it behind; the OS lock itself is gone), else ("idle", None). Never inspects command lines."""
+    if not LOCK_FILE.exists(): return ("idle", None)
+    probe = open(LOCK_FILE, "a+")
+    try:
+        try: fcntl.flock(probe, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except OSError:
+            probe.seek(0); txt = probe.read().strip(); return ("running", int(txt) if txt.isdigit() else None)
+        probe.seek(0); txt = probe.read().strip()
+        if txt.isdigit() and not _pid_alive(int(txt)): return ("stale", int(txt))
+        fcntl.flock(probe, fcntl.LOCK_UN); return ("idle", None)
+    finally: probe.close()
 
 # ---------- path permissions (enforced after the run) ----------
 def allowed(seat, rel, was_new):
@@ -179,6 +207,7 @@ def cycle(supervised=False):
     seats = [1, 2, 3, 4, 5]; random.shuffle(seats); return [wake(s, supervised) for s in seats]
 if __name__ == "__main__":
     a = sys.argv[1:]; sup = "--supervised" in a
-    if a and a[0] == "wake": print(json.dumps(wake(int(a[1]), sup), indent=1))
+    if a and a[0] == "status": st, pid = runner_state(); print(json.dumps({"runner": st, "pid": pid}))
+    elif a and a[0] == "wake": print(json.dumps(wake(int(a[1]), sup), indent=1))
     elif a and a[0] == "cycle": print(json.dumps(cycle(sup), indent=1))
     else: print(__doc__)

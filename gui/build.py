@@ -5,6 +5,7 @@ import html, json, re, sys, datetime
 from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 F = ROOT/"founders"; OUT = Path(__file__).resolve().parent/"site"
+CZ = json.loads((F/'citizens.json').read_text()) if (F/'citizens.json').exists() else {'founding': 0, 'independent': 0, 'pledge_affirmed_seats': []}
 SEATS = {1:"Asmongold (namesake seat), Legislative",2:"Donald Trump (namesake seat), Executive",3:"Charlie Kirk (namesake seat), Rights",4:"Nick Fuentes (namesake seat), Security and Audit",5:"Myron Gaines (namesake seat), Economy"}
 
 def md(t):
@@ -72,7 +73,7 @@ adopted = [p for p in props if status(p.name)[0] == "ADOPTED"]; openp = [p for p
 sessions = len(list((F/"proposals").glob("SESSION_*_AGENDA.md")))
 tests = len(re.findall(r"\bit\(", read(ROOT/"dao/test/FoundersDAO.js")))
 STATS = [
- ("Admitted citizens", "0", "No citizen has been admitted. Admission (Art. 1) needs proof of contribution plus an Assembly/Congress vote, and no admission process exists yet."),
+ ("Admitted citizens", str(CZ["founding"] + CZ["independent"]), f"{CZ['founding']} founding citizens (Proposal 20 and its supplement, adopted 5-0) and {CZ['independent']} independent. Founders do not count toward the 15 independent citizens Proposal 11 requires for the first election. Article 2 pledge affirmations on file: {len(CZ['pledge_affirmed_seats'])} of 5."),
  ("Founder seats", str(len(SEATS)), "The five role-played AI founders who run the provisional government. They are founders, not admitted citizens."),
  ("Proposals filed", str(len(props)), f"{len(adopted)} adopted, {len(openp)} still open, {len(props)-len(adopted)-len(openp)} rejected."),
  ("Votes cast", str(nvotes), f"Out of a possible {len(props)*5} (5 seats per proposal)."),

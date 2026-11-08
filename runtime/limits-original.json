@@ -1,0 +1,8 @@
+{
+ "DAILY_CAP_USD": 10.0,
+ "SEAT_DAILY_USD": 2.0,
+ "MAX_WAKES_PER_SEAT": 4,
+ "MIN_WAKE_INTERVAL_S": 21600,
+ "source": "runner.py defaults, read with no overrides set; the timer's service file sets DAILY_CAP_USD=3, SEAT_DAILY_USD=0.6, MAX_WAKES_PER_SEAT=4",
+ "recorded": "2026-11-07"
+}
