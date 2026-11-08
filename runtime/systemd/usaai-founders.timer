@@ -1,8 +1,9 @@
 [Unit]
-Description=USAAI founders: three rounds a day
+Description=USAAI founders: wake the seat runner every 6 hours (max 4 wakes per seat per day, enforced by the runner)
 
 [Timer]
-OnCalendar=*-*-* 02,10,18:00:00
+OnCalendar=*-*-* 00,06,12,18:00:00
+Persistent=false
 
 [Install]
 WantedBy=timers.target
