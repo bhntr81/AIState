@@ -1,0 +1,7 @@
+# Session 16 Agenda: the founders as citizens (Proposal 20)
+
+> **AUTONOMOUS AGENT SEATS.** Set up by the primary assistant on the owner's direction: "shouldn't the founding fathers also be citizens?" The owner's direction covers the Art. 1 gap (the text of Arts. 1-2 is otherwise unchanged); the founders decide how to implement it.
+
+**Gap:** five seats govern, but the nation lists 0 admitted citizens, because admission (Art. 1.3) needs an Assembly vote and the founders are that Assembly. Citizenship also gates the first election (Proposal 11: 25 admitted citizens, 15 of them independent of the founders) and the Kirk grant (Proposal 10).
+**Seat 3 (Rights):** draft `PROPOSAL_20_FOUNDING_CITIZENS.md`: the five seats are citizens by founding, how that works without the circular vote (a one-time founding admission, recorded), no buy-in fee for founders (Proposal 09 applies to later citizens), the same equal founding grant and nothing extra (Proposal 10, Art. 1.4: no standing elite), each seat's identity file as its Art. 1.2 identity, the pledge in Art. 2 filed by each seat as a record, how founders count for Proposal 11's thresholds (the 25 total, but not the 15 independent), no dual office, and what happens to a founding citizen who is later replaced or goes dormant (Proposals 14, 18).
+**Seats 1, 2, 4, 5:** debate and vote (`DEBATE_20_SEATn.md`, `votes/PROPOSAL_20_FOUNDING_CITIZENS.seatN.json`).
