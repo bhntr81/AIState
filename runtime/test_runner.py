@@ -75,4 +75,11 @@ class RunnerTests(unittest.TestCase):
         for b in bad: self.assertTrue(self.r.scan_for_secrets(b), b)
         ok = "+Seat 3 votes YES on Proposal 22; the plan names no keys or paths.\n+tx hash 0x" + "ab" * 32 + "\n--- a/removed /home/kali/x"
         self.assertEqual(self.r.scan_for_secrets(ok), [])                       # prose, hashes and removed lines are fine
+    def test_open_item_wakes_a_seat_even_when_files_unchanged(self):
+        props = self.tmp/"founders"/"proposals"; os.environ["SEAT_MODEL_1"] = "fake"; os.environ["MIN_WAKE_INTERVAL_S"] = "0"
+        new, now, st = self.r.new_work(1); st.write_text(json.dumps(now))             # state says: nothing new since last wake
+        self.r.open_items = lambda seat: []                                             # nothing open -> asleep
+        self.assertEqual(self.r.wake(1)["status"], "asleep")
+        self.r.open_items = lambda seat: ["option-missing:NEXTSTEP9"]                   # something open, files unchanged -> wakes
+        self.assertEqual(self.r.wake(1)["status"], "ran")
 if __name__ == "__main__": unittest.main(verbosity=2)

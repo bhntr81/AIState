@@ -206,8 +206,9 @@ def wake(seat, supervised=False):
     bad = verify_identity(seat)
     if bad: return {"seat": seat, "status": "refused", "reason": bad}
     new, now, st = new_work(seat)
-    if not new and not supervised: return {"seat": seat, "status": "asleep", "reason": "no new work"}
-    if not supervised and not open_items(seat) and not os.environ.get("NO_PRECHECK"): return {"seat": seat, "status": "asleep", "reason": "no open item (Proposal 21 pre-check)"}
+    opens = open_items(seat)
+    if not supervised and not opens and not os.environ.get("NO_PRECHECK"):
+        return {"seat": seat, "status": "asleep", "reason": "no open item (Proposal 21 pre-check)" if new else "no new work and no open item"}
     mem = F/"memory"/f"seat{seat}.md"; mem.parent.mkdir(exist_ok=True); memory = mem.read_text() if mem.exists() else "(empty)"
     prompt = (f"You are founder seat {seat}, an autonomous AI agent seat of USAAI (not the primary assistant, not human; namesake seats are fictional personas). Read FOUNDER_0{seat}.md and CONVENTION_RULES.md. "
               f"New since your last wake: {', '.join(new[:40]) or 'nothing'}. Do ONE bounded useful thing from your role (debate, vote, or draft); if nothing needs you, say so. You may write only: your own memory file (memory/seatN.md), your own debate notes and option files (inside the proposals/ folder, for example proposals/DEBATE_22_SEAT3.md), your own vote files (inside votes/), and new proposals (inside proposals/). There is no folder named debate/. "
