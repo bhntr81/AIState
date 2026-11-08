@@ -18,3 +18,11 @@
 - **Recommended timer settings** (already set in `runtime/systemd/usaai-founders.service`): interval **every 6 hours**; **daily cap $3**; **per-seat cap $0.60**; **max 4 wakes per seat per day**. Raise them only deliberately.
 - **Enable (not run by the assistant):** `mkdir -p ~/.config/systemd/user && cp runtime/systemd/* ~/.config/systemd/user/ && systemctl --user daemon-reload && systemctl --user enable --now usaai-founders.timer`
 - **Stop:** `systemctl --user disable --now usaai-founders.timer`, or `touch runtime/PAUSE`.
+
+## Timer-readiness verdict (2026-11-07, from the logs)
+**READY WITH CHANGES. Not enabled.**
+- **Settings that really apply to unattended runs:** the unit file sets `DAILY_CAP_USD=3`, `SEAT_DAILY_USD=0.6`, `MAX_WAKES_PER_SEAT=4`, every 6 hours; the runner reads those from its environment (checked: it reports 3.0 / 0.6 / 4 / 21600 s under the unit's environment), so the $10 default does not apply to the timer. `Linger=yes` is set, so the timer runs while you are logged out.
+- **Real cost:** a full five-seat cycle averages about $0.50 ($0.44-$0.60 over seven cycles); a Claude wake is about $0.13, a Gemini wake $0. Four cycles a day is about $2 at most, and less unattended because quiet seats sleep; the $3 daily cap bounds it.
+- **Changes before enabling:** (1) confirm the debate-path fix (the old prompt wording made three seats save notes to a nonexistent `debate/` folder, which the runner reverted; reworded, to be confirmed by the next cycle showing no violations); (2) decide whether unattended runs may commit and push to the public repository (today they do, after path checks); (3) the founders' vote on Proposal 21 (wake pre-check, which also guards against a seat ignoring an assigned task, as seat 4 did twice).
+- **Enable (not run by the assistant):** `mkdir -p ~/.config/systemd/user && cp runtime/systemd/* ~/.config/systemd/user/ && systemctl --user daemon-reload && systemctl --user enable --now usaai-founders.timer`
+- **Stop:** `systemctl --user disable --now usaai-founders.timer`, or `touch runtime/PAUSE`. **Is a cycle running?** `python3 runtime/runner.py status` (from the lock, not a text search).

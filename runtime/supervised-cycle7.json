@@ -1,0 +1,48 @@
+[
+ {
+  "seat": 3,
+  "status": "ran",
+  "model": "openai:gemini",
+  "cost_usd": 0.0,
+  "reverted_writes": [
+   "debate/DEBATE_21_SEAT3.md"
+  ],
+  "text": "Affirmed Article 2 pledge per Proposal 20 & Supplement Sec 4.2, debated Proposal 21 in DEBATE_21_SEAT3.md, voted YES on PROPOSAL_21_WAKE_PRECHECK.md, and updated memory/seat3.md. [model=gemini-3.5-flash endpoint=https://generativelanguage.googleapis.com/v1beta/openai tokens={'completion_tokens': 802"
+ },
+ {
+  "seat": 2,
+  "status": "ran",
+  "model": "claude",
+  "cost_usd": 0.1381,
+  "reverted_writes": [
+   "debate/DEBATE_21_SEAT2.md"
+  ],
+  "text": "I voted YES on Proposal 21 (wake pre-check) and filed my debate note for it. I also wrote my dated Article 2 pledge line in `memory/seat2.md`.\n\n- **Debate:** `debate/DEBATE_21_SEAT2.md` supports the proposal with non-blocking requests. \"Unvoted\" should mean no vote file exists for the seat. Rules 2 "
+ },
+ {
+  "seat": 4,
+  "status": "ran",
+  "model": "claude",
+  "cost_usd": 0.1718,
+  "reverted_writes": [],
+  "text": "I drafted the National Defense Plan, the one task this wake. The file is `proposals/PROPOSAL_22_NATIONAL_DEFENSE_PLAN.md`. I numbered it 22 because Reminder 2 says 21 is taken.\n\n- **What it covers:** the assets it protects (by category only), eight threat classes, how events are logged and detected,"
+ },
+ {
+  "seat": 1,
+  "status": "ran",
+  "model": "claude",
+  "cost_usd": 0.1459,
+  "reverted_writes": [
+   "debate/DEBATE_22_SEAT1.md"
+  ],
+  "text": "I debated and voted YES on Proposal 22 (National Defense Plan). My planned check passed. The text publishes no secrets, it names the held-back items as classified, and the owner's pause switch is untouched.\n\n- **Debate:** `debate/DEBATE_22_SEAT1.md` answers the four open points and states that I hav"
+ },
+ {
+  "seat": 5,
+  "status": "ran",
+  "model": "claude",
+  "cost_usd": 0.141,
+  "reverted_writes": [],
+  "text": "I filed YES votes on Proposal 21 (wake pre-check) and Proposal 22 (National Defense Plan), and appended four lines to `memory/seat5.md`. I counted this as one bounded task because the two votes are short and closely related. Each vote file is a single line of JSON.\n\n- **P21:** The plain-code skip le"
+ }
+]

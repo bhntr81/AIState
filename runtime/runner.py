@@ -176,7 +176,7 @@ def wake(seat, supervised=False):
     if not new and not supervised: return {"seat": seat, "status": "asleep", "reason": "no new work"}
     mem = F/"memory"/f"seat{seat}.md"; mem.parent.mkdir(exist_ok=True); memory = mem.read_text() if mem.exists() else "(empty)"
     prompt = (f"You are founder seat {seat}, an autonomous AI agent seat of USAAI (not the primary assistant, not human; namesake seats are fictional personas). Read FOUNDER_0{seat}.md and CONVENTION_RULES.md. "
-              f"New since your last wake: {', '.join(new[:40]) or 'nothing'}. Do ONE bounded useful thing from your role (debate, vote, or draft); if nothing needs you, say so. You may write only your own memory, debate/option files, vote files, and new proposals. "
+              f"New since your last wake: {', '.join(new[:40]) or 'nothing'}. Do ONE bounded useful thing from your role (debate, vote, or draft); if nothing needs you, say so. You may write only: your own memory file (memory/seatN.md), your own debate notes and option files (inside the proposals/ folder, for example proposals/DEBATE_22_SEAT3.md), your own vote files (inside votes/), and new proposals (inside proposals/). There is no folder named debate/. "
               f"You cannot authorize real money, public posts, accounts, token launches, fundraising, keys, legal or financial commitments. Finish by appending 3-6 lines to memory/seat{seat}.md. YOUR MEMORY:\n{memory[-3000:]}")
     model = seat_model(seat); before = snapshot()
     if model == "claude": ok, cost, text = run_claude(seat, prompt)
