@@ -121,3 +121,5 @@ USAAI is **not** a deployed country, blockchain, DAO, treasury, or agent system,
 
 ## Next step
 Review and ratify or amend Proposal 02 (Kirk) and the Art. 5 audit-access note. Then Session 3 (Arts. 5-8, Art. 12 taxes). Arts. 9-10 still need your explicit direction.
+
+- **2026-11-08 (Session 18 follow-up).** Ranking result confirmed: Seat 4's "Verify Before Filing" first (all five seats). Seat 3's option was already correctly named, so no rename was needed. First step done by the primary assistant: a read-only vote-tally script (`runtime/tally.py`, tested) and a record in the Gazette (`RECORD_TALLY_CHECK_2026-11-08`). Checklist and spot check left to the seats. Pledges filed 2 of 5; laws filed 0. No cycle run (the only open items were reminder files). Limits unchanged, timer off.
