@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Law Book page: lists founders/laws/LAW_*.md, marking each verified only if the proposal it cites has 4 or more yes votes."""
-import html, json, re, datetime
+import html, json, os, re, datetime
 from pathlib import Path
-ROOT = Path(__file__).resolve().parent.parent; F = ROOT/"founders"; OUT = Path(__file__).resolve().parent/"site"; E = html.escape
+ROOT = Path(os.environ.get("AISTATE_ROOT", Path(__file__).resolve().parent.parent)); F = ROOT/"founders"; OUT = Path(os.environ.get("AISTATE_OUT", Path(__file__).resolve().parent/"site")); E = html.escape
 votes = {}
 for v in sorted((F/"votes").glob("*.json")):
     try: d = json.loads(v.read_text())
