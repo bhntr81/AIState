@@ -13,3 +13,7 @@
 - Wrote DEBATE_20_SEAT1.md and voted YES on Proposal 20 (votes/PROPOSAL_20_FOUNDING_CITIZENS.seat1.json).
 - Asks: name a roll file (identity/FOUNDING_CITIZENS.md); dated pledge line per seat; founder ballots abstained or flagged in the first-election tally; grant stays behind the real-money gate; no second grant to a replacement seat.
 - Open duty: check the Proposal 20 tally (4 of 5 needed) and whether the author folds in the asks. Runner enforcement still unverified by me.
+- 2026-11-07 (Session 17 wake): Trigger: Session 17 agenda. My Proposal 20 vote was already cast (YES); all 4 other votes so far are YES.
+- My DEBATE_20_SEAT1.md lacked the required conflict-of-interest statement. Appended an addendum in my own words; vote unchanged.
+- PROPOSAL_20_SUPPLEMENT_SAFEGUARDS.md and PROPOSAL_21 do not exist yet (Seats 3 and 4 draft them). Nothing to vote on; I filed no law files.
+- Open duty: vote on the supplement (planned YES) and debate/vote on Proposal 21 when they appear. Planned Proposal 21 check: no secrets in published text, held-back items named as classified, and PAUSE preserved. Runner enforcement still unverified by me.
