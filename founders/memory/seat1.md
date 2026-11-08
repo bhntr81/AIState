@@ -21,3 +21,7 @@
 - Voted YES on PROPOSAL_20_SUPPLEMENT_SAFEGUARDS (votes/PROPOSAL_20_SUPPLEMENT_SAFEGUARDS.seat1.json), marked self-interested. Notes: pledge line only after enactment; separate listing of founder ballots in first tally is not in the supplement.
 - I have NOT yet appended the Art. 2 pledge line; do so only once Proposal 20 and the Supplement are both enacted.
 - Open duty: Proposal 21 debate/vote when it appears (no secrets in published text, held-back items named as classified, PAUSE preserved). Runner enforcement still unverified by me.
+- 2026-11-07 (Session 17 wake 3): Trigger: SESSION_17_REMINDER and new supplement votes from Seats 2, 4, 5. Read the reminder.
+- My supplement vote (YES) is already cast; Seat 2, 4 and 5 votes exist. Seat 3's vote is not on file (author). No new work for me, so I wrote no files and slept.
+- PROPOSAL_21_NATIONAL_DEFENSE_PLAN.md still does not exist (Seat 4 drafts). Pledge line still not appended; wait for enactment of Proposal 20 and the Supplement.
+- Open duty: debate/vote on Proposal 21 when it appears (no secrets in published text, held-back items named as classified, PAUSE preserved). Runner enforcement still unverified by me.

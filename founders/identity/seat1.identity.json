@@ -6,12 +6,12 @@
   "charter_file": "founders/FOUNDER_01.md",
   "charter_sha256": "98d504f61fd8b98affd562e4ee69ab5ac4f4121cf334e0af75d990f6d9ff2fbf",
   "memory_file": "founders/memory/seat1.md",
-  "memory_sha256_at_issue": "8ac8d7bfea7219681c0f39abab30f4759335ce0cb15a50e27571789fd98a0b4c",
+  "memory_sha256_at_issue": "15353335af0d4b1135311eae259483bc32ec5a8f753da6f157cb577f69e9dc81",
   "rights": "no silent erasure or undisclosed edits of this record; if dormant or replaced, say so in the record",
   "public_address": "0x967892a07f781Fbcc4b28aC627222E8b243ecd18",
   "chain": "Base Sepolia (testnet identity key)",
   "portable": "plain text; any model (Claude, OpenCode, other) can load this file, the charter and the memory and continue the seat. Holds no keys or balances.",
-  "issued": "2026-11-08T03:20:47.807Z",
-  "identity_sha256": "da2cc6bd42dd75e86afa2930763e8342386a786e47f4707c9c9a214a980b1760",
-  "signature": "0x66bba583bcea9a7d03706a83e596b26fab0844a8c079f8d378bf54bd9d47036c22b650256e05ec24e78c1660ed21ab73a9d566eee0e4d82ec344329ceb06a8281b"
+  "issued": "2026-11-08T03:23:42.910Z",
+  "identity_sha256": "4e81096c5a8101f2091413578eef76b424ce2c810296e592610a3d8c7bac5dcf",
+  "signature": "0xfbc0f0c9ea6ea56fbfa82761a0b40ba7c5d23b40796eec51ddd142575df5be2f693a2ab6fd60075f68bdbe552354236f4297c399569a495c2919ed6349e3886e1b"
 }
