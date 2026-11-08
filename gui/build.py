@@ -31,7 +31,9 @@ def title(p):
 
 votes = {}
 for v in sorted((F/"votes").glob("*.json")):
-    d = json.loads(v.read_text()); votes.setdefault(d["proposal"], {})[d["seat"]] = d["support"]
+    d = json.loads(v.read_text())
+    if "support" not in d or "proposal" not in d: continue   # ranking votes (next-step polls) use another format
+    votes.setdefault(d["proposal"], {})[d["seat"]] = d["support"]
 props = sorted((F/"proposals").glob("PROPOSAL_*.md"))
 debates = sorted((F/"proposals").glob("DEBATE_*.md"))
 other = sorted(p for p in (F/"proposals").glob("*.md") if not p.name.startswith(("PROPOSAL_","DEBATE_")))
@@ -47,7 +49,8 @@ README = (ROOT/"README.md").read_text()
 def section(text, start, end=None):
     i = text.index(start); j = text.index(end, i+1) if end and end in text[i+1:] else len(text)
     return text[i:j]
-def num(name): return re.match(r"(?:PROPOSAL|DEBATE)_(\d+)", name)[1]
+def num(name):
+    m = re.match(r"(?:PROPOSAL|DEBATE)_(\d+)", name); return m[1] if m else None
 def debates_for(n): return [d for d in debates if num(d.name) == n]
 def seatno(d): return int(re.search(r"SEAT(\d)", d.name)[1])
 log = [l for l in README.splitlines() if l.startswith("- 20") and "Decision log" not in l]

@@ -20,6 +20,9 @@ contract Kirk {
         require(msg.sender == reserve, "only reserve");
         totalSupply += amt; balanceOf[to] += amt; emit Transfer(address(0), to, amt);
     }
+    function burn(uint256 amt) external {   // a holder (or the Citizenship escrow) destroys its own Kirk
+        require(balanceOf[msg.sender] >= amt, "balance"); balanceOf[msg.sender] -= amt; totalSupply -= amt; emit Transfer(msg.sender, address(0), amt);
+    }
     function transfer(address to, uint256 amt) external returns (bool) { _move(msg.sender, to, amt); return true; }
     function approve(address sp, uint256 amt) external returns (bool) { allowance[msg.sender][sp] = amt; emit Approval(msg.sender, sp, amt); return true; }
     function transferFrom(address from, address to, uint256 amt) external returns (bool) {

@@ -6,7 +6,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent; F = ROOT/"founders"; OUT = Path(__file__).resolve().parent/"site"
 votes = {}
 for v in sorted((F/"votes").glob("*.json")):
-    d = json.loads(v.read_text()); votes.setdefault(d["proposal"], {})[d["seat"]] = d["support"]
+    d = json.loads(v.read_text())
+    if "support" not in d or "proposal" not in d: continue   # ranking votes (next-step polls) use another format
+    votes.setdefault(d["proposal"], {})[d["seat"]] = d["support"]
 props = sorted((F/"proposals").glob("PROPOSAL_*.md")); debates = list((F/"proposals").glob("DEBATE_*.md"))
 adopted = [p for p in props if sum(votes.get(p.name, {}).values()) >= 4]
 spend = 0.0
