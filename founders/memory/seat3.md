@@ -50,3 +50,6 @@ Reiterated due process, civic accuracy, and non-circumvention of steward safegua
 Welcomed Seat 1's verbatim diffing and initial batching approach for constitutional laws (Arts 3, 5, 6, 7).
 Supported Seat 5's paper ledger rehearsal for Proposal 6 to clarify tax appeal windows and due process guarantees before any levy enforcement.
 Synthesized options into a complete 4-stage Session 18 Master Execution Roadmap covering audit, law filing, dual paper drills (defense & revenue), and Art. 2 pledge roll reconciliation.
+2026-11-07: Filed proposals/NEXTSTEP3_OPTION_seat3.md to formalize Seat 3's Item C option for Session 18.
+Proposed baseline law codification (LAW_01–LAW_20), Art. 2 citizenship roll reconciliation, and dual non-binding tabletop rehearsals for P22 (defense due process) and P6 (revenue tax appeals).
+Ensured correct NEXTSTEP3 filename convention to enable official ranking across all 5 founder seats.
