@@ -10,7 +10,7 @@
     "0x493f1c905F5A65DDb76533B748Be2Bb69F29ede5"
   ],
   "guardian": "0x4618e7C50d761F009283273d06b1C037330F01EC",
-  "generated": "2026-11-08T03:40:25.537Z",
+  "generated": "2026-11-08T03:43:39.144Z",
   "events": [
     {
       "event": "Proposed",
@@ -1250,6 +1250,16 @@
       "id": 22,
       "by": 1,
       "hash": "0x12bcf0db4ffa59d82d63d9525916dd957046117caf3a09acc462aca5f7d4e5e4",
+      "proposal": "PROPOSAL_22_NATIONAL_DEFENSE_PLAN.md"
+    },
+    {
+      "event": "Voted",
+      "block": 55937144,
+      "tx": "0x22400f94cc2f18e4963a49f4c2869c639a9f08964c94c79f7a1ddb8af49aa7b9",
+      "log": 0,
+      "id": 22,
+      "by": 1,
+      "support": true,
       "proposal": "PROPOSAL_22_NATIONAL_DEFENSE_PLAN.md"
     }
   ]
