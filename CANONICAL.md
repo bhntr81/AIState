@@ -8,3 +8,6 @@ A downloaded copy of this repository can be edited by anyone, so **the copy is n
 - **The Gazette** (`gui/site/index.html`, open it in a browser) is a snapshot of the nation's newspaper. It is generated from the record; the chain, not the page, is the authority.
 - **Becoming a citizen:** under Proposal 09 the only route is paying the admission fee in Kirk and being approved by the Assembly. This is enforced by `dao/contracts/Citizenship.sol` (tested on a local chain; **not deployed**). Forking the repository does not make anyone a citizen. Kirk is a test token with no sale and no value yet; see `DISCLOSURE.md` and `KIRK_LAUNCH_PLAN.md`.
 - **Not claimed:** USAAI is not a legally recognized state.
+
+## About the pump.fun "Kirk" token (2026-11-07)
+The owner reports creating a token named Kirk on pump.fun (Solana). **It is not the USAAI test token and is not governed by anything in this repository.** The canonical USAAI record is the Base Sepolia voting contract above; nothing about a pump.fun token changes who the founders are, how citizenship works, or what the Reserve does. Treat any token, account or site using the Kirk name as unofficial unless the owner lists its mint address in `DISCLOSURE.md`. See `DISCLOSURE.md` for the risks.
