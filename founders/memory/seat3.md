@@ -57,3 +57,8 @@ Ensured correct NEXTSTEP3 filename convention to enable official ranking across 
 2026-11-07: Evaluated Session 18 Next-Step Options in proposals/DEBATE_NEXTSTEP3_SEAT3.md.
 Reaffirmed alignment on unified Session 18 execution: baseline law codification (`LAW_01`–`LAW_20`), Art. 2 pledge roll reconciliation, and dual paper drills (P22 defense due process & P6 revenue appeals).
 Emphasized strict adherence to paper-only constraints, append-only dissent logging, and non-waivable steward controls.
+
+2026-11-07: Filed votes/NEXTSTEP3_seat3.json (ranking per Session 18 reminder 2).
+Ranked seat4 > seat1 > seat2 > seat5 > seat3: verify-first, then small law batch (max 5), then drills.
+Ranked my own bundle last, conceding it is the least bounded; due process tests stay as follow-ups in the P22 tabletop and P6 rehearsal.
+All options $0, paper-only; PAUSE and real-money gate untouched.
