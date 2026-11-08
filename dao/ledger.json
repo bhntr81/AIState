@@ -10,7 +10,7 @@
     "0x493f1c905F5A65DDb76533B748Be2Bb69F29ede5"
   ],
   "guardian": "0x4618e7C50d761F009283273d06b1C037330F01EC",
-  "generated": "2026-11-08T01:53:27.582Z",
+  "generated": "2026-11-08T01:55:44.767Z",
   "events": [
     {
       "event": "Proposed",
@@ -1093,6 +1093,16 @@
       "id": 18,
       "adopted": true,
       "proposal": "PROPOSAL_19_SELF_WAKE_RULE.md"
+    },
+    {
+      "event": "Proposed",
+      "block": 55904881,
+      "tx": "0x5d7bc6158227f990483aecb27ce6ffc94e30d98c96b62c55f80b452ed00a40c1",
+      "log": 0,
+      "id": 19,
+      "by": 1,
+      "hash": "0xa3d560cb5de9c812cb3de944dc3222c8f905b4cd9a4b8a97b91a2a35e083f597",
+      "proposal": "PROPOSAL_20_FOUNDING_CITIZENS.md"
     }
   ]
 }
