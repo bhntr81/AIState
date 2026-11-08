@@ -1,0 +1,27 @@
+{
+  "kimi": {
+    "base": "https://api.moonshot.ai/v1",
+    "model": "kimi-k3",
+    "key_file": "/home/kali/Programming/API-KEYS/Kimi",
+    "price_in_per_m": 0.6,
+    "price_out_per_m": 2.5,
+    "note": "account suspended for insufficient balance on 2026-11-07; unusable until recharged by the owner. prices are ESTIMATES; key is read from the owner's key folder by path, never copied into the repo"
+  },
+  "deepseek": {
+    "base": "https://api.deepseek.com",
+    "model": "deepseek-chat",
+    "key_file": "~/.config/aistate/deepseek.key",
+    "env": "DEEPSEEK_API_KEY",
+    "price_in_per_m": 0.3,
+    "price_out_per_m": 1.2,
+    "note": "estimates; waiting on key"
+  },
+  "gemini": {
+    "base": "https://generativelanguage.googleapis.com/v1beta/openai",
+    "model": "gemini-3.5-flash",
+    "key_file": "/home/kali/Programming/API-KEYS/gemini",
+    "price_in_per_m": 0.0,
+    "price_out_per_m": 0.0,
+    "note": "free tier (about 5 requests/minute); cost recorded as 0; key read from the owner's key folder by path"
+  }
+}

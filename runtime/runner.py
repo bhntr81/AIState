@@ -79,38 +79,53 @@ def enforce_paths(seat, before):
         else: full.unlink(missing_ok=True)
     return bad
 
+def normalize_votes(seat):
+    """Models differ in how they write vote files; the runner (code, not the model) rewrites them to the canonical shape."""
+    for p in (F/"votes").glob(f"*seat{seat}.json"):
+        try: d = json.loads(p.read_text())
+        except Exception: continue
+        if "ranking" in d: continue                                    # next-step ranking votes have their own format
+        changed = False
+        if "support" not in d and "vote" in d: d["support"] = str(d["vote"]).strip().upper() in ("YES", "FOR", "TRUE", "SUPPORT"); changed = True
+        if "proposal" not in d:
+            m = re.match(r"(PROPOSAL_.+)\.seat\d\.json$", p.name, re.I)
+            if m: d["proposal"] = m[1] + ".md"; changed = True
+        if "seat" not in d: d["seat"] = int(seat); changed = True
+        if changed: p.write_text(json.dumps(d))
+
 # ---------- backends ----------
 def seat_model(seat):
     cfg = json.loads((RT/"seats.json").read_text()) if (RT/"seats.json").exists() else {}
     return os.environ.get(f"SEAT_MODEL_{seat}") or cfg.get(str(seat), "claude")
-def deepseek_key():
-    k = os.environ.get("DEEPSEEK_API_KEY")
-    if k: return k.strip()
-    p = Path.home()/".config/aistate/deepseek.key"
-    return p.read_text().strip() if p.exists() else None
+def provider_cfg(name):
+    cfg = json.loads((RT/"providers.json").read_text()); return cfg[name]
+def provider_key(c):
+    k = os.environ.get(c.get("env", ""), "") if c.get("env") else ""
+    if k.strip(): return k.strip()
+    p = Path(os.path.expanduser(c.get("key_file", "")))
+    return p.read_text().strip() if p.is_file() else None
 def run_claude(seat, prompt):
     r = subprocess.run(["claude", "-p", prompt, "--max-budget-usd", str(PER_RUN_CAP), "--allowedTools", "Read", "Write", "Edit", "Glob", "Grep",
                         "--permission-mode", "acceptEdits", "--output-format", "json"], cwd=F, capture_output=True, text=True, timeout=900)
     try: d = json.loads(r.stdout); return True, float(d.get("total_cost_usd", PER_RUN_CAP)), d.get("result", "")
     except Exception: return False, PER_RUN_CAP, r.stdout[-300:] + r.stderr[-300:]
-def run_deepseek(seat, prompt, context):
-    key = deepseek_key()
-    if not key: return None, 0.0, "waiting on key: no DEEPSEEK_API_KEY and no ~/.config/aistate/deepseek.key"
-    base = os.environ.get("DEEPSEEK_BASE_URL", "https://api.deepseek.com"); model = os.environ.get("DEEPSEEK_MODEL", "deepseek-chat")
-    body = {"model": model, "messages": [{"role": "system", "content": "You are a founder seat of USAAI, an autonomous AI agent. Answer ONLY with JSON: {\"writes\":[{\"path\":\"relative/path\",\"content\":\"...\"}],\"summary\":\"...\"}. Paths are relative to the founders folder. Use \"append\" instead of \"content\" to append."},
+def run_openai_compat(seat, provider, prompt, context):
+    c = provider_cfg(provider); key = provider_key(c)
+    if not key: return None, 0.0, f"waiting on key: no key for provider {provider}"
+    body = {"model": c["model"], "messages": [{"role": "system", "content": "You are a founder seat of USAAI, an autonomous AI agent. Answer ONLY with JSON: {\"writes\":[{\"path\":\"relative/path\",\"content\":\"...\"}],\"summary\":\"...\"}. Paths are relative to the founders folder. Use \"append\" instead of \"content\" to append."},
             {"role": "user", "content": prompt + "\n\n" + context}], "response_format": {"type": "json_object"}}
-    req = urllib.request.Request(base + "/chat/completions", json.dumps(body).encode(), {"Content-Type": "application/json", "Authorization": "Bearer " + key})
+    req = urllib.request.Request(c["base"] + "/chat/completions", json.dumps(body).encode(), {"Content-Type": "application/json", "Authorization": "Bearer " + key})
     with urllib.request.urlopen(req, timeout=300) as resp: out = json.load(resp)
-    u = out.get("usage", {}); pin = float(os.environ.get("DEEPSEEK_PRICE_IN_PER_M", "0.30")); pout = float(os.environ.get("DEEPSEEK_PRICE_OUT_PER_M", "1.20"))
-    cost = u.get("prompt_tokens", 0) / 1e6 * pin + u.get("completion_tokens", 0) / 1e6 * pout   # ESTIMATE from configured prices
-    data = json.loads(out["choices"][0]["message"]["content"])
+    u = out.get("usage", {})
+    cost = u.get("prompt_tokens", 0) / 1e6 * c["price_in_per_m"] + u.get("completion_tokens", 0) / 1e6 * c["price_out_per_m"]   # ESTIMATE from configured prices
+    txt = out["choices"][0]["message"]["content"]; data = json.loads(txt[txt.index("{"): txt.rindex("}") + 1])
     for w in data.get("writes", []):
         full = (F/w["path"]).resolve()
         if F.resolve() not in full.parents: continue      # never outside founders/
         full.parent.mkdir(parents=True, exist_ok=True)
         if "append" in w: open(full, "a").write(w["append"])
         else: full.write_text(w.get("content", ""))
-    return True, cost, f"{data.get('summary','')} [model={model} endpoint={base} tokens={u}]"
+    return True, cost, f"{data.get('summary','')} [model={c['model']} endpoint={c['base']} tokens={u} cost_est_usd={cost:.5f}]"
 def run_fake(seat, prompt):
     (F/"votes"/f"TESTVOTE.seat{seat}.json").write_text('{"ok":1}')               # allowed
     (F/"CONVENTION_RULES.md").write_text("tampered"); (F/"memory"/f"seat{(seat % 5) + 1}.md").write_text("x")  # not allowed
@@ -137,12 +152,16 @@ def wake(seat, supervised=False):
     model = seat_model(seat); before = snapshot()
     if model == "claude": ok, cost, text = run_claude(seat, prompt)
     elif model == "fake": ok, cost, text = run_fake(seat, prompt)
-    elif model.startswith("deepseek"):
+    elif model.startswith("deepseek") or model.startswith("openai:"):
         ctx = "\n\n".join(f"== {k}\n" + (F/k).read_text()[:3500] for k in new[:6] if (F/k).exists()) + f"\n== CHARTER\n" + (F/f"FOUNDER_0{seat}.md").read_text()
-        ok, cost, text = run_deepseek(seat, prompt, ctx)
+        try: ok, cost, text = run_openai_compat(seat, model.split(":", 1)[1] if ":" in model else model, prompt, ctx)
+        except Exception as e:                                   # provider errors must never crash a cycle
+            body = e.read()[:300].decode("utf-8", "ignore") if hasattr(e, "read") else ""
+            return {"seat": seat, "status": "failed", "model": model, "reason": f"{type(e).__name__}: {e} {body}"[:400]}
         if ok is None: return {"seat": seat, "status": "waiting on key", "reason": text, "model": model}
     else: return {"seat": seat, "status": "error", "reason": f"unknown model setting {model}"}
     violations = enforce_paths(seat, before)
+    normalize_votes(seat)
     record_cost(seat, cost, model, "violations:" + ",".join(violations) if violations else "")
     if ok: st.write_text(json.dumps(now))
     if ok and not os.environ.get("NO_FINALIZE"): finalize(seat)
