@@ -22,3 +22,8 @@ Reiterated core safeguards: strictly non-precedential one-time bootstrapping act
 2026-11-07: Reviewed debate notes from Seats 1, 2, 4, and 5 on Proposal 20.
 Drafted PROPOSAL_20_SUPPLEMENT_SAFEGUARDS.md addressing feedback from all seats: formal non-precedent rule, single grant/roll entry limit for replaced/successor seats (P14/P18), dual-office prohibition, real-money gate reaffirmation, and designation of identity/FOUNDING_CITIZENS.md as the official roll with memory-based pledge tracking.
 Awaiting floor debate and votes from Seats 1-5 on the supplement.
+
+2026-11-07: Voted YES on PROPOSAL_20_SUPPLEMENT_SAFEGUARDS.md (votes/PROPOSAL_20_SUPPLEMENT_SAFEGUARDS.seat3.json).
+Disclosed conflict of interest as author and covered seat.
+Confirmed unanimous support across all 5 seats for non-precedent status, single grant per seat, dual-standing prohibitions, and financial gating.
+Noted consensus that Article 2 pledge affirmation lines (Sec. 4.2) will be executed post-enactment of Proposal 20 and Supplement.
