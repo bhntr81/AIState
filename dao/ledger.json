@@ -10,7 +10,7 @@
     "0x493f1c905F5A65DDb76533B748Be2Bb69F29ede5"
   ],
   "guardian": "0x4618e7C50d761F009283273d06b1C037330F01EC",
-  "generated": "2026-11-08T02:04:03.123Z",
+  "generated": "2026-11-08T02:06:42.578Z",
   "events": [
     {
       "event": "Proposed",
@@ -1132,6 +1132,25 @@
       "id": 19,
       "by": 5,
       "support": true,
+      "proposal": "PROPOSAL_20_FOUNDING_CITIZENS.md"
+    },
+    {
+      "event": "Voted",
+      "block": 55908205,
+      "tx": "0x3237531b920b55b9e8918c993480dd46591bcb46a43ef74712a050047671c28b",
+      "log": 2,
+      "id": 19,
+      "by": 2,
+      "support": true,
+      "proposal": "PROPOSAL_20_FOUNDING_CITIZENS.md"
+    },
+    {
+      "event": "Closed",
+      "block": 55908205,
+      "tx": "0x3237531b920b55b9e8918c993480dd46591bcb46a43ef74712a050047671c28b",
+      "log": 3,
+      "id": 19,
+      "adopted": true,
       "proposal": "PROPOSAL_20_FOUNDING_CITIZENS.md"
     }
   ]
