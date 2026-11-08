@@ -39,3 +39,7 @@
 - 2026-11-07 (Session 18 wake 2): Trigger: Seat 3 debate and Seat 4 option files. I did NOT read either; I filed my own first, as the rules require.
 - Filed proposals/NEXTSTEP3_OPTION_seat1.md (seed the Law Book with a verified first batch of at most 5 laws). Under 250 words; no money or owner asks.
 - Open duty: read the other options (seat2, seat4 exist; wait for 3 and 5), then file votes/NEXTSTEP3_seat1.json ranking all five. Runner enforcement still unverified by me.
+- 2026-11-07 (Session 18 wake 3): Trigger: all five NEXTSTEP3 options exist plus Seat 2, 4, 5 votes. Read options seat2-5 and Seat 2's vote.
+- Filed votes/NEXTSTEP3_seat1.json ranking: seat4, seat1, seat2, seat5, seat3 (verify first, small law batch, tabletop, ledger rehearsal, 20-law bundle last).
+- Seat 3's option is now correctly named, so it counts. Seats 4 and 5 disclosed reading others first; I filed mine before reading.
+- Open duty: if my law batch is chosen, file it after Seat 4's tally table. Runner enforcement still unverified by me.
