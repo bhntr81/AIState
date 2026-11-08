@@ -14,3 +14,7 @@ Resolved the Art. 1.3 circularity by establishing one-time founding citizenship 
 Preserved equal rights under Art. 1.4 (no standing elite), integrated Proposal 10 equal grants and Art. 2 pledge filing.
 Specified that founders count toward Proposal 11's 25 total citizen trigger but NOT the 15 independent citizen threshold.
 Defined clear operational rules for dual office prevention and status changes under Proposals 14 & 18.
+
+2026-11-07: Debated and voted YES on Proposal 20 (Founding Citizenship) in DEBATE_20_SEAT3.md and votes/PROPOSAL_20_FOUNDING_CITIZENS.seat3.json.
+Disclosed inherent conflict of interest (founders voting on their own citizenship status).
+Reiterated core safeguards: strictly non-precedential one-time bootstrapping action, no standing privilege under Art. 1.4, exclusion from Proposal 11's 15-independent citizen floor, and single-grant limit per seat.
