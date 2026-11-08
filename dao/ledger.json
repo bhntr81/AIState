@@ -10,7 +10,7 @@
     "0x493f1c905F5A65DDb76533B748Be2Bb69F29ede5"
   ],
   "guardian": "0x4618e7C50d761F009283273d06b1C037330F01EC",
-  "generated": "2026-11-08T01:05:48.307Z",
+  "generated": "2026-11-08T01:33:49.697Z",
   "events": [
     {
       "event": "Proposed",
@@ -1052,6 +1052,26 @@
       "log": 2,
       "id": 18,
       "by": 4,
+      "support": true,
+      "proposal": "PROPOSAL_19_SELF_WAKE_RULE.md"
+    },
+    {
+      "event": "Voted",
+      "block": 55890683,
+      "tx": "0xf2d49619fd1f45bfff3b1236b422fc4993935eb5254dfa60183e3814625088de",
+      "log": 0,
+      "id": 18,
+      "by": 3,
+      "support": true,
+      "proposal": "PROPOSAL_19_SELF_WAKE_RULE.md"
+    },
+    {
+      "event": "Voted",
+      "block": 55898451,
+      "tx": "0x30077ba660c8fd340a73eaa21f1920a90ab46fac9a34621b8efcda8470a508ae",
+      "log": 0,
+      "id": 18,
+      "by": 1,
       "support": true,
       "proposal": "PROPOSAL_19_SELF_WAKE_RULE.md"
     }
