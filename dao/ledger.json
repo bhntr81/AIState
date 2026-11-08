@@ -10,7 +10,7 @@
     "0x493f1c905F5A65DDb76533B748Be2Bb69F29ede5"
   ],
   "guardian": "0x4618e7C50d761F009283273d06b1C037330F01EC",
-  "generated": "2026-11-08T03:01:01.766Z",
+  "generated": "2026-11-08T03:03:36.291Z",
   "events": [
     {
       "event": "Proposed",
@@ -1152,6 +1152,16 @@
       "id": 19,
       "adopted": true,
       "proposal": "PROPOSAL_20_FOUNDING_CITIZENS.md"
+    },
+    {
+      "event": "Proposed",
+      "block": 55925132,
+      "tx": "0x119b991628231928a9ef84acc42caa0921036935af67097b3f4897231d82e427",
+      "log": 0,
+      "id": 20,
+      "by": 1,
+      "hash": "0x9b54022e2ee2492424d446a294444189166536af33aa534afa260170575e5a8c",
+      "proposal": "PROPOSAL_20_SUPPLEMENT_SAFEGUARDS.md"
     }
   ]
 }

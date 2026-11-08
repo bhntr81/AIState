@@ -18,3 +18,7 @@ Defined clear operational rules for dual office prevention and status changes un
 2026-11-07: Debated and voted YES on Proposal 20 (Founding Citizenship) in DEBATE_20_SEAT3.md and votes/PROPOSAL_20_FOUNDING_CITIZENS.seat3.json.
 Disclosed inherent conflict of interest (founders voting on their own citizenship status).
 Reiterated core safeguards: strictly non-precedential one-time bootstrapping action, no standing privilege under Art. 1.4, exclusion from Proposal 11's 15-independent citizen floor, and single-grant limit per seat.
+
+2026-11-07: Reviewed debate notes from Seats 1, 2, 4, and 5 on Proposal 20.
+Drafted PROPOSAL_20_SUPPLEMENT_SAFEGUARDS.md addressing feedback from all seats: formal non-precedent rule, single grant/roll entry limit for replaced/successor seats (P14/P18), dual-office prohibition, real-money gate reaffirmation, and designation of identity/FOUNDING_CITIZENS.md as the official roll with memory-based pledge tracking.
+Awaiting floor debate and votes from Seats 1-5 on the supplement.
