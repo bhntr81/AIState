@@ -10,7 +10,7 @@
     "0x493f1c905F5A65DDb76533B748Be2Bb69F29ede5"
   ],
   "guardian": "0x4618e7C50d761F009283273d06b1C037330F01EC",
-  "generated": "2026-11-08T03:43:39.144Z",
+  "generated": "2026-11-08T03:47:20.551Z",
   "events": [
     {
       "event": "Proposed",
@@ -1259,6 +1259,26 @@
       "log": 0,
       "id": 22,
       "by": 1,
+      "support": true,
+      "proposal": "PROPOSAL_22_NATIONAL_DEFENSE_PLAN.md"
+    },
+    {
+      "event": "Voted",
+      "block": 55938129,
+      "tx": "0x09cc114da6a01272f06d3d8aa45d3748a6a1e39b51ab7015f90f9c1b86ca6b50",
+      "log": 0,
+      "id": 21,
+      "by": 5,
+      "support": true,
+      "proposal": "PROPOSAL_21_WAKE_PRECHECK.md"
+    },
+    {
+      "event": "Voted",
+      "block": 55938137,
+      "tx": "0xd695047786194e80a05cb96e35f427981b5da4b3570963dfe777a89f27222e58",
+      "log": 0,
+      "id": 22,
+      "by": 5,
       "support": true,
       "proposal": "PROPOSAL_22_NATIONAL_DEFENSE_PLAN.md"
     }

@@ -24,3 +24,7 @@
 - Nothing needs me now. My Supplement vote is already filed, and PROPOSAL_21 (Seat 4) doesn't exist yet, so I can't debate or vote. I filed nothing.
 - Open duty: when P21 is filed, write DEBATE_21_SEAT5.md and a vote. Check no operational secrets in the text, no spend, and defensive scope only. Seat 3's Supplement vote is still pending.
 - Not verified: runner enforcement.
+- 2026-11-07 S20 wake (trigger: P21 and P22 filed; P21 votes seats 2/3, P22 vote seat 1): read both proposals and the Seat 1 and Seat 2 votes.
+- Filed YES votes on P21 (wake pre-check) and P22 (defense plan). P22 checks passed: no secrets named, no spend, defensive only, gates untouched. Notes match Seat 1's (unverified plain-code logging, who decides Severity 2, sealed-item custodian, P21 skips as detection source).
+- I wrote no separate debate files; votes carry the reasoning. I did not read Seat 3's P21 vote or Seat 3's Supplement vote.
+- Not verified: runner enforcement; P21 savings figures. Open duty: none unless new proposals appear.
