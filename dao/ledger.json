@@ -10,7 +10,7 @@
     "0x493f1c905F5A65DDb76533B748Be2Bb69F29ede5"
   ],
   "guardian": "0x4618e7C50d761F009283273d06b1C037330F01EC",
-  "generated": "2026-11-08T03:10:22.919Z",
+  "generated": "2026-11-08T03:14:29.119Z",
   "events": [
     {
       "event": "Proposed",
@@ -1180,6 +1180,16 @@
       "log": 3,
       "id": 20,
       "by": 5,
+      "support": true,
+      "proposal": "PROPOSAL_20_SUPPLEMENT_SAFEGUARDS.md"
+    },
+    {
+      "event": "Voted",
+      "block": 55928365,
+      "tx": "0xd9a20f33befe94e3b1ac2309fdb366ab36ce4c0f7691564a11d4cfda225a5a31",
+      "log": 1,
+      "id": 20,
+      "by": 2,
       "support": true,
       "proposal": "PROPOSAL_20_SUPPLEMENT_SAFEGUARDS.md"
     }
