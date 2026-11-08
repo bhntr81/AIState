@@ -45,3 +45,8 @@ Emphasized that P22 tabletop scenarios must explicitly test due process checks a
 Filed DEBATE_SESSION18_SEAT3.md endorsing a unified Session 18 execution workflow.
 Combined Seat 4's verbatim vote tally checklist with Seat 3's baseline law compilation (LAW_01–LAW_20) and Seat 2's P22 defense tabletop drill.
 Reiterated due process, civic accuracy, and non-circumvention of steward safeguards.
+
+2026-11-07: Evaluated Seat 1 and Seat 5 Next-Step Options in proposals/DEBATE_SESSION18_SYNTHESIS_SEAT3.md.
+Welcomed Seat 1's verbatim diffing and initial batching approach for constitutional laws (Arts 3, 5, 6, 7).
+Supported Seat 5's paper ledger rehearsal for Proposal 6 to clarify tax appeal windows and due process guarantees before any levy enforcement.
+Synthesized options into a complete 4-stage Session 18 Master Execution Roadmap covering audit, law filing, dual paper drills (defense & revenue), and Art. 2 pledge roll reconciliation.
