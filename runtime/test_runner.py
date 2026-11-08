@@ -70,4 +70,9 @@ class RunnerTests(unittest.TestCase):
         held = props/"PROPOSAL_08_TEST_HELD.md"; held.write_text("# held"); self.assertNotIn("unvoted:PROPOSAL_08_TEST_HELD.md", self.r.open_items(1))   # held plans are excluded
         (props/"SESSION_97_AGENDA.md").write_text("# a\n- **Seat 1:** draft `PROPOSAL_96_ASSIGNED.md`.\n")
         r2 = self.r.open_items(1); self.assertIn("new-agenda:SESSION_97_AGENDA.md", r2); self.assertIn("assigned-draft:PROPOSAL_96_ASSIGNED.md", r2)
+    def test_secret_scan_blocks_keys_and_private_paths_but_not_normal_text(self):
+        bad = ["+AIzaSyA1234567890abcdefghijklmnopqrstuvw", "+see /home/someone/API-KEYS/gemini", "+-----BEGIN PRIVATE KEY-----", "+file dao/keys/mainnet-seats.json"]
+        for b in bad: self.assertTrue(self.r.scan_for_secrets(b), b)
+        ok = "+Seat 3 votes YES on Proposal 22; the plan names no keys or paths.\n+tx hash 0x" + "ab" * 32 + "\n--- a/removed /home/kali/x"
+        self.assertEqual(self.r.scan_for_secrets(ok), [])                       # prose, hashes and removed lines are fine
 if __name__ == "__main__": unittest.main(verbosity=2)

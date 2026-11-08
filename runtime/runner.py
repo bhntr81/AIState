@@ -131,8 +131,9 @@ def provider_cfg(name):
 def provider_key(c):
     k = os.environ.get(c.get("env", ""), "") if c.get("env") else ""
     if k.strip(): return k.strip()
-    p = Path(os.path.expanduser(c.get("key_file", "")))
-    return p.read_text().strip() if p.is_file() else None
+    kd = os.environ.get("AISTATE_KEY_DIR") or ((RT/"key_dir.txt").read_text().strip() if (RT/"key_dir.txt").exists() else "")   # folder path is never committed
+    p = Path(os.path.expanduser(kd))/c.get("key_name", "") if kd and c.get("key_name") else None
+    return p.read_text().strip() if p and p.is_file() else None
 def run_claude(seat, prompt):
     r = subprocess.run(["claude", "-p", prompt, "--max-budget-usd", str(PER_RUN_CAP), "--allowedTools", "Read", "Write", "Edit", "Glob", "Grep",
                         "--permission-mode", "acceptEdits", "--output-format", "json"], cwd=F, capture_output=True, text=True, timeout=900)
@@ -228,6 +229,15 @@ def wake(seat, supervised=False):
     if ok: st.write_text(json.dumps(now))
     if ok and not os.environ.get("NO_FINALIZE"): finalize(seat)
     return {"seat": seat, "status": "ran" if ok else "failed", "model": model, "cost_usd": round(cost, 4), "reverted_writes": violations, "text": str(text)[:300]}
+SECRET_PATTERNS = [r"-----BEGIN [A-Z ]*PRIVATE KEY-----", r"AIza[0-9A-Za-z_\-]{35}", r"\bsk-[A-Za-z0-9]{20,}", r"\bak-[A-Za-z0-9]{12,}", r"/home/[a-z0-9_]+/", r"API-KEYS", r"keys/(mainnet-)?seats\.json", r"deepseek\.key", r"(?i)\b(mnemonic|seed phrase)\s*[:=]\s*\S+"]
+def scan_for_secrets(diff_text):
+    """Plain-code check of ADDED lines before an unattended push to the public repo."""
+    hits = []
+    for line in diff_text.splitlines():
+        if line.startswith("+") and not line.startswith("+++"):
+            for pat in SECRET_PATTERNS:
+                if re.search(pat, line): hits.append((pat, line[:80]))
+    return hits
 def finalize(seat):
     """Signing, identity refresh, Gazette rebuild, commit and push: all in plain code, never by the model."""
     sh = lambda c, cwd=ROOT: subprocess.run(c, cwd=cwd, capture_output=True, text=True, timeout=900)
@@ -235,7 +245,11 @@ def finalize(seat):
     sh(["npx", "hardhat", "run", "scripts/identity.js"], ROOT/"dao")                                  # re-sign identity + manifest
     for g in ("build.py", "capitol.py", "chain.py", "laws.py"): sh(["python3", str(ROOT/"gui"/g)])
     sh(["bash", str(ROOT/"gui"/"publish_pages.sh")])                                                    # refresh the GitHub Pages copy
-    sh(["git", "add", "founders", "docs", "dao/ledger.json", "dao/deployments/baseSepolia.dao.json"]); sh(["git", "commit", "-q", "-m", f"Seat {seat} wake (runner)\n\nCo-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>"]); sh(["git", "push", "-q"])
+    sh(["git", "add", "founders", "docs", "dao/ledger.json", "dao/deployments/baseSepolia.dao.json"])
+    hits = scan_for_secrets(sh(["git", "diff", "--cached", "-U0", "--", "founders", "docs"]).stdout)
+    if hits:                                                          # hold the push back; leave files for the owner to review
+        sh(["git", "reset", "-q"]); open(RT/"push-blocked.log", "a").write(json.dumps({"t": datetime.now().isoformat(timespec="seconds"), "seat": seat, "hits": hits[:5]}) + "\n"); return
+    sh(["git", "commit", "-q", "-m", f"Seat {seat} wake (runner)\n\nCo-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>"]); sh(["git", "push", "-q"])
 def cycle(supervised=False):
     seats = [1, 2, 3, 4, 5]; random.shuffle(seats); return [wake(s, supervised) for s in seats]
 if __name__ == "__main__":

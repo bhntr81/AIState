@@ -3,3 +3,8 @@ runtime/last-run.json
 runtime/last-run.json
 runtime/tick.log
 runtime/sealed/
+runtime/key_dir.txt
+runtime/supervised-cycle*.json
+runtime/supervised-cycle*.err
+__pycache__/
+*.pyc
