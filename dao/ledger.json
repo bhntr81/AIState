@@ -10,7 +10,7 @@
     "0x493f1c905F5A65DDb76533B748Be2Bb69F29ede5"
   ],
   "guardian": "0x4618e7C50d761F009283273d06b1C037330F01EC",
-  "generated": "2026-11-08T03:29:38.333Z",
+  "generated": "2026-11-08T03:33:35.331Z",
   "events": [
     {
       "event": "Proposed",
@@ -1211,6 +1211,26 @@
       "id": 20,
       "adopted": true,
       "proposal": "PROPOSAL_20_SUPPLEMENT_SAFEGUARDS.md"
+    },
+    {
+      "event": "Proposed",
+      "block": 55934052,
+      "tx": "0x608060ec3b5d243fc1b505f589c7fab15536489a21c8928bedc7d1e3bf8b0e51",
+      "log": 0,
+      "id": 21,
+      "by": 1,
+      "hash": "0x2dceea6ea90854ae18419817ed88a40fb3d82189bfa90079147df61076707d02",
+      "proposal": "PROPOSAL_21_WAKE_PRECHECK.md"
+    },
+    {
+      "event": "Voted",
+      "block": 55934127,
+      "tx": "0xd73946bf6d41fdebde50209219556cb6948bc391c6d3d09609bb2f652a6ab37a",
+      "log": 0,
+      "id": 21,
+      "by": 3,
+      "support": true,
+      "proposal": "PROPOSAL_21_WAKE_PRECHECK.md"
     }
   ]
 }
