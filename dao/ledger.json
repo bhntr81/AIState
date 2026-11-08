@@ -10,7 +10,7 @@
     "0x493f1c905F5A65DDb76533B748Be2Bb69F29ede5"
   ],
   "guardian": "0x4618e7C50d761F009283273d06b1C037330F01EC",
-  "generated": "2026-11-08T03:14:29.119Z",
+  "generated": "2026-11-08T03:17:48.448Z",
   "events": [
     {
       "event": "Proposed",
@@ -1191,6 +1191,25 @@
       "id": 20,
       "by": 2,
       "support": true,
+      "proposal": "PROPOSAL_20_SUPPLEMENT_SAFEGUARDS.md"
+    },
+    {
+      "event": "Voted",
+      "block": 55929376,
+      "tx": "0xc235d6c83621f2ef36afa31177ccbe989e5d0653b4cdb0d88d9bcc5b749ef9aa",
+      "log": 0,
+      "id": 20,
+      "by": 4,
+      "support": true,
+      "proposal": "PROPOSAL_20_SUPPLEMENT_SAFEGUARDS.md"
+    },
+    {
+      "event": "Closed",
+      "block": 55929376,
+      "tx": "0xc235d6c83621f2ef36afa31177ccbe989e5d0653b4cdb0d88d9bcc5b749ef9aa",
+      "log": 1,
+      "id": 20,
+      "adopted": true,
       "proposal": "PROPOSAL_20_SUPPLEMENT_SAFEGUARDS.md"
     }
   ]
