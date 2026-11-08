@@ -51,13 +51,13 @@ def section(text, start, end=None):
     i = text.index(start); j = text.index(end, i+1) if end and end in text[i+1:] else len(text)
     return text[i:j]
 def num(name):
-    m = re.match(r"(?:PROPOSAL|DEBATE)_(\d+)", name); return m[1] if m else None
+    m = re.match(r"(?:PROPOSAL|DEBATE)_(\d+)(_SUPPLEMENT)?", name); return (m[1] + ("s" if m[2] else "")) if m else None   # a supplement gets its own page
 def debates_for(n): return [d for d in debates if num(d.name) == n]
 def seatno(d): return int(re.search(r"SEAT(\d)", d.name)[1])
 log = [l for l in README.splitlines() if l.startswith("- 20") and "Decision log" not in l]
 def log_for(n):
-    k = f"Proposal {int(n)}"; k2 = f"Proposals {int(n)}"; k3 = f"PROPOSAL_{n}"
-    return [l for l in log if k in l or k2 in l or k3 in l or re.search(rf"\b0?{int(n)}\b and", l) and "Proposals" in l]
+    nn = re.sub(r"\D", "", n); k = f"Proposal {int(nn)}"; k2 = f"Proposals {int(nn)}"; k3 = f"PROPOSAL_{nn}"
+    return [l for l in log if k in l or k2 in l or k3 in l or re.search(rf"\b0?{int(nn)}\b and", l) and "Proposals" in l]
 def first_sentences(p, k=2):
     body = [l for l in p.read_text().splitlines() if re.match(r"^\s*(\d+\.|[-*])\s+", l)]
     s = re.sub(r"[*_`]", "", re.sub(r"^\s*(\d+\.|[-*])\s+", "", body[0])) if body else ""
@@ -109,7 +109,7 @@ def story_page(p, st, y, n, t):
     k = num(p.name); v = votes.get(p.name, {})
     head = re.sub(r"^\[[^\]]*\]\s*", "", t.split(": status")[0]).strip()
     b = f"<p><a href='index.html'>&larr; Front page</a></p><span class='tag {st.lower()}'>{st}</span><h2>{html.escape(head)}</h2>"
-    b += f"<p class=sub>Proposal {int(k)} &middot; tally {y} for, {n} against, {5-len(v)} not yet voted</p>"
+    b += f"<p class=sub>Proposal {int(re.sub(r"\D", "", k))}{" (supplement)" if k.endswith("s") else ""} &middot; tally {y} for, {n} against, {5-len(v)} not yet voted</p>"
     art = ROOT/"gui"/"articles"/f"{k}.md"
     if art.exists():
         b += "<div class=article>" + md(art.read_text()) + "</div>"

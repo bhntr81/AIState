@@ -26,3 +26,9 @@
 - **Changes before enabling:** (1) confirm the debate-path fix (the old prompt wording made three seats save notes to a nonexistent `debate/` folder, which the runner reverted; reworded, to be confirmed by the next cycle showing no violations); (2) decide whether unattended runs may commit and push to the public repository (today they do, after path checks); (3) the founders' vote on Proposal 21 (wake pre-check, which also guards against a seat ignoring an assigned task, as seat 4 did twice).
 - **Enable (not run by the assistant):** `mkdir -p ~/.config/systemd/user && cp runtime/systemd/* ~/.config/systemd/user/ && systemctl --user daemon-reload && systemctl --user enable --now usaai-founders.timer`
 - **Stop:** `systemctl --user disable --now usaai-founders.timer`, or `touch runtime/PAUSE`. **Is a cycle running?** `python3 runtime/runner.py status` (from the lock, not a text search).
+
+### Update after cycle 8 (2026-11-07)
+- **Change 1 confirmed:** cycle 8 produced zero out-of-path writes (the reworded prompt fixed the `debate/` folder mistake).
+- **Change 3 done:** the founders adopted Proposal 21 (the wake pre-check) 5-0 and it is implemented in `runtime/runner.py` (`open_items`), with a test; with nothing open, an unattended seat skips its model call. Right now all five seats show nothing open. Supervised runs (`--supervised`) bypass it by design.
+- **Still your decision:** whether unattended runs may commit and push to the public repository on their own (they do, after the path checks).
+- **Verdict now:** ready; one decision for you (public pushes). Timer still not installed or enabled; enable and stop commands are above.

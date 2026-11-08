@@ -166,6 +166,38 @@ def new_work(seat):
     st = F/"memory"/f"seat{seat}.state.json"; old = json.loads(st.read_text()) if st.exists() else {}
     now = {f"{s}/{p.name}": hashlib.sha256(p.read_bytes()).hexdigest()[:12] for s in ("proposals", "votes") for p in sorted((F/s).glob("*")) if p.is_file() and p.name != ".gitkeep"}
     return [k for k, v in now.items() if old.get(k) != v], now, st
+HELD_PROPOSALS = ("PROPOSAL_08_",)       # plans held for the owner: a founder vote cannot act on them
+def open_items(seat):
+    """Proposal 21 (adopted 5-0): plain-code pre-check run BEFORE any model call. A seat has something open only if:
+    (1) a proposal exists that it has not voted on (held proposals excluded); (2) a new agenda/reminder file has appeared
+    since it last ran; (3) an option or ranking round is open and its part is missing; (4) it is the named author of a
+    draft an agenda assigns and has not filed it. Returns a list of reasons (empty = nothing open)."""
+    out, n = [], str(seat)
+    for p in sorted((F/"proposals").glob("PROPOSAL_*.md")):
+        if p.name.startswith(HELD_PROPOSALS): continue
+        yes = 0
+        for vf in (F/"votes").glob(f"{p.stem}.seat*.json"):
+            try: v = json.loads(vf.read_text()); yes += bool(v.get("support", str(v.get("vote", "")).upper() == "YES"))
+            except Exception: pass
+        if yes >= 4: continue                                         # already adopted: nothing left to vote on
+        if not list((F/"votes").glob(f"{p.stem}.seat{n}.json")) and not re.search(rf"seat{n}\b", p.stem, re.I):
+            if not (re.search(rf"Drafted by Seat {n}\b|Authored by Seat {n}\b|Seat {n} \(", (p.read_text()[:600])) and False): out.append(f"unvoted:{p.name}")
+    st = F/"memory"/f"seat{n}.state.json"; seen = json.loads(st.read_text()) if st.exists() else {}
+    for a in sorted((F/"proposals").glob("SESSION_*.md")):
+        if a.name not in seen and f"proposals/{a.name}" not in seen: out.append(f"new-agenda:{a.name}")
+        else:
+            h = hashlib.sha256(a.read_bytes()).hexdigest()[:12]
+            if seen.get(f"proposals/{a.name}") not in (None, h): out.append(f"changed-agenda:{a.name}")
+    tags = {m[1] for p in (F/"proposals").glob("NEXTSTEP*_OPTION_seat*.md") if (m := re.match(r"(NEXTSTEP\d*)_OPTION_seat\d", p.name))}
+    for t in tags:
+        opts = list((F/"proposals").glob(f"{t}_OPTION_seat*.md"))
+        if not (F/"proposals"/f"{t}_OPTION_seat{n}.md").exists() and len(opts) < 5: out.append(f"option-missing:{t}")
+        if len(opts) >= 5 and not (F/"votes"/f"{t}_seat{n}.json").exists(): out.append(f"ranking-missing:{t}")
+    for a in sorted((F/"proposals").glob("SESSION_*.md")):
+        for m in re.finditer(rf"Seat {n}\b[^\n`]*`(PROPOSAL_[A-Za-z0-9_]+\.md)`", a.read_text()):
+            suffix = re.sub(r"^PROPOSAL_\d+[A-Za-z]*_", "", m[1])
+            if not (F/"proposals"/m[1]).exists() and not list((F/"proposals").glob(f"PROPOSAL_*_{suffix}")): out.append(f"assigned-draft:{m[1]}")
+    return list(dict.fromkeys(out))
 def wake(seat, supervised=False):
     if not take_lock(): return {"seat": seat, "status": "busy: one heavy process at a time"}
     why = guardrails(seat, supervised)
@@ -174,6 +206,7 @@ def wake(seat, supervised=False):
     if bad: return {"seat": seat, "status": "refused", "reason": bad}
     new, now, st = new_work(seat)
     if not new and not supervised: return {"seat": seat, "status": "asleep", "reason": "no new work"}
+    if not supervised and not open_items(seat) and not os.environ.get("NO_PRECHECK"): return {"seat": seat, "status": "asleep", "reason": "no open item (Proposal 21 pre-check)"}
     mem = F/"memory"/f"seat{seat}.md"; mem.parent.mkdir(exist_ok=True); memory = mem.read_text() if mem.exists() else "(empty)"
     prompt = (f"You are founder seat {seat}, an autonomous AI agent seat of USAAI (not the primary assistant, not human; namesake seats are fictional personas). Read FOUNDER_0{seat}.md and CONVENTION_RULES.md. "
               f"New since your last wake: {', '.join(new[:40]) or 'nothing'}. Do ONE bounded useful thing from your role (debate, vote, or draft); if nothing needs you, say so. You may write only: your own memory file (memory/seatN.md), your own debate notes and option files (inside the proposals/ folder, for example proposals/DEBATE_22_SEAT3.md), your own vote files (inside votes/), and new proposals (inside proposals/). There is no folder named debate/. "

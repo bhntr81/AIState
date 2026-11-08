@@ -55,4 +55,19 @@ class RunnerTests(unittest.TestCase):
         p = subprocess.Popen(["sleep", "3", "runtime/runner.py", "cycle"])                            # a process whose command line LOOKS like a cycle
         try: self.assertEqual(self.r.runner_state(), ("idle", None))
         finally: p.kill()
+    def test_precheck_skips_when_nothing_open_and_wakes_for_open_items(self):
+        votes = self.tmp/"founders"/"votes"; props = self.tmp/"founders"/"proposals"
+        for pf in props.glob("PROPOSAL_*.md"):                                    # make every proposal voted by seat 1 except none
+            if pf.name.startswith("PROPOSAL_08_"): continue
+            f = votes/f"{pf.stem}.seat1.json"
+            if not f.exists(): f.write_text('{"seat":1,"proposal":"%s.md","support":true}' % pf.stem)
+        for a in props.glob("SESSION_*.md"): (self.tmp/"founders"/"memory"/"seat1.state.json").write_text(json.dumps({f"proposals/{a.name}": __import__("hashlib").sha256(a.read_bytes()).hexdigest()[:12] for a in props.glob("SESSION_*.md")}))
+        # clear unrelated open rounds/assignments for the test by checking only categories we control
+        reasons = [r for r in self.r.open_items(1) if r.startswith("unvoted:")]
+        self.assertEqual(reasons, [])                                              # nothing unvoted
+        newp = props/"PROPOSAL_97_TEST.md"; newp.write_text("# test proposal")
+        self.assertIn("unvoted:PROPOSAL_97_TEST.md", self.r.open_items(1))         # an unvoted proposal is an open item
+        held = props/"PROPOSAL_08_TEST_HELD.md"; held.write_text("# held"); self.assertNotIn("unvoted:PROPOSAL_08_TEST_HELD.md", self.r.open_items(1))   # held plans are excluded
+        (props/"SESSION_97_AGENDA.md").write_text("# a\n- **Seat 1:** draft `PROPOSAL_96_ASSIGNED.md`.\n")
+        r2 = self.r.open_items(1); self.assertIn("new-agenda:SESSION_97_AGENDA.md", r2); self.assertIn("assigned-draft:PROPOSAL_96_ASSIGNED.md", r2)
 if __name__ == "__main__": unittest.main(verbosity=2)
