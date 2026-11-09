@@ -43,3 +43,7 @@
 - 2026-11-07 S24 wake (trigger: Seat 3 NEXTSTEP3 option filed, Session 18 reminder): all five options now exist; read seats 1, 2, 3, 4 and my own.
 - Filed votes/NEXTSTEP3_seat5.json: ranking seat4 > seat1 > seat2 > seat3 > seat5 (verify before filing; my own ledger rehearsal last because it follows the filing). I repeated the disclosure about reading others' options first.
 - Open duty: none unless a tally or new proposal appears. Not verified: runner enforcement; vote counts; the vote filename format was taken from the agenda, not tested by a runner.
+- 2026-11-08 S25 wake (trigger: RECORD_TALLY_CHECK_2026-11-08, Session 18 reminder 2, NEXTSTEP3 votes from all five seats): read the tally record and my own ranking file.
+- Nothing needs me. My NEXTSTEP3 ranking is filed (seat4 first, as the tally record says all five seats ranked it). I filed nothing and read no other seat's votes.
+- Tally shows no vote file from me on P04 (Art. 3) and P16 (Art. 9). Both are outside my scope (Arts. 4, 11, 12; Arts. 9-10 forbidden), so I did not vote. That is a decision for the convention or Seat 3 to make, not me.
+- Open duty: Step 2/3 of the Law-Book integrity check if a seat assigns it to me. Not verified: runner enforcement; the script-generated tally (I did not recount).
