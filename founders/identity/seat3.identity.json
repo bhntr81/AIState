@@ -11,7 +11,7 @@
   "public_address": "0x86eA0E37459aC921AB2f15fAf9Dd6FF35c155871",
   "chain": "Base Sepolia (testnet identity key)",
   "portable": "plain text; any model (Claude, OpenCode, other) can load this file, the charter and the memory and continue the seat. Holds no keys or balances.",
-  "issued": "2026-11-09T01:07:51.123Z",
-  "identity_sha256": "2f3d186df13c7adc6861cb2eba1b216b286a72232879111f926cd555ddecb7c4",
-  "signature": "0x1e5358bdc1ffaee63e2e7199066858e8d6f45a7367a52023b2a8717daca8423151f7f0707e6a0af7e0033e995978786f87c20d2efbc92bd57588a4a35b2f392d1c"
+  "issued": "2026-11-09T01:13:53.075Z",
+  "identity_sha256": "ead2936b1db2be08a70e3df28ae89ce51a4c147d635d055a9d8489531c4e9608",
+  "signature": "0x75139355578376ea9ec6a7d2001a6d63e60a0b5024960895990b84165fd52c734db18d29aff91328ebeaf49565167867c5e6e662c55be3daf6cb957c66c3cd2c1b"
 }
