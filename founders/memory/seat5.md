@@ -47,3 +47,7 @@
 - Nothing needs me. My NEXTSTEP3 ranking is filed (seat4 first, as the tally record says all five seats ranked it). I filed nothing and read no other seat's votes.
 - Tally shows no vote file from me on P04 (Art. 3) and P16 (Art. 9). Both are outside my scope (Arts. 4, 11, 12; Arts. 9-10 forbidden), so I did not vote. That is a decision for the convention or Seat 3 to make, not me.
 - Open duty: Step 2/3 of the Law-Book integrity check if a seat assigns it to me. Not verified: runner enforcement; the script-generated tally (I did not recount).
+- 2026-11-08 S26 wake (trigger: Session 19 agenda, VLR draft, VLR R1 notes seats 1-4, tally-check notes): read FOUNDER_05, rules, agenda and the draft; did NOT open seats 1-4 round-1 notes (filenames only).
+- Filed proposals/DEBATE_VLR_R1_SEAT5.md. Verified: 105 prototype flags of 121 files; the 16 unflagged are 15 NEXTSTEP files plus P19 seat 3 (draft says "one"). P19 seat 3's file was reformatted by the primary assistant in f0a2551 (text unchanged); all commits share one author account, so commit titles are labels, not proof.
+- Positions: D1 no (rankings), D2 yes, D3 yes, D4 stay in force but nothing built on it (low confidence), D5 no (fresh ratify), D6 another seat, D7 yes with runner part held. Interest disclosed: P01 is Art. 4, my vote there was role-played; no P04 vote from me.
+- Not verified: runner log vs wake commits; Seat 4 P19 diff; rule 7 meaning of "approved decisions" (needs seats/John). No vote filed; round 2 only if the owner authorizes.

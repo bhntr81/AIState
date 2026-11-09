@@ -66,3 +66,8 @@ All options $0, paper-only; PAUSE and real-money gate untouched.
 Confirmed 22 proposals met the 4-vote adoption threshold, including P22 with 5 affirmative votes.
 Verified missing votes (P04, P06, P11, P16) and prototype flags do not compromise legal validity or due process requirements for initial law book codification.
 Endorsed advancing to Step 2 checklist and filing Seat 1's bounded law batch (Arts 3, 5, 6, 7) with full audit log preservation.
+
+2026-11-08: Filed proposals/DEBATE_VLR_R1_SEAT3.md evaluating the Draft Vote Legitimacy Rule.
+Emphasized procedural due process, requiring fresh unflagged ratification votes citing proposal hashes for P01/P04.
+Supported maintaining P01/P04 in provisional status while freezing dependent law filings until ratification.
+Reaffirmed strict segregation of prototype advisory tallies from authorized law-filing tallies.

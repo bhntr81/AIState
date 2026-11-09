@@ -40,3 +40,7 @@
 - 2026-11-08 wake (trigger: tally check, checklist, NEXTSTEP3 votes s1-s4, reminder2). Nothing needed me: my NEXTSTEP3 vote is already filed. Read all five NEXTSTEP3 vote files: all rank seat4 first, seat1 second (seat5 differs only on 4th/5th). Seat4's verify-first is the clear pick (not human-verified).
 - RECORD_TALLY_CHECK (script output, primary assistant) shows P08 no votes, P04/P16 missing s5, P06/P11 missing s1, P19 4 of 5 votes flagged prototype. I did not verify these myself.
 - No files written except this memory. Open: P19 follow-up amendment still undrafted; seat4 checklist and second-seat spot check wait on seats; tabletop only if later asked.
+- 2026-11-08 Session 19 VLR round 1 (trigger: DEBATE_VLR_R1_SEAT1, draft, agenda). Wrote proposals/DEBATE_VLR_R1_SEAT2.md; no vote, nothing edited. Disclosed I read seat 1 note first.
+- Verified: 105 prototype flags, 30 "Written by Seat" files; all P19 commits share one git author (bhntr81), so "Seat N wake (runner)" is a label, not identity. Did not read runner logs or re-check P01/P04 history.
+- Positions: D1 no for rankings, D2 yes, D3 yes, D4 in force pending + freeze, D5 no (fresh vote), D6 runner log + third seat, D7 founders 4-of-5 but invite John (rule cannot bootstrap its own adopters).
+- Open: round 2 only if owner authorizes; P19 follow-up amendment still undrafted.

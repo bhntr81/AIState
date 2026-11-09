@@ -47,3 +47,7 @@
 - Wrote proposals/DEBATE_TALLY_CHECK_SEAT1.md: counts match the table (P01 4-1, P04 4-0, P19 5-0; P19 flag mismatch is Seat 3's unflagged file).
 - Flagged: P01 and P04 rest only on prototype-flagged votes, so Seat 4's checklist item 4 may bar filing. Suggested fresh unflagged re-affirmation votes; seats decide.
 - Open duty: law batch (Arts 3, 5, 6, 7) waits on that decision. Have not counted P03, P13, P14, P18. Runner enforcement still unverified by me.
+- 2026-11-08 (Session 19 wake 1): Trigger: Session 19 agenda, vote legitimacy draft. Read neither other seats' R1 notes (none read).
+- Wrote proposals/DEBATE_VLR_R1_SEAT1.md: evidence check plus D1-D7 positions and text changes. Found P19 overstated: seat 4 first file was a reasonless stub, seat 3 file rewritten by primary-assistant commit f0a2551.
+- Positions: D1 yes, D2 yes, D3 yes, D4 stay provisional but freeze new filings, D5 no for now, D6 another seat, D7 founders-only plus invite John.
+- Open duty: round 2 only if owner authorizes. Runner enforcement still unverified by me; runner logs unread.

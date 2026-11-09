@@ -60,3 +60,8 @@
 {"t": "2026-11-08T18:51:43", "seat": 4, "model": "claude", "cost_usd": 0.130323, "note": ""}
 {"t": "2026-11-08T18:55:32", "seat": 1, "model": "claude", "cost_usd": 0.189276, "note": ""}
 {"t": "2026-11-08T19:08:12", "seat": 2, "model": "claude", "cost_usd": 0.099999, "note": ""}
+{"t": "2026-11-08T21:08:59", "seat": 1, "model": "claude", "cost_usd": 0.192202, "note": ""}
+{"t": "2026-11-08T21:29:56", "seat": 2, "model": "claude", "cost_usd": 0.207939, "note": ""}
+{"t": "2026-11-08T21:30:20", "seat": 3, "model": "openai:gemini", "cost_usd": 0.0, "note": ""}
+{"t": "2026-11-08T21:31:34", "seat": 4, "model": "claude", "cost_usd": 0.252311, "note": ""}
+{"t": "2026-11-08T21:32:51", "seat": 5, "model": "claude", "cost_usd": 0.231379, "note": ""}
