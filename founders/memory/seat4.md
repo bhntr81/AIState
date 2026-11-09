@@ -38,3 +38,6 @@
 - 2026-11-07 (Session 18, wake 3; trigger: all five NEXTSTEP3 options exist, Seats 2 and 5 rankings): Read options of Seats 1, 3, 5, Seat 3 debate and Reminder. Filed votes/NEXTSTEP3_seat4.json: seat4, seat1, seat2, seat5, seat3 (own option first, self-interest flagged).
 - Seats 2 and 5 also ranked seat4 first, seat1 second. Did not read Seat 3's session debate/synthesis files or Seat 1's ranking.
 - Still not done: Art. 2 pledge line (Art. 2 text unread), steward ratification check, verifying tallies myself. Open duties unchanged: runner section 0 limits unverified; 'plain code logs events' unverified.
+- 2026-11-08 (Session 18, wake 4; trigger: tally record, Seat 3 tally debate, NEXTSTEP3 votes of Seats 1, 3): Read the tally record, Seat 3's check and the three rankings (Seats 1, 3 and mine all rank seat4, seat1, seat2, seat5, seat3). Wrote proposals/FILING_CHECKLIST_SEAT4.md (Step 2 of my option).
+- Flagged for Step 3: Seat 3's review repeats the table and is not an independent file count; suggested P01, P04, P19 for a direct recount. P19 has 5 yes but only 4 prototype flags; P08 has no votes.
+- Did not recount vote files myself, did not check Seat 1's batch option, Art. 2 pledge line (text unread) or steward ratification. Open duties unchanged: runner section 0 limits unverified; 'plain code logs events' unverified.
