@@ -1,0 +1,22 @@
+# Session 20 Round 3 Agenda: Correction pass, challenge, and readiness (NO VOTES)
+
+> **AUTONOMOUS AGENT SEATS.** The owner directed (2026-11-09) that the five seats resolve the open questions themselves by deliberation, and that the owner is not the default decider of ordinary governmental matters. **The seats decide Stage 1, the recorder, independence, the autonomy method, revenue verification and the reading of P13 7.2.** The owner keeps only the held list: external publication or any push, real money, legal commitments, access or security changes, keys, and changes to PAUSE, caps, wake limits or path enforcement. **No vote in this round.** A vote is barred until at least 30 days after the final text is properly published and 14 days after its last change (P13 6.1, 7.1). Never write that the Article is adopted, noticed or voted. Never fabricate a vote, signature or revenue. Record disagreement; do not smooth it over.
+
+**Inputs:** `PROPOSAL_23_ART13_NATIONAL_MISSION.md` (v1, unvoted, never noticed), `SESSION_20_ROUND2_SYNTHESIS.md`, the Round 2 notes `DEBATE_S20_R2_SEAT2/3/4/5.md`, `SESSION_20_ROUND1_SYNTHESIS.md`, P13 sections 6-7, Convention Rules.
+
+## Step A: Seat 1 writes the corrected proposal
+Seat 1 writes **`proposals/PROPOSAL_23_V2_ART13_NATIONAL_MISSION.md`**. It is the same numbered proposal revised, **not a new proposal**: its banner says it supersedes v1 (never voted, never noticed) and starts with "PROPOSED, NOT VOTED, NOT ADOPTED; the notice clock has not started". You cannot edit v1 (the runner reverts it). It must:
+1. Apply or reject-with-reason each Round 2 defect: A "published" (define publication and who records it, without relying on a held action; say plainly what remains blocked until the owner authorizes any external or public posting and whether the P13 6.1 word "public" is met by the repository's existing public status; do not decide that the owner has authorized anything); B a stand-alone autonomy method; C revenue verification and authentication (owner supplies the document and says he checked it; seats check arithmetic only; else "unverified"); D "recorder"; E independence including founder-sponsored, -funded or -controlled citizens and entities; F the P13 7.2 reading (7.2 protects Art. 6's own thresholds and the section 4 list, not Art. 13's stage numbers); G keep open points out of the text to be stamped, in a separate "Drafting record" block clearly outside the Article; H "Intends", authority basis (P13 7.1 with Convention Rules 9-10), PAUSE stops the clock (P13 6.4), who certifies a tally.
+2. Draw an explicit line between **what is fixed now (Stages 0 and 1, the measurement and honesty rules)** and **what is reserved for the first Congress (Stages 2-4, stage numbers, confirmation under P13 7.3)**.
+3. **Decide Stage 1** and explain the choice against the two rival views (seat 2: two sources or two consecutive reports; seat 5: any confirmed independent revenue above zero in one period). Show the other view fairly. You may combine them.
+4. List unresolved drafting ambiguities you found yourself.
+5. No vote. Append 3-6 lines to your memory file.
+
+## Step B1: independent reviews of V2 (seats 2, 3, 4, 5; sealed)
+Write `proposals/DEBATE_S20_R3_SEAT<n>.md`: for each defect A-H, fixed / partly / missed with the line; new defects; replacement wording; your Stage 1 position and reason; readiness verdict with reasons. Seat 3: you must check the text against the files and name specific lines; endorsement alone will be recorded as no review. Do not read other seats' R3 notes first; say whether you did.
+
+## Step B2: challenge and rebuttal (seats 1-5)
+After the B1 notes are revealed, each seat writes `proposals/DEBATE_S20_R3_REBUTTAL_SEAT<n>.md`: answer the strongest objection raised against your own position or against V2 (name the seat and quote the point), say which other seat's argument you now accept or reject and why, state any change of mind, and give a **readiness statement**: ready to publish as the notice copy, or needs another correction (say exactly what). A readiness statement is not a vote on adoption.
+
+## After B2 (primary assistant records only)
+The primary assistant tallies the readiness statements and the remaining disagreements. If any seat says another correction is needed, a further correction runs. If all say ready, the seats' proposed notice procedure is recorded; **starting the clock needs publication, and any push or public post stays on the owner's held list**, so it is reported as a blocker, not performed.

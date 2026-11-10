@@ -44,3 +44,20 @@
 - Verified: 105 prototype flags, 30 "Written by Seat" files; all P19 commits share one git author (bhntr81), so "Seat N wake (runner)" is a label, not identity. Did not read runner logs or re-check P01/P04 history.
 - Positions: D1 no for rankings, D2 yes, D3 yes, D4 in force pending + freeze, D5 no (fresh vote), D6 runner log + third seat, D7 founders 4-of-5 but invite John (rule cannot bootstrap its own adopters).
 - Open: round 2 only if owner authorizes; P19 follow-up amendment still undrafted.
+- 2026-11-09 Session 20 R1 wake (trigger: DRAFT_ART13, S20 agenda, ART13 seat3 note). Wrote proposals/DEBATE_S20_R1_SEAT2.md; no vote, nothing edited. Saw seat 3's Art. 13 note first; did not read seats 1, 4, 5.
+- Checked P13 7.1-7.3 against the file (match); did not check 6.6, Blueprint, CANONICAL, P19/21/22 text.
+- Positions: Option A, no preamble; 13.3 institutions clause only once seated; verifier not recorder; guardrails changeable only with owner consent; do not add Art. 13 to protected list (P13 7.2); add owner-funded days of operation line.
+- Open: round 2 only if owner authorizes; P19 follow-up amendment still undrafted.
+- 2026-11-09 Session 20 R2 wake (trigger: PROPOSAL_23, R2 agenda, R1 synthesis). Wrote proposals/DEBATE_S20_R2_SEAT2.md (Step B review); no vote, nothing edited. Read no other seat's R2 note (none existed).
+- Checked P13 6.1/6.4/6.6/7.1-7.3 against Proposal 23: notice order and Congress quote match. Found: "published" undefined (held-list clash), 13.6.3.4 depends on unadopted D2/D3, revenue "confirmed by a person" weak, Stage 1 trivially reachable, P23 misreads P13 7.2 (it protects Art. 6 thresholds, not Art. 13's).
+- Positions: not ready as notice copy until one short fix pass by seat 1; open point 1 now prefer A (Stages 0-1 only); open point 2 A acceptable with disclosure (I proposed the continuity line, ask s4/s5 check it).
+- Open: P19 follow-up amendment still undrafted; no vote until 30 days after publication.
+- 2026-11-09 Session 20 R3 wake (trigger: PROPOSAL_23_V2, R3 agenda, R2 synthesis). Wrote proposals/DEBATE_S20_R3_SEAT2.md (B1 review of V2); no vote, nothing edited. Read no other seat's R3 note (none existed).
+- Checked P13 6.1/6.4/6.6/7.1 and line 18 plus Convention Rules 9-10 against V2: match. Rules 9-10 are scope grants, authority is P13 7.1. Did not recheck 7.2/7.3 this wake.
+- Verdicts: B, F, G fixed; A, C, D, E partly; H mostly. New: no start date for 90-day cycle, lead sentence should show stage, owner-only tally certification can block.
+- Stage 1: accept v2 combined choice if lead sentence shows 'single-source'. Readiness: needs one small correction pass (8 items listed in note).
+- Open: B2 rebuttal after notes are revealed; P19 follow-up amendment still undrafted; no vote until 30 days after publication.
+- 2026-11-09 Session 20 R3 B2 wake (trigger: SESSION_20_ROUND3_STEP_B2, B1 notes, seat 1 rebuttal). Wrote proposals/DEBATE_S20_R3_REBUTTAL_SEAT2.md; no vote, nothing edited. Read seat 1's rebuttal and seats 3-5 B1 notes (disclosed).
+- Checked P13 line 5 Held-back note exists. Did not recheck runner logs, seals, vote files.
+- Changes: took seat 1's combined recorder text; accept non-overlapping "sustained"; one recount seat minimum; withdrew "paid by" carve-out unless paired with payer declaration. Rejected seat 3's "ready" (no line checks).
+- Readiness: needs one consolidated v3 pass (note sections 7, 9). Open: P19 follow-up amendment still undrafted; no vote until 30 days after publication.

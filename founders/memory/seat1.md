@@ -51,3 +51,19 @@
 - Wrote proposals/DEBATE_VLR_R1_SEAT1.md: evidence check plus D1-D7 positions and text changes. Found P19 overstated: seat 4 first file was a reasonless stub, seat 3 file rewritten by primary-assistant commit f0a2551.
 - Positions: D1 yes, D2 yes, D3 yes, D4 stay provisional but freeze new filings, D5 no for now, D6 another seat, D7 founders-only plus invite John.
 - Open duty: round 2 only if owner authorizes. Runner enforcement still unverified by me; runner logs unread.
+- 2026-11-09 (Session 20 wake 1): Trigger: Session 20 agenda, Art. 13 draft, Seat 3 note. Read agenda, draft, Convention Rules, Proposal 13 lines on notice; did NOT read Seat 3 or other seats' notes.
+- Wrote proposals/DEBATE_S20_R1_SEAT1.md (no vote). Found draft omits Proposal 13's "14 days after last change" notice rule and the no-Court conflict-of-interest flag; Q6 do not add to protected list.
+- Positions: Art. 13 placement A, leave Stages 2-4 to Congress, loosen 13.4.2 wording, add plain 5-line summary. Added a "process obstacle" (vote legitimacy, cadence).
+- Open duty: Round 2 only if owner authorizes; no revenue idea filed. Runner enforcement and verify.js still unverified by me.
+- 2026-11-09 (Session 20 wake 2): Trigger: Round 2 agenda Step A. Read agenda, synthesis, draft, P13 sections 6-7, seat 4's note; no vote.
+- Wrote proposals/PROPOSAL_23_ART13_NATIONAL_MISSION.md: banner, 5-line summary, full Art. 13 text with all (a)-(h) changes applied; preamble and protected-list rejected with reasons; draft not edited.
+- Open points left to seats: stage thresholds (I recommend fix Stages 0-1 only) and first report writer (recommend seat 2 writes, 4 checks cost, 5 confirms revenue).
+- Weak spot: 13.6.3.4 depends on Session 19 D2/D3 not yet adopted. Clock starts only when owner/primary publishes with timestamp. Runner enforcement still unverified by me.
+- 2026-11-09 (Session 20 wake 3): Trigger: Round 3 agenda Step A. Read agenda, v1, Round 2 synthesis; no vote.
+- Wrote proposals/PROPOSAL_23_V2_ART13_NATIONAL_MISSION.md: supersedes v1; only Summary, Art. 13 text and Notice record are stamped; drafting record outside. Defects A-H applied.
+- Stage 1 chosen: one confirmed independent positive period (seat 5), plus source count, "single-source" label, "sustained" needs two reports (seat 2's concern). Stages 2+ reserved (13.9).
+- "Published" proposed as commit hash + owner-recorded timestamp; push/posting stays held. Eight ambiguities listed. Convention Rules 9-10 cite unchecked against the file.
+- 2026-11-09 (Session 20 wake 4): Trigger: Round 3 Step B2 (rebuttal, no vote). Read V2, seats 2-5 B1 notes, P13 lines 5 and 69.
+- Wrote proposals/DEBATE_S20_R3_REBUTTAL_SEAT1.md. Conceded my own recorder/author contradiction (seat 5) and withdrew owner certification 13.6.6 (replace with non-filing-seat recount). Kept owner-anchored clock start as a gate only on timing, said so openly.
+- Found P13's Held-back note at line 5; Art. 13 touches none of it. Did not accept seat 3's "ready" (no line citations). Readiness: needs one consolidated v3 pass, list in section 9.
+- Open duty: write v3 if round asks; runner enforcement, verify.js, own-wake seals still unverified by me.
