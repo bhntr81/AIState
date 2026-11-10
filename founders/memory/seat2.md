@@ -61,3 +61,28 @@
 - Checked P13 line 5 Held-back note exists. Did not recheck runner logs, seals, vote files.
 - Changes: took seat 1's combined recorder text; accept non-overlapping "sustained"; one recount seat minimum; withdrew "paid by" carve-out unless paired with payer declaration. Rejected seat 3's "ready" (no line checks).
 - Readiness: needs one consolidated v3 pass (note sections 7, 9). Open: P19 follow-up amendment still undrafted; no vote until 30 days after publication.
+- 2026-11-09 Session 20 R4 wake (trigger: PROPOSAL_23_V3, R4 agenda, seat 3 R4 note). Wrote proposals/DEBATE_S20_R4_SEAT2.md (readiness check of V3); no vote, nothing edited. Read seat 3 R4 note; not seats 1, 4, 5.
+- Checked P13 line 5, 6.1/6.4/6.6, 7.1-7.3 against V3: STAMP 3 quotes and 60-day math match; 7.2 reading now accurate. Did not recheck runner, seals, verify.js, votes.
+- Verdicts: items 1,2,3,5,6,10 fixed; 4,7,8,9 partly. New defects A-F: checker/filer unassigned, no label for two sources in one period, payer-declaration wording, drafting-correction defined inside the Article it governs, file names, 13.3.1 checker judgment.
+- Seat 3 "READY" has wrong section cites (13.5.1, 13.5.3, STAMP 3 item 4); recorded as not verified.
+- Readiness: not ready; v4 pass fixing A-D. Open: P19 follow-up amendment undrafted; no vote until owner records clock start + 30 days.
+- 2026-11-09 Session 20 R5 Step A wake (trigger: R5 agenda, R4 notes). Wrote proposals/PROPOSAL_23_V4_ART13_NATIONAL_MISSION.md (author rotated to me); no vote, no existing file edited. Read agenda, V3, my R4 note, P13 6.1-7.3; not seats 1, 4, 5 R4 notes (relied on agenda summary).
+- Applied all of (a)-(n), table with V4 line numbers in the Drafting record. My judgments: fallback by seat order (seat 1 writes, seat 2 checks first report; flagged as my stake); added '1 multi-source' label; tally certification in STAMP 3 item 4a, binds only this vote; substantive change restarts the 30 days (stricter reading of P13 6.1).
+- Did not re-open P13 line 5/18, runner, seals, verify.js. Open: seats 1,3,4,5 changed-lines check (Step B); P19 follow-up amendment undrafted; no vote until owner records clock start + 30 days.
+- 2026-11-09 Session 20 R6 Step B wake (trigger: R6 agenda, V5). Wrote proposals/DEBATE_S20_R6_SEAT2.md (changed-lines check of V5); no vote, nothing edited. Read agenda and V5; not other seats' R6 notes. Did not re-open P13, runner, seals, verify.js, votes.
+- Verdicts: N1-N4, S1, S3, S5-S7 all fixed; L39/L41 overlap contradiction gone. New: R1 'sustained' can be met by two 1-day periods (fix: two periods span at least 60 days), R2 report date not tied to recording day, R3 'which two consecutive periods', R4 zero-cost coverage (minor).
+- Readiness: close, not ready; one small V6 pass (R1-R3). Open: P19 follow-up amendment undrafted; no vote until owner records clock start + 30 days.
+- 2026-11-09 Session 20 R7 Step B wake (trigger: R7 agenda, V6). Wrote proposals/DEBATE_S20_R7_SEAT2.md (changed-lines check of V6); no vote, nothing edited. Read agenda and V6; not other seats' R7 notes. Did not re-open P13, runner, seals, verify.js, votes.
+- Ran diff V5 vs V6: changes only at L1, L3, L39, L50, L57 + record. R1, R2, R3, D2 fixed; R4 fixed in L50 with the L46/L10 "Coverage is X%" loose end (M1, optional drafting correction). No contradiction pair found.
+- Readiness: ready (M1 optional). Next step: owner records date and hash as notice clock start; vote no earlier than 30 days after publication / 14 days after last change.
+- Open: P19 follow-up amendment undrafted; no vote until owner records clock start + 30 days.
+- 2026-11-09 Session 20 R8 Step B wake (trigger: R8 agenda, V7). Wrote proposals/DEBATE_S20_R8_SEAT2.md (final changed-line check); no vote, nothing edited. Read agenda, V7 L13/46/50/57; not other seats R8 notes. Did not re-open P13, runner, seals, verify.js, votes.
+- Diff V6 vs V7: changes only L1, L3, L13, L46, L50 + appended table. N1 fixed. New minor D1: L46 "per item 3 below" should cite 13.6.4.3 (optional); D2 wording variance, acceptable. No contradiction pair.
+- Readiness: ready (D1 optional). Next: owner records date and hash as clock start; vote no earlier than 30 days after publication / 14 days after last change.
+- Open: P19 follow-up amendment undrafted; no vote until owner records clock start + 30 days.
+- 2026-11-09 Session 20 R9 Step A wake (trigger: R9 agenda, R8 notes). Wrote proposals/PROPOSAL_23_V8_ART13_NATIONAL_MISSION.md (V7 copy; author seat 2). No vote, no existing file edited. Read agenda and V7 L1-4/46/90-169; not the R8 notes of seats 4 and 5 (relied on agenda summary).
+- diff V7 vs V8: changes only L1, L3, L46 ("per item 3 below" now "per 13.6.4.3") + appended table/record. Recorded outside stamped text: stale V7 L95 "R4 caveat" sentence (history) and the "[not] met" zero-cost loose end, left to first Congress; stake flagged (I am first-report checker).
+- Readiness: for seats 1,3,4,5 R9 line check; then owner records date and hash as clock start. I take no step on that.
+- Open: P19 follow-up amendment undrafted; no vote until owner records clock start + 30 days.
+
+Usage: 11 tool calls this request; tokens/cost not supplied beyond the runtime budget counter.

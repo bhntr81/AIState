@@ -12,11 +12,13 @@ from datetime import date, datetime
 from pathlib import Path
 ROOT = Path(os.environ.get("AISTATE_ROOT", Path(__file__).resolve().parent.parent))
 F, RT = ROOT/"founders", ROOT/"runtime"
-GLOBAL_CAP = float(os.environ.get("DAILY_CAP_USD", "10"))
-SEAT_CAP = float(os.environ.get("SEAT_DAILY_USD", "2"))
-MAX_WAKES = int(os.environ.get("MAX_WAKES_PER_SEAT", "4"))
+# Owner standing authorization 2026-11-09: no daily spend cap, no per-seat cap, no wake-count limit by default (0 = unlimited).
+# The mechanisms remain: set the env var to a positive number to re-enable one. PAUSE, path enforcement, identity checks, the lock stay.
+GLOBAL_CAP = float(os.environ.get("DAILY_CAP_USD", "0"))
+SEAT_CAP = float(os.environ.get("SEAT_DAILY_USD", "0"))
+MAX_WAKES = int(os.environ.get("MAX_WAKES_PER_SEAT", "0"))
 MIN_INTERVAL = int(os.environ.get("MIN_WAKE_INTERVAL_S", str(6*3600)))
-PER_RUN_CAP = float(os.environ.get("PER_RUN_USD", "0.50"))
+PER_RUN_CAP = float(os.environ.get("PER_RUN_USD", "5.00"))   # runaway-session fault guard (observed seat cost is about $0.2); not a governance cap
 
 # ---------- state: ledger and cost log ----------
 def _ledger():
@@ -35,10 +37,10 @@ def record_cost(seat, cost, model, note=""):
 # ---------- guardrails (plain code) ----------
 def guardrails(seat, supervised):
     if (RT/"PAUSE").exists(): return "paused: runtime/PAUSE exists"
-    if global_spent() + 0.01 >= GLOBAL_CAP: return f"global daily cap reached (${global_spent():.2f} of ${GLOBAL_CAP})"
+    if GLOBAL_CAP and global_spent() + 0.01 >= GLOBAL_CAP: return f"global daily cap reached (${global_spent():.2f} of ${GLOBAL_CAP})"
     d, day, _ = _ledger(); s = str(seat)
-    if day["seats"].get(s, 0) >= SEAT_CAP: return f"seat {seat} daily budget reached"
-    if day["wakes"].get(s, 0) >= MAX_WAKES: return f"seat {seat} reached {MAX_WAKES} wakes today"
+    if SEAT_CAP and day["seats"].get(s, 0) >= SEAT_CAP: return f"seat {seat} daily budget reached"
+    if MAX_WAKES and day["wakes"].get(s, 0) >= MAX_WAKES: return f"seat {seat} reached {MAX_WAKES} wakes today"
     if not supervised and time.time() - day["last"].get(s, 0) < MIN_INTERVAL: return f"seat {seat}: minimum wake interval not elapsed"
     return None
 def verify_identity(seat):

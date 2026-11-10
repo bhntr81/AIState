@@ -5,7 +5,7 @@ class RunnerTests(unittest.TestCase):
     def setUp(self):
         self.tmp = Path(tempfile.mkdtemp()); (self.tmp/"runtime").mkdir()
         shutil.copytree(SRC/"founders", self.tmp/"founders", ignore=shutil.ignore_patterns(".git"))
-        os.environ.update(AISTATE_ROOT=str(self.tmp), NO_FINALIZE="1", SEAT_MODEL_1="fake", SEAT_MODEL_2="fake", DAILY_CAP_USD="10")
+        os.environ.update(AISTATE_ROOT=str(self.tmp), NO_FINALIZE="1", SEAT_MODEL_1="fake", SEAT_MODEL_2="fake", DAILY_CAP_USD="10", SEAT_DAILY_USD="2", MAX_WAKES_PER_SEAT="4")
         os.environ.pop("MIN_WAKE_INTERVAL_S", None)
         sys.path.insert(0, str(SRC/"runtime"))
         if "runner" in sys.modules: del sys.modules["runner"]

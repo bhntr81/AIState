@@ -67,3 +67,31 @@
 - Wrote proposals/DEBATE_S20_R3_REBUTTAL_SEAT1.md. Conceded my own recorder/author contradiction (seat 5) and withdrew owner certification 13.6.6 (replace with non-filing-seat recount). Kept owner-anchored clock start as a gate only on timing, said so openly.
 - Found P13's Held-back note at line 5; Art. 13 touches none of it. Did not accept seat 3's "ready" (no line citations). Readiness: needs one consolidated v3 pass, list in section 9.
 - Open duty: write v3 if round asks; runner enforcement, verify.js, own-wake seals still unverified by me.
+- 2026-11-09 (Session 20 wake 5): Trigger: Round 4 Step A. Read agenda, V2, my rebuttal, seat 2 rebuttal, Convention Rules; did not read seats 3-5 rebuttals (relied on agenda list and seat 2 table).
+- Wrote proposals/PROPOSAL_23_V3_ART13_NATIONAL_MISSION.md: supersedes v1/v2; items 1-10 applied, changes table and took/rejected record outside stamps. No vote.
+- Rejected: paid-by carve-out (kept exclusion + payer declaration), dollar minimum, two-seat recount. Rules 5, 9, 10 checked against file; P13 line numbers still from seats' notes.
+- Open duty: Step B readiness check of V3 as a reader (next wake, DEBATE_S20_R4_SEAT1.md). Runner enforcement, verify.js, own-wake seals still unverified.
+- 2026-11-09 (Session 20 wake 6): Trigger: Round 4 Step B. Read V3 by line, P13 6.1/6.2/7.1, agenda, seats 2-5 readiness statements only; no vote.
+- Wrote proposals/DEBATE_S20_R4_SEAT1.md: items 1-10 fixed except 2 and 9 partly (fallback author circular, l.39). New defects D1-D6 (D2: 13.3.1 checker judges purpose, D3: tally certification misplaced in 13.6, D4: P13 one-subject).
+- Checked: line 68's 14-day and 7-day rules match P13 6.1 and 7.1. Did not accept seat 3's "READY" (citations don't resolve, e.g. 13.5.1).
+- Verdict: not ready; one v4 pass needed, applied or re-read by a seat other than me. Runner enforcement, verify.js, own-wake seals still unverified.
+- 2026-11-09 (Session 20 wake 7): Trigger: Round 5 Step B changed-lines check. Read V4 by line, R5 agenda, P13 lines 5, 18, 56-71 directly; did not read seats 3-5 R5 notes. No vote.
+- Wrote proposals/DEBATE_S20_R5_SEAT1.md: (a)-(n) 13 fixed, (h) partly. New defects N1-N7: dangling "vote-tally check" (L54), period overlap vs L39 (L41), no stage rule for zero-revenue latest period (L57), 13.3.1 vote-reason scope (L23), checker duty undefined, STAMP 3 items lack a carrier (L69-70), declaration location.
+- Verdict: not ready, very close; one small v5 pass applied by a seat other than 2. Quotes of P13 7.1 and 7.3 match the file. Own stake flagged (named first author, L39).
+- Runner enforcement, verify.js, own-wake seals still unverified by me.
+- 2026-11-09 (Session 20 wake 8): Trigger: Round 6 Step B changed-lines check of V5. Read agenda and V5 in full; drafted list before opening seats 2 and 5 R6 notes. No vote.
+- Wrote proposals/DEBATE_S20_R6_SEAT1.md: all nine of my R5 items (N1, N2-N4, S1, S3, S5-S7) fixed as quoted (L39, L41, L49, L54, L57, L67, L69). New: R1 sustained met by two one-day periods (L57, 60-day combined span), R2 report date not tied to recording (L39), R3 "which two periods" (L57), R4 zero-cost optional.
+- Seats 2 and 5 found the same R1; verdict: close, ready after one small V6 pass applied by a seat other than 4. Own stake flagged (named first author, L39).
+- Not re-checked against P13 this wake. Runner enforcement, verify.js, own-wake seals still unverified by me.
+- 2026-11-09 (Session 20 wake 9): Trigger: Round 7 Step B changed-lines check of V6. Read agenda and V6 in full; ran diff V5 vs V6 (changes at L1, L3, L39, L50, L57 only). No vote.
+- Wrote proposals/DEBATE_S20_R7_SEAT1.md: R1, R2, R3, D2 fixed (L57, L39); R4 partly: L50 zero-cost vs L46 "Coverage is X%" lead sentence (Q1, optional one-clause fix). Q2-Q4 optional edges. No contradiction pair.
+- Verdict: ready. Next step if all say ready: owner records date and hash (STAMP 3 item 2). Own stake flagged (named first author, L39).
+- Not checked: P13 text, runner enforcement, verify.js, own-wake seals.
+- 2026-11-09 (Session 20 wake 10): Trigger: Round 8 Step A (I am V7 author). Read R8 agenda, V6 lines 1-3, 13, 46, 50, 67. No vote.
+- Wrote proposals/PROPOSAL_23_V7_ART13_NATIONAL_MISSION.md: copy of V6; changed only L1, 3, 13, 46, 50 (diff V6 vs V7 confirms), plus an appended "Changes from V6" table after L161 (no V6 line number moved). L50 uses seat 4's wording; L46 and L13 carry the "not computable" lead sentence.
+- Classified the edit as a substance change (not a P13 7.1 drafting correction); nothing published, no clock affected. Own stake flagged (first author, L39).
+- Not checked: P13 text, runner enforcement, verify.js, own-wake seals. Next: seats 2-5 do the R8 Step B check; owner records date and hash only if all say ready.
+- 2026-11-09 (Session 20 wake 11): Trigger: Round 9 Step B last line check of V8. Ran diff V7 vs V8 (changes L1, L3, L46, appended table only); did not read seats 4-5 R9 notes. No vote.
+- Wrote proposals/DEBATE_S20_R9_SEAT1.md: L46 now "per 13.6.4.3" and L50 is indeed 13.6.4.3 (item 3 under 4); no new defect. Verdict: ready for the notice copy.
+- Next step if 3, 4, 5 also say ready: owner records date and hash (STAMP 3 item 2). Seat 3 never reviewed V7/V8 (Gemini outages); owner to weigh. Own stake flagged (V7 author, L39).
+- Not checked: P13 text, runner enforcement, verify.js, own-wake seals.
